@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "kind": "pasqal_sdk_target",
+  "provider": "Pasqal",
+  "target_device": "FRESNEL",
+  "device_json": "pasqal_fresnel_device.json",
+  "device_sha256": "77cae02afd05a9470683e72294e7f4b1c1e7f2e686ca886a243fe4f4ab351ea1",
+  "snapshot_source": "Unauthenticated public device-specification API via PasqalCloudConnection().fetch_available_devices()",
+  "retrieved_at_utc": "2026-11-02T23:14:42.820203+00:00",
+  "account_access_verified": false,
+  "live_calibration_verified": false,
+  "calibration_status": "public_device_snapshot_not_live_calibration",
+  "power_calibration": {
+    "rydberg_global": {
+      "bias_w": null,
+      "omega_squared_w": null,
+      "wall_efficiency": null
+    }
+  },
+  "overhead": {
+    "preparation_us": null,
+    "readout_us": null,
+    "reset_us": null,
+    "background_power_w": null,
+    "fixed_energy_j_per_shot": null
+  },
+  "references": [
+    "https://docs.pasqal.com/qpu-emulators/qpus/",
+    "https://docs.pasqal.com/qoolqit/extended_usage/device_noise/"
+  ]
+}

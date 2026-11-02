@@ -1,5 +1,7 @@
 # Hardware execution requirements
 
+The selected provider is now **Pasqal**, with a pinned public FRESNEL specification and an additional native analog classifier. See [the target/capability assessment](pasqal-target.md). The earlier digital and hybrid research models are preserved; their local storage controls are not exposed by this FRESNEL interface. The Pasqal backend rejects those original circuits instead of treating them as supported.
+
 There is currently **no QPU submission backend** in this repository. All recorded results are CPU simulations. No paid quantum jobs have been submitted.
 
 There is now an optional **hardware-informed research simulation layer**: QuTiP three-level pulse dynamics for both circuits, explicit noise assumptions and an energy ledger. QoolQit/Pulser separately validate compilation of the global analog block against a constrained SDK device. Read [the model and limitations](pulse-model-and-energy.md) and [the results](../hardware_results/SUMMARY.md). These are not vendor-calibrated full-device predictions.

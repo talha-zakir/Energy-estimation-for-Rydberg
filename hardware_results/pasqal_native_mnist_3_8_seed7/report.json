@@ -1,0 +1,230 @@
+{
+  "status": "Pasqal-native global analog classifier; local simulation only",
+  "scope": "Separate architecture from the preserved digital/digital-analog VQCs; small single-seed binary-MNIST validation, not a matched accuracy/energy comparison",
+  "config": {
+    "architecture": "pasqal_native_analog",
+    "target": "configs/pasqal_target.json",
+    "digits": [
+      3,
+      8
+    ],
+    "seed": 7,
+    "n_qubits": 4,
+    "input_slots": 4,
+    "slot_duration_ns": 128,
+    "rise_ns": 16,
+    "amplitude_fraction_of_limit": 0.8,
+    "detuning_to_amplitude_ratio": 1.5,
+    "n_train": 80,
+    "n_val": 20,
+    "n_test": 40,
+    "iterations": 12,
+    "checkpoint_every": 4,
+    "spsa_learning_rate": 2.0,
+    "spsa_perturbation": 0.2,
+    "alpha_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "shots": 1000,
+    "noise_trajectories": 1,
+    "threads": 4
+  },
+  "target": {
+    "schema_version": 1,
+    "kind": "pasqal_sdk_target",
+    "provider": "Pasqal",
+    "target_device": "FRESNEL",
+    "device_json": "pasqal_fresnel_device.json",
+    "device_sha256": "77cae02afd05a9470683e72294e7f4b1c1e7f2e686ca886a243fe4f4ab351ea1",
+    "snapshot_source": "Unauthenticated public device-specification API via PasqalCloudConnection().fetch_available_devices()",
+    "retrieved_at_utc": "2026-11-02T23:14:42.820203+00:00",
+    "account_access_verified": false,
+    "live_calibration_verified": false,
+    "calibration_status": "public_device_snapshot_not_live_calibration",
+    "power_calibration": {
+      "rydberg_global": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      }
+    },
+    "overhead": {
+      "preparation_us": null,
+      "readout_us": null,
+      "reset_us": null,
+      "background_power_w": null,
+      "fixed_energy_j_per_shot": null
+    },
+    "references": [
+      "https://docs.pasqal.com/qpu-emulators/qpus/",
+      "https://docs.pasqal.com/qoolqit/extended_usage/device_noise/"
+    ]
+  },
+  "parameter_count": 8,
+  "training_backend": "QoolQit compilation + Pulser QutipBackendV2 with finite bandwidth, no training noise",
+  "training_method": "SPSA with analytically fitted linear regression readout",
+  "selected_iteration": 12,
+  "optimizer_converged": false,
+  "optimizer_note": "Fixed SPSA iteration budget; no convergence claim",
+  "device_noise_protocol": "Supplied FRESNEL snapshot noise; quantum parameters/readout frozen before noisy inference. Occupation/correlation scores precede detector errors; bitstring scores include SDK SPAM.",
+  "models": {
+    "classical_pca_linear": {
+      "alpha": 10.0,
+      "test": {
+        "accuracy": 0.875,
+        "balanced_accuracy": 0.875,
+        "correct": 35,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "confusion_matrix": [
+          [
+            18,
+            2
+          ],
+          [
+            3,
+            17
+          ]
+        ]
+      }
+    },
+    "frozen_native_pulses_linear": {
+      "alpha": 0.01,
+      "test": {
+        "accuracy": 0.575,
+        "balanced_accuracy": 0.575,
+        "correct": 23,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.42194800436059987,
+          0.7149083147518411
+        ],
+        "confusion_matrix": [
+          [
+            12,
+            8
+          ],
+          [
+            9,
+            11
+          ]
+        ]
+      }
+    },
+    "trained_native_pulses_linear": {
+      "alpha": 0.01,
+      "test": {
+        "accuracy": 0.525,
+        "balanced_accuracy": 0.525,
+        "correct": 21,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.37497106853929735,
+          0.6706477044981831
+        ],
+        "confusion_matrix": [
+          [
+            10,
+            10
+          ],
+          [
+            9,
+            11
+          ]
+        ]
+      }
+    },
+    "trained_native_pulses_device_noise": {
+      "alpha": 0.01,
+      "test": {
+        "accuracy": 0.525,
+        "balanced_accuracy": 0.525,
+        "correct": 21,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.37497106853929735,
+          0.6706477044981831
+        ],
+        "confusion_matrix": [
+          [
+            10,
+            10
+          ],
+          [
+            9,
+            11
+          ]
+        ]
+      }
+    },
+    "trained_native_pulses_device_noise_shots": {
+      "alpha": 0.01,
+      "test": {
+        "accuracy": 0.625,
+        "balanced_accuracy": 0.625,
+        "correct": 25,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.47032160054531913,
+          0.7577722646420829
+        ],
+        "confusion_matrix": [
+          [
+            11,
+            9
+          ],
+          [
+            6,
+            14
+          ]
+        ]
+      }
+    }
+  },
+  "compiled_emulated_sequences": 2620,
+  "runtime_seconds": 224.1348168860004,
+  "versions": {
+    "qoolqit": "1.5.0",
+    "pulser-core": "1.10.0",
+    "pulser-simulation": "1.10.0",
+    "qutip": "5.3.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1"
+  },
+  "first_test_input_energy": {
+    "calibration_status": "public_device_snapshot_not_live_calibration",
+    "scheduled_control_window_us_per_shot": 0.6820000000000005,
+    "full_cycle_us_per_shot": null,
+    "stage_duration_us": {
+      "pasqal_analog_block": 0.6820000000000005
+    },
+    "channels": {
+      "rydberg_global": {
+        "beam_time_us": 0.6820000000000005,
+        "omega_squared_integral_rad2_per_us": 11.693448352384207,
+        "optical_j_per_shot": null,
+        "electrical_j_per_shot": null
+      }
+    },
+    "shots": 1000,
+    "control_optical_j_per_shot": null,
+    "control_electrical_j_per_shot": null,
+    "full_quantum_cycle_j_per_shot": null,
+    "full_quantum_cycle_j_for_requested_shots": null,
+    "classical_preprocessing_training_readout_energy_j": null,
+    "end_to_end_pipeline_energy_j": null,
+    "missing_calibrations": [
+      "rydberg_global: beam-power calibration",
+      "complete cycle timing/background and fixed overhead energy"
+    ],
+    "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime.",
+    "waveform_accounting": "Linear interpolation of 1 ns SDK amplitude samples including a final zero endpoint",
+    "modulation_included": true
+  }
+}

@@ -10,6 +10,9 @@ from ..quantum import cnot_pairs
 
 def load_profile(path):
     profile = json.loads(Path(path).read_text())
+    if profile.get("kind") == "pasqal_sdk_target":
+        raise ValueError("Pasqal target configs require the QoolQit/Pulser backend; "
+                         "they do not support the three-level research compiler's local gates")
     for key in ("spacing_um", "c6_rad_us_um6", "raman_omega_rad_us", "stark_rate_rad_us",
                 "gate_omega_rad_us", "transfer_omega_rad_us"):
         if not np.isfinite(profile[key]) or profile[key] <= 0:

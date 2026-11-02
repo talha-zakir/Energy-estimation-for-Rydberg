@@ -1,0 +1,26 @@
+[
+  {
+    "iteration": 0,
+    "train_objective": 0.18371908202178872,
+    "validation_mse": 0.17200188345701933,
+    "validation_accuracy": 0.75
+  },
+  {
+    "iteration": 4,
+    "train_objective": 0.1799803577544709,
+    "validation_mse": 0.16640230260462066,
+    "validation_accuracy": 0.75
+  },
+  {
+    "iteration": 8,
+    "train_objective": 0.17680210329261006,
+    "validation_mse": 0.1607187162235144,
+    "validation_accuracy": 0.75
+  },
+  {
+    "iteration": 12,
+    "train_objective": 0.17320988246544605,
+    "validation_mse": 0.15460710070403555,
+    "validation_accuracy": 0.8
+  }
+]

@@ -1,0 +1,15 @@
+{
+  "architecture": "pasqal_native_analog",
+  "target": "configs/pasqal_target.json",
+  "digits": [3, 8], "seed": 7,
+  "n_qubits": 4, "input_slots": 4,
+  "slot_duration_ns": 128, "rise_ns": 16,
+  "amplitude_fraction_of_limit": 0.8,
+  "detuning_to_amplitude_ratio": 1.5,
+  "n_train": 80, "n_val": 20, "n_test": 40,
+  "iterations": 12, "checkpoint_every": 4,
+  "spsa_learning_rate": 2.0, "spsa_perturbation": 0.2,
+  "alpha_grid": [0.01, 0.1, 1.0, 10.0],
+  "shots": 1000, "noise_trajectories": 1,
+  "threads": 4
+}

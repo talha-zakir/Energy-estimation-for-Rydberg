@@ -8,6 +8,8 @@ See [the paired architecture comparison](results/ARCHITECTURE_COMPARISON.md), [t
 
 ## Hardware-informed simulation
 
+**Selected target: Pasqal FRESNEL via QoolQit/Pulser.** A pinned public device/noise specification and compatibility guard are included. Its exposed global analog controls cannot run the original digital/hybrid pair as written, so those research baselines are retained and a separate **Pasqal-native global-pulse classifier** is added with the requested linear readout. See [Pasqal results](hardware_results/PASQAL_SUMMARY.md) and [target/model details](docs/pasqal-target.md).
+
 An optional **QuTiP three-level pulse backend** now models both architectures with finite-rise controls, Rydberg blockade, storage/Rydberg transfers, decay, dephasing and explicit static-noise assumptions. A separate **QoolQit/Pulser** check compiles and simulates the eight-atom global analog block against SDK device constraints. Full eight-qubit trained schedules have an inspectable energy ledger; full noisy dynamics were checked on a small four-atom MNIST probe.
 
 This is a research model, not device-calibrated hardware. The probe exposes substantial pulse/noise errors, so a trustworthy energy-per-accuracy comparison needs calibration and pulse improvements. Joules remain unknown until measured power/efficiency and overhead data are provided. See [hardware results](hardware_results/SUMMARY.md) and [model, energy equations and setup](docs/pulse-model-and-energy.md). The ideal results below remain separate.

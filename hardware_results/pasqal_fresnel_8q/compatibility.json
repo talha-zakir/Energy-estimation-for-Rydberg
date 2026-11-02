@@ -1,0 +1,46 @@
+{
+  "device": "FRESNEL",
+  "channels": {
+    "rydberg_global": {
+      "basis": "ground-rydberg",
+      "addressing": "Global",
+      "max_omega_rad_us": 11.309733552923255,
+      "max_abs_detuning_rad_us": 62.83185307179586,
+      "clock_period_ns": 4,
+      "min_pulse_duration_ns": 16,
+      "mod_bandwidth_mhz": 8
+    }
+  },
+  "rydberg_level": 60,
+  "c6_rad_us_um6": 865723.02,
+  "max_atoms": 100,
+  "min_distance_um": 5,
+  "max_radial_distance_um": 46,
+  "max_sequence_duration_ns": 6000,
+  "supported_global_analog_drive": true,
+  "exposed_local_storage_drive": false,
+  "exposed_local_rydberg_drive": false,
+  "device_noise_model_available": true,
+  "noise_types": [
+    "SPAM",
+    "dephasing",
+    "relaxation"
+  ],
+  "original_digital_vqc": {
+    "supported_as_written": false,
+    "reasons": [
+      "Individually addressed hyperfine/storage RX-RZ-RX controls are not exposed",
+      "Individually addressed Rydberg pulses for selected-pair blockade CNOTs are not exposed",
+      "The storage-to-Rydberg transfer controls of the current hybrid compiler are not certified by this SDK snapshot"
+    ]
+  },
+  "original_hybrid_vqc": {
+    "supported_as_written": false,
+    "reasons": [
+      "Individually addressed hyperfine/storage RX-RZ-RX controls are not exposed",
+      "The storage-to-Rydberg transfer controls of the current hybrid compiler are not certified by this SDK snapshot"
+    ]
+  },
+  "submission_ready": false,
+  "submission_note": "Local simulation only. Account access, live calibration and any cloud register/layout validation are not established."
+}

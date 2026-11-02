@@ -9,3 +9,4 @@ qoolqit==1.5.0
 pulser==1.10.0
 pulser-core==1.10.0
 pulser-simulation==1.10.0
+pasqal-cloud==0.24.0
