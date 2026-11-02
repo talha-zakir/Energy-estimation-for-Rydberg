@@ -1,10 +1,12 @@
 # Hardware execution requirements
 
-There is currently **no QPU submission backend** in this repository. All recorded results come from the exact CPU simulator. No paid quantum jobs have been submitted.
+There is currently **no QPU submission backend** in this repository. All recorded results are CPU simulations. No paid quantum jobs have been submitted.
+
+There is now an optional **hardware-informed research simulation layer**: QuTiP three-level pulse dynamics for both circuits, explicit noise assumptions and an energy ledger. QoolQit/Pulser separately validate compilation of the global analog block against a constrained SDK device. Read [the model and limitations](pulse-model-and-energy.md) and [the results](../hardware_results/SUMMARY.md). These are not vendor-calibrated full-device predictions.
 
 The Lu digital–analog baseline needs preparation of arbitrary per-qubit product states, individually controlled RX/RZ rotations, global Rydberg evolution, and switching between hyperfine storage and Rydberg manifolds. A purely global analog interface does not supply all these operations. Matching the Rydberg Hamiltonian alone does not make this circuit runnable on every Rydberg device.
 
-The digital-only variant instead needs individually addressed rotations and selected-pair CNOTs. Its CNOTs are ideal logical operations in this simulator. On a neutral-atom gate device they must be compiled into supported Rydberg-mediated entangling gates, with local basis changes as needed. The current model does not include pulse waveforms, atom transport, blockade leakage, native decomposition or gate errors. It is not a pulse-level implementation of a Rydberg CNOT.
+The digital-only variant instead needs individually addressed rotations and selected-pair CNOTs. Its CNOTs remain ideal logical operations in the original NumPy baseline. The optional QuTiP backend adds explicit blockade pulses, finite leakage and basis/phase corrections under a shared research profile. Atom transport and a vendor-native optimized gate compiler are not included. A selected device may require a different pulse construction.
 
 The [ResQ paper](https://openaccess.thecvf.com/content/ICCV2025/papers/DiBrita_ResQ_A_Novel_Framework_to_Implement_Residual_Neural_Networks_on_ICCV_2025_paper.pdf) offers a different, analog-native route: features and trainable parameters are embedded in control pulses. Its Aquila experiments used local detuning described as experimental in the paper. Current availability, device limits and account permissions must be checked before selecting that path.
 

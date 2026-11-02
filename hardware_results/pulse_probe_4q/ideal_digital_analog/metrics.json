@@ -1,0 +1,406 @@
+{
+  "status": "CPU simulation; not a hardware experiment or paper reproduction",
+  "architecture": "digital_analog",
+  "circuit": {
+    "architecture": "digital_analog",
+    "n_qubits": 4,
+    "layers": 2,
+    "trainable_parameters": 24,
+    "rotation_gates_per_circuit": 24,
+    "cnot_pairs_per_layer": [],
+    "cnot_gates_per_circuit": 0,
+    "cnot_sublayers_per_circuit": 0,
+    "analog_blocks_per_circuit": 2,
+    "analog_evolution_us_per_circuit": 0.5,
+    "hardware_execution_time_us": null,
+    "note": "Logical ansatz counts exclude encoding/readout. Native gate compilation, durations and noise are not modeled."
+  },
+  "config": {
+    "digits": [
+      3,
+      8
+    ],
+    "seed": 7,
+    "n_train": 200,
+    "n_val": 40,
+    "n_test": 40,
+    "maxiter": 20,
+    "shots": 1000,
+    "threads": 4,
+    "alpha_grid": [
+      0.0,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "physics": {
+      "n_qubits": 4,
+      "layers": 2,
+      "omega_rad_us": 25.132741228718345,
+      "delta_over_omega": 0.8,
+      "rb_over_a": 0.8700000000000001,
+      "c6_rad_us_um6": 5420441.132650757,
+      "evolution_us": 0.25
+    },
+    "architecture": "digital_analog"
+  },
+  "physics": {
+    "n_qubits": 4,
+    "layers": 2,
+    "omega_rad_us": 25.132741228718345,
+    "delta_over_omega": 0.8,
+    "rb_over_a": 0.8700000000000001,
+    "c6_rad_us_um6": 5420441.132650757,
+    "evolution_us": 0.25,
+    "spacing_um": 8.90115867138624,
+    "analog_evolution_us_per_circuit": 0.5
+  },
+  "optimizer": {
+    "method": "L-BFGS-B with exact adjoint / variable projection",
+    "objective_evaluations": 23,
+    "iterations": 20,
+    "converged": false,
+    "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+    "checkpoint_selection": "minimum validation MSE",
+    "selected_iteration": 15,
+    "alpha": 0.0
+  },
+  "models": {
+    "classical_pca_linear": {
+      "alpha": 0.0,
+      "feature_count": 8,
+      "train": {
+        "accuracy": 0.945,
+        "balanced_accuracy": 0.9452781112444978,
+        "correct": 189,
+        "n": 200,
+        "accuracy_wilson95": [
+          0.9042120755340645,
+          0.9690149791986299
+        ],
+        "confusion_matrix": [
+          [
+            95,
+            7
+          ],
+          [
+            4,
+            94
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.925,
+        "balanced_accuracy": 0.9235588972431077,
+        "correct": 37,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "confusion_matrix": [
+          [
+            20,
+            1
+          ],
+          [
+            2,
+            17
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.85,
+        "balanced_accuracy": 0.8500000000000001,
+        "correct": 34,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.7092737396097997,
+          0.9293890829149256
+        ],
+        "confusion_matrix": [
+          [
+            18,
+            2
+          ],
+          [
+            4,
+            16
+          ]
+        ]
+      }
+    },
+    "encoding_only_linear": {
+      "alpha": 0.0,
+      "feature_count": 10,
+      "train": {
+        "accuracy": 0.87,
+        "balanced_accuracy": 0.8699479791916767,
+        "correct": 174,
+        "n": 200,
+        "accuracy_wilson95": [
+          0.8163353692726989,
+          0.9097185863477437
+        ],
+        "confusion_matrix": [
+          [
+            89,
+            13
+          ],
+          [
+            13,
+            85
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.925,
+        "balanced_accuracy": 0.9235588972431077,
+        "correct": 37,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "confusion_matrix": [
+          [
+            20,
+            1
+          ],
+          [
+            2,
+            17
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.85,
+        "balanced_accuracy": 0.8500000000000001,
+        "correct": 34,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.7092737396097997,
+          0.9293890829149256
+        ],
+        "confusion_matrix": [
+          [
+            18,
+            2
+          ],
+          [
+            4,
+            16
+          ]
+        ]
+      }
+    },
+    "frozen_rydberg_linear": {
+      "alpha": 0.0,
+      "feature_count": 10,
+      "train": {
+        "accuracy": 0.81,
+        "balanced_accuracy": 0.8097238895558223,
+        "correct": 162,
+        "n": 200,
+        "accuracy_wilson95": [
+          0.7499864142552062,
+          0.8583290620754351
+        ],
+        "confusion_matrix": [
+          [
+            84,
+            18
+          ],
+          [
+            20,
+            78
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.775,
+        "balanced_accuracy": 0.7781954887218046,
+        "correct": 31,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.6249660359590695,
+          0.8768404674532148
+        ],
+        "confusion_matrix": [
+          [
+            15,
+            6
+          ],
+          [
+            3,
+            16
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.9,
+        "balanced_accuracy": 0.9,
+        "correct": 36,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "confusion_matrix": [
+          [
+            18,
+            2
+          ],
+          [
+            2,
+            18
+          ]
+        ]
+      }
+    },
+    "trained_rydberg_linear": {
+      "alpha": 0.0,
+      "feature_count": 10,
+      "train": {
+        "accuracy": 0.92,
+        "balanced_accuracy": 0.9201680672268908,
+        "correct": 184,
+        "n": 200,
+        "accuracy_wilson95": [
+          0.8740095102048769,
+          0.9501598448237337
+        ],
+        "confusion_matrix": [
+          [
+            93,
+            9
+          ],
+          [
+            7,
+            91
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.95,
+        "balanced_accuracy": 0.9473684210526316,
+        "correct": 38,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "confusion_matrix": [
+          [
+            21,
+            0
+          ],
+          [
+            2,
+            17
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.875,
+        "balanced_accuracy": 0.875,
+        "correct": 35,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "confusion_matrix": [
+          [
+            19,
+            1
+          ],
+          [
+            4,
+            16
+          ]
+        ]
+      }
+    },
+    "trained_rydberg_linear_shots": {
+      "alpha": 10.0,
+      "feature_count": 10,
+      "train": {
+        "accuracy": 0.91,
+        "balanced_accuracy": 0.9101640656262505,
+        "correct": 182,
+        "n": 200,
+        "accuracy_wilson95": [
+          0.8622332538615105,
+          0.9423130212854665
+        ],
+        "confusion_matrix": [
+          [
+            92,
+            10
+          ],
+          [
+            8,
+            90
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.95,
+        "balanced_accuracy": 0.9473684210526316,
+        "correct": 38,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.834958291820748,
+          0.9861796228538989
+        ],
+        "confusion_matrix": [
+          [
+            21,
+            0
+          ],
+          [
+            2,
+            17
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.825,
+        "balanced_accuracy": 0.825,
+        "correct": 33,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.6804970794560755,
+          0.9125469700311694
+        ],
+        "confusion_matrix": [
+          [
+            19,
+            1
+          ],
+          [
+            6,
+            14
+          ]
+        ]
+      }
+    }
+  },
+  "pca_explained_variance_ratio_sum": 0.4801981173956017,
+  "max_state_norm_error": 2.55351295663786e-15,
+  "runtime_seconds": 0.47196303800046735,
+  "simulation_counters": {
+    "forward_calls": 73,
+    "sample_circuit_evaluations": 10440,
+    "note": "Simulator workload counts; adjoint backward passes excluded. Not QPU shots or energy."
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.8.0"
+  }
+}

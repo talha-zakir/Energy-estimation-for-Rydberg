@@ -1,0 +1,172 @@
+{
+  "status": "Eight-qubit schedule compilation/accounting only; no noisy eight-qubit dynamics run",
+  "mnist_official_test_index": 7024,
+  "label": 3,
+  "scope": "One paired input, frozen trained parameters; no energy-per-accuracy or training-energy claim",
+  "profile": {
+    "name": "Shared Rydberg research model, not a calibrated commercial device",
+    "calibration_status": "illustrative",
+    "spacing_um": 8.90115867138624,
+    "c6_rad_us_um6": 5420441.132650757,
+    "raman_omega_rad_us": 6.283185307179586,
+    "stark_rate_rad_us": 6.283185307179586,
+    "gate_omega_rad_us": 0.6283185307179586,
+    "transfer_omega_rad_us": 125.66370614359172,
+    "rise_us": 0.01,
+    "analog_rise_us": 0.01,
+    "addressing": "one local beam; local operations and CNOTs serialized",
+    "noise": {
+      "rydberg_lifetime_us": 150.0,
+      "rydberg_pure_dephasing_us": 300.0,
+      "storage_pure_dephasing_us": 10000.0,
+      "rydberg_decay_to_zero_fraction": 0.5,
+      "amplitude_fraction_std": 0.01,
+      "detuning_std_rad_us": 0.1,
+      "position_std_um": 0.02,
+      "readout_false_positive": 0.01,
+      "readout_false_negative": 0.01
+    },
+    "power_calibration": {
+      "raman_local": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      },
+      "stark_local": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      },
+      "rydberg_local": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      },
+      "rydberg_global": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      }
+    },
+    "overhead": {
+      "preparation_us": null,
+      "readout_us": null,
+      "reset_us": null,
+      "background_power_w": null,
+      "fixed_energy_j_per_shot": null
+    },
+    "provenance": {
+      "spacing_and_c6": "Lu et al. arXiv:2401.02940v2 physical baseline",
+      "pulse_rates_and_noise": "Explicit research assumptions, not vendor calibration",
+      "power": "Unknown; needs measured beam powers/efficiencies, including both two-photon legs"
+    }
+  },
+  "architectures": {
+    "digital_analog": {
+      "source_model": "results/mnist_3_8_seed7/model.npz",
+      "n_qubits": 8,
+      "segment_count": 285,
+      "energy": {
+        "calibration_status": "illustrative",
+        "scheduled_control_window_us_per_shot": 18.430817890572953,
+        "full_cycle_us_per_shot": null,
+        "stage_duration_us": {
+          "encoding": 3.648970747319662,
+          "ansatz": 13.16184714325321,
+          "transfer": 1.1200000000000006,
+          "analog": 0.5
+        },
+        "channels": {
+          "stark_local": {
+            "beam_time_us": 5.7764169685953695,
+            "omega_squared_integral_rad2_per_us": 215.93708661110176,
+            "optical_j_per_shot": null,
+            "electrical_j_per_shot": null
+          },
+          "raman_local": {
+            "beam_time_us": 11.034400921977504,
+            "omega_squared_integral_rad2_per_us": 415.1942079400451,
+            "optical_j_per_shot": null,
+            "electrical_j_per_shot": null
+          },
+          "rydberg_local": {
+            "beam_time_us": 1.1200000000000006,
+            "omega_squared_integral_rad2_per_us": 10948.6811489418,
+            "optical_j_per_shot": null,
+            "electrical_j_per_shot": null
+          },
+          "rydberg_global": {
+            "beam_time_us": 0.5,
+            "omega_squared_integral_rad2_per_us": 298.98321599033363,
+            "optical_j_per_shot": null,
+            "electrical_j_per_shot": null
+          }
+        },
+        "shots": 1000,
+        "control_optical_j_per_shot": null,
+        "control_electrical_j_per_shot": null,
+        "full_quantum_cycle_j_per_shot": null,
+        "full_quantum_cycle_j_for_requested_shots": null,
+        "classical_preprocessing_training_readout_energy_j": null,
+        "end_to_end_pipeline_energy_j": null,
+        "missing_calibrations": [
+          "stark_local: beam-power calibration",
+          "raman_local: beam-power calibration",
+          "rydberg_local: beam-power calibration",
+          "rydberg_global: beam-power calibration",
+          "complete cycle timing/background and fixed overhead energy"
+        ],
+        "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime."
+      }
+    },
+    "digital": {
+      "source_model": "results/mnist_3_8_digital_seed7/model.npz",
+      "n_qubits": 8,
+      "segment_count": 563,
+      "energy": {
+        "calibration_status": "illustrative",
+        "scheduled_control_window_us_per_shot": 333.57852497844095,
+        "full_cycle_us_per_shot": null,
+        "stage_duration_us": {
+          "encoding": 3.648970747319662,
+          "ansatz": 13.66955423112221,
+          "digital_entangler": 316.2599999999994
+        },
+        "channels": {
+          "stark_local": {
+            "beam_time_us": 34.562487674681435,
+            "omega_squared_integral_rad2_per_us": 1322.8883886566089,
+            "optical_j_per_shot": null,
+            "electrical_j_per_shot": null
+          },
+          "raman_local": {
+            "beam_time_us": 18.596037303760493,
+            "omega_squared_integral_rad2_per_us": 698.9409525997261,
+            "optical_j_per_shot": null,
+            "electrical_j_per_shot": null
+          },
+          "rydberg_local": {
+            "beam_time_us": 280.41999999999985,
+            "omega_squared_integral_rad2_per_us": 110.48429950755455,
+            "optical_j_per_shot": null,
+            "electrical_j_per_shot": null
+          }
+        },
+        "shots": 1000,
+        "control_optical_j_per_shot": null,
+        "control_electrical_j_per_shot": null,
+        "full_quantum_cycle_j_per_shot": null,
+        "full_quantum_cycle_j_for_requested_shots": null,
+        "classical_preprocessing_training_readout_energy_j": null,
+        "end_to_end_pipeline_energy_j": null,
+        "missing_calibrations": [
+          "stark_local: beam-power calibration",
+          "raman_local: beam-power calibration",
+          "rydberg_local: beam-power calibration",
+          "complete cycle timing/background and fixed overhead energy"
+        ],
+        "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime."
+      }
+    }
+  }
+}

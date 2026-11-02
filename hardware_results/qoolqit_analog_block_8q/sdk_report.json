@@ -1,0 +1,66 @@
+{
+  "scope": "Isolated rectangular global analog block from all-ground input; not compilation of the full digital-only or hyperfine-storage hybrid circuit",
+  "device": "AnalogDevice",
+  "constrained_sdk_device": true,
+  "input_physics": {
+    "n_qubits": 8,
+    "layers": 2,
+    "omega_rad_us": 25.132741228718345,
+    "delta_over_omega": 0.8,
+    "rb_over_a": 0.87,
+    "c6_rad_us_um6": 5420441.132650757,
+    "evolution_us": 0.25,
+    "spacing_um": 8.90115867138624,
+    "analog_evolution_us_per_circuit": 0.5
+  },
+  "compiled_duration_ns": 500,
+  "compiled_coordinates_um": {
+    "0": [
+      -25.757891,
+      0.0
+    ],
+    "1": [
+      -18.398494,
+      0.0
+    ],
+    "2": [
+      -11.039096,
+      0.0
+    ],
+    "3": [
+      -3.679699,
+      0.0
+    ],
+    "4": [
+      3.679699,
+      0.0
+    ],
+    "5": [
+      11.039096,
+      0.0
+    ],
+    "6": [
+      18.398494,
+      0.0
+    ],
+    "7": [
+      25.757891,
+      0.0
+    ]
+  },
+  "compiled_c6_rad_us_um6": 865723.02,
+  "compiled_peak_omega_rad_us": 12.566370614359,
+  "compiled_peak_detuning_rad_us": 10.053096491487201,
+  "ideal_state_fidelity": 0.999956474297522,
+  "compiled_rectangle_state_fidelity": 0.9999999999998921,
+  "sampled_backend_infidelity_tolerance": 0.0001,
+  "passes_fidelity_check": true,
+  "sampling_note": "Pulser's 1 ns waveform grid includes a zero-valued end sample. Compiled rectangular Hamiltonian is checked separately at stricter tolerance; the sampled backend's small waveform-discretization discrepancy is retained.",
+  "calibration_note": "SDK device constraints are checked. This check does not supply current device calibration, noise validation or measured power. Compilation rescales geometry, amplitude and time; these compiled controls are NOT substituted into the separate shared research-profile energy ledger.",
+  "versions": {
+    "qoolqit": "1.5.0",
+    "pulser-core": "1.10.0",
+    "pulser-simulation": "1.10.0",
+    "qutip": "5.3.1"
+  }
+}

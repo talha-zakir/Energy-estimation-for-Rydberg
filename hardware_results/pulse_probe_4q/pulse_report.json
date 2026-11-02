@@ -1,0 +1,1021 @@
+{
+  "status": "Illustrative hardware-informed research simulation; not a device-calibrated prediction or hardware accuracy benchmark",
+  "profile": {
+    "name": "Shared Rydberg research model, not a calibrated commercial device",
+    "calibration_status": "illustrative",
+    "spacing_um": 8.90115867138624,
+    "c6_rad_us_um6": 5420441.132650757,
+    "raman_omega_rad_us": 6.283185307179586,
+    "stark_rate_rad_us": 6.283185307179586,
+    "gate_omega_rad_us": 0.6283185307179586,
+    "transfer_omega_rad_us": 125.66370614359172,
+    "rise_us": 0.01,
+    "analog_rise_us": 0.01,
+    "addressing": "one local beam; local operations and CNOTs serialized",
+    "noise": {
+      "rydberg_lifetime_us": 150.0,
+      "rydberg_pure_dephasing_us": 300.0,
+      "storage_pure_dephasing_us": 10000.0,
+      "rydberg_decay_to_zero_fraction": 0.5,
+      "amplitude_fraction_std": 0.01,
+      "detuning_std_rad_us": 0.1,
+      "position_std_um": 0.02,
+      "readout_false_positive": 0.01,
+      "readout_false_negative": 0.01
+    },
+    "power_calibration": {
+      "raman_local": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      },
+      "stark_local": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      },
+      "rydberg_local": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      },
+      "rydberg_global": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      }
+    },
+    "overhead": {
+      "preparation_us": null,
+      "readout_us": null,
+      "reset_us": null,
+      "background_power_w": null,
+      "fixed_energy_j_per_shot": null
+    },
+    "provenance": {
+      "spacing_and_c6": "Lu et al. arXiv:2401.02940v2 physical baseline",
+      "pulse_rates_and_noise": "Explicit research assumptions, not vendor calibration",
+      "power": "Unknown; needs measured beam powers/efficiencies, including both two-photon legs"
+    }
+  },
+  "examples": 4,
+  "static_noise_realizations": 2,
+  "shots_per_input": 1000,
+  "training_origin": "ideal CPU simulator",
+  "readout_protocol": "Ideal-trained linear weights frozen; no retraining on pulse/noisy features",
+  "noise_protocol": "Exact Lindblad density evolution per static control draw. Same position/detuning/amplitude draw paired across architectures; draws are shared over inputs within a realization. Detector shots sample the equal mixture of these states, not a single fixed-drift realization.",
+  "readout_erasure_policy": "Residual |r> is flagged with Z=0. No postselection. 0/1 detection flips are included; erasure-resolving detection is an explicit assumption.",
+  "versions": {
+    "qutip": "5.3.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.8.0"
+  },
+  "architectures": {
+    "digital_analog": {
+      "n_qubits": 4,
+      "physics": {
+        "n_qubits": 4,
+        "layers": 2,
+        "omega_rad_us": 25.132741228718345,
+        "delta_over_omega": 0.8,
+        "rb_over_a": 0.8700000000000001,
+        "c6_rad_us_um6": 5420441.132650757,
+        "evolution_us": 0.25,
+        "spacing_um": 8.90115867138624,
+        "analog_evolution_us_per_circuit": 0.5
+      },
+      "inputs": [
+        {
+          "mnist_official_test_index": 1134,
+          "label": 3,
+          "ideal_prediction": 3,
+          "coherent_pulse_prediction": 3,
+          "noisy_expected_prediction": 3,
+          "noisy_sampled_prediction": 3,
+          "coherent_pulse_state_fidelity_to_ideal": 0.24772510441236914,
+          "noisy_state_fidelity_to_ideal_mean": 0.23037158670886212,
+          "coherent_diagnostics": {
+            "residual_rydberg_probability": 0.014186442504024562,
+            "rydberg_atom_time_us": 1.3251431797991127,
+            "max_normalization_error": 1.223221524071505e-10,
+            "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+          },
+          "noise_diagnostics": [
+            {
+              "residual_rydberg_probability": 0.019933829587270517,
+              "rydberg_atom_time_us": 1.3375774680514214,
+              "max_normalization_error": 5.773159728050814e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            },
+            {
+              "residual_rydberg_probability": 0.018057227049894826,
+              "rydberg_atom_time_us": 1.3408558495671283,
+              "max_normalization_error": 1.5543122344752192e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            }
+          ],
+          "ideal_features": [
+            0.7259633302292776,
+            0.29515020652816487,
+            0.4612436966405065,
+            0.8099142498409095,
+            0.43839170513355347,
+            0.440404089202941,
+            0.6192282981108344,
+            0.04569326065291917,
+            0.34055789058099173,
+            0.38883950957204905
+          ],
+          "coherent_features": [
+            0.27021818068425557,
+            -0.06368315961865285,
+            -0.2508831110115876,
+            0.578255396084317,
+            0.21207413758143642,
+            -0.3207257326238513,
+            0.19114947475118488,
+            -0.038319650466058335,
+            0.10223375001890105,
+            -0.3119048075053099
+          ],
+          "noisy_features_mean": [
+            0.24609108376184863,
+            -0.06737645027981373,
+            -0.2781535876452703,
+            0.5563607151617008,
+            0.20282247232284406,
+            -0.3016063179350643,
+            0.16576748233199434,
+            -0.048970241209644064,
+            0.0900044299767018,
+            -0.3261092725551539
+          ],
+          "energy": {
+            "calibration_status": "illustrative",
+            "scheduled_control_window_us_per_shot": 9.268090825328933,
+            "full_cycle_us_per_shot": null,
+            "stage_duration_us": {
+              "encoding": 1.9692880353722215,
+              "ansatz": 6.238802789956719,
+              "transfer": 0.5600000000000004,
+              "analog": 0.5
+            },
+            "channels": {
+              "raman_local": {
+                "beam_time_us": 4.893244833381533,
+                "omega_squared_integral_rad2_per_us": 183.1763638461636,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "stark_local": {
+                "beam_time_us": 3.314845991947407,
+                "omega_squared_integral_rad2_per_us": 125.07470644892446,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_local": {
+                "beam_time_us": 0.5600000000000004,
+                "omega_squared_integral_rad2_per_us": 5474.340574470898,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_global": {
+                "beam_time_us": 0.5,
+                "omega_squared_integral_rad2_per_us": 298.98321599033363,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              }
+            },
+            "shots": 1000,
+            "control_optical_j_per_shot": null,
+            "control_electrical_j_per_shot": null,
+            "full_quantum_cycle_j_per_shot": null,
+            "full_quantum_cycle_j_for_requested_shots": null,
+            "classical_preprocessing_training_readout_energy_j": null,
+            "end_to_end_pipeline_energy_j": null,
+            "missing_calibrations": [
+              "raman_local: beam-power calibration",
+              "stark_local: beam-power calibration",
+              "rydberg_local: beam-power calibration",
+              "rydberg_global: beam-power calibration",
+              "complete cycle timing/background and fixed overhead energy"
+            ],
+            "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime."
+          }
+        },
+        {
+          "mnist_official_test_index": 7692,
+          "label": 3,
+          "ideal_prediction": 3,
+          "coherent_pulse_prediction": 3,
+          "noisy_expected_prediction": 3,
+          "noisy_sampled_prediction": 3,
+          "coherent_pulse_state_fidelity_to_ideal": 0.5136200288782402,
+          "noisy_state_fidelity_to_ideal_mean": 0.5203151106880907,
+          "coherent_diagnostics": {
+            "residual_rydberg_probability": 0.021079624135707027,
+            "rydberg_atom_time_us": 1.4007863452754268,
+            "max_normalization_error": 8.998446432428864e-11,
+            "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+          },
+          "noise_diagnostics": [
+            {
+              "residual_rydberg_probability": 0.027593800353219507,
+              "rydberg_atom_time_us": 1.4137776872697638,
+              "max_normalization_error": 2.7755575615628914e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            },
+            {
+              "residual_rydberg_probability": 0.023112366579119276,
+              "rydberg_atom_time_us": 1.4235409215081565,
+              "max_normalization_error": 1.6653345369377348e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            }
+          ],
+          "ideal_features": [
+            0.6103955997626509,
+            0.24054441049948705,
+            0.14895360071570082,
+            -0.036957578490616275,
+            0.21191581014956143,
+            -0.00024872239336264437,
+            -0.07369645044117205,
+            0.008862653384633308,
+            -0.06765059781750447,
+            0.2736921425112069
+          ],
+          "coherent_features": [
+            0.6789967833098227,
+            0.58419251257314,
+            0.21483771422440792,
+            -0.16095084305643792,
+            0.4638174033335225,
+            0.2243146088968456,
+            -0.181471988073505,
+            0.02483532232951161,
+            -0.10067969614745555,
+            0.09179784303864807
+          ],
+          "noisy_features_mean": [
+            0.6495742697378486,
+            0.5589069317545071,
+            0.19906340679755424,
+            -0.17912793216372996,
+            0.4346765255590824,
+            0.21282379336774832,
+            -0.18314562692433647,
+            0.0516349305144974,
+            -0.10997843089007975,
+            0.0707117820540447
+          ],
+          "energy": {
+            "calibration_status": "illustrative",
+            "scheduled_control_window_us_per_shot": 9.696213924077854,
+            "full_cycle_us_per_shot": null,
+            "stage_duration_us": {
+              "encoding": 2.3974111341211426,
+              "ansatz": 6.238802789956719,
+              "transfer": 0.5600000000000004,
+              "analog": 0.5
+            },
+            "channels": {
+              "raman_local": {
+                "beam_time_us": 5.067679510860429,
+                "omega_squared_integral_rad2_per_us": 190.06276888835683,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "stark_local": {
+                "beam_time_us": 3.568534413217434,
+                "omega_squared_integral_rad2_per_us": 135.0899238852127,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_local": {
+                "beam_time_us": 0.5600000000000004,
+                "omega_squared_integral_rad2_per_us": 5474.340574470898,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_global": {
+                "beam_time_us": 0.5,
+                "omega_squared_integral_rad2_per_us": 298.98321599033363,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              }
+            },
+            "shots": 1000,
+            "control_optical_j_per_shot": null,
+            "control_electrical_j_per_shot": null,
+            "full_quantum_cycle_j_per_shot": null,
+            "full_quantum_cycle_j_for_requested_shots": null,
+            "classical_preprocessing_training_readout_energy_j": null,
+            "end_to_end_pipeline_energy_j": null,
+            "missing_calibrations": [
+              "raman_local: beam-power calibration",
+              "stark_local: beam-power calibration",
+              "rydberg_local: beam-power calibration",
+              "rydberg_global: beam-power calibration",
+              "complete cycle timing/background and fixed overhead energy"
+            ],
+            "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime."
+          }
+        },
+        {
+          "mnist_official_test_index": 9596,
+          "label": 8,
+          "ideal_prediction": 8,
+          "coherent_pulse_prediction": 3,
+          "noisy_expected_prediction": 3,
+          "noisy_sampled_prediction": 3,
+          "coherent_pulse_state_fidelity_to_ideal": 0.06339096397790507,
+          "noisy_state_fidelity_to_ideal_mean": 0.06896761597672209,
+          "coherent_diagnostics": {
+            "residual_rydberg_probability": 0.021772629479422552,
+            "rydberg_atom_time_us": 1.9372909700204088,
+            "max_normalization_error": 2.869833259921961e-10,
+            "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+          },
+          "noise_diagnostics": [
+            {
+              "residual_rydberg_probability": 0.027065681395002268,
+              "rydberg_atom_time_us": 1.9612657868624725,
+              "max_normalization_error": 2.55351295663786e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            },
+            {
+              "residual_rydberg_probability": 0.022948474221584622,
+              "rydberg_atom_time_us": 1.958120422480188,
+              "max_normalization_error": 3.9968028886505635e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            }
+          ],
+          "ideal_features": [
+            -0.5983923434620357,
+            0.4682941089968869,
+            -0.43939153424383187,
+            0.8626766044868486,
+            -0.46249046790584664,
+            0.3486286876940035,
+            -0.5068955058682957,
+            -0.14052529083488835,
+            0.36693740650659523,
+            -0.4194476105769619
+          ],
+          "coherent_features": [
+            -0.3251423026107893,
+            -0.5445243852998253,
+            -0.3471835191273091,
+            0.6226629804115841,
+            -0.06142453064973112,
+            -0.08083605432975616,
+            -0.2573492423489779,
+            0.4934762530036886,
+            -0.3238580358094346,
+            -0.3718460554419303
+          ],
+          "noisy_features_mean": [
+            -0.29914952075973444,
+            -0.50330645773083,
+            -0.3102968318571364,
+            0.6199367953337308,
+            -0.08917941571021155,
+            -0.11010664619867595,
+            -0.23693270696808116,
+            0.47708353757736804,
+            -0.2989574480583057,
+            -0.32823891619190876
+          ],
+          "energy": {
+            "calibration_status": "illustrative",
+            "scheduled_control_window_us_per_shot": 8.951505493595644,
+            "full_cycle_us_per_shot": null,
+            "stage_duration_us": {
+              "encoding": 1.6527027036389317,
+              "ansatz": 6.238802789956719,
+              "transfer": 0.5600000000000004,
+              "analog": 0.5
+            },
+            "channels": {
+              "stark_local": {
+                "beam_time_us": 3.0663333144207723,
+                "omega_squared_integral_rad2_per_us": 115.28045933326361,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "raman_local": {
+                "beam_time_us": 4.825172179174879,
+                "omega_squared_integral_rad2_per_us": 180.4889631759563,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_local": {
+                "beam_time_us": 0.5600000000000004,
+                "omega_squared_integral_rad2_per_us": 5474.340574470898,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_global": {
+                "beam_time_us": 0.5,
+                "omega_squared_integral_rad2_per_us": 298.98321599033363,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              }
+            },
+            "shots": 1000,
+            "control_optical_j_per_shot": null,
+            "control_electrical_j_per_shot": null,
+            "full_quantum_cycle_j_per_shot": null,
+            "full_quantum_cycle_j_for_requested_shots": null,
+            "classical_preprocessing_training_readout_energy_j": null,
+            "end_to_end_pipeline_energy_j": null,
+            "missing_calibrations": [
+              "stark_local: beam-power calibration",
+              "raman_local: beam-power calibration",
+              "rydberg_local: beam-power calibration",
+              "rydberg_global: beam-power calibration",
+              "complete cycle timing/background and fixed overhead energy"
+            ],
+            "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime."
+          }
+        },
+        {
+          "mnist_official_test_index": 4820,
+          "label": 8,
+          "ideal_prediction": 3,
+          "coherent_pulse_prediction": 3,
+          "noisy_expected_prediction": 3,
+          "noisy_sampled_prediction": 3,
+          "coherent_pulse_state_fidelity_to_ideal": 0.21593400610473493,
+          "noisy_state_fidelity_to_ideal_mean": 0.23135706123839556,
+          "coherent_diagnostics": {
+            "residual_rydberg_probability": 0.016383583242503157,
+            "rydberg_atom_time_us": 1.3801322467851989,
+            "max_normalization_error": 1.931721449466295e-10,
+            "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+          },
+          "noise_diagnostics": [
+            {
+              "residual_rydberg_probability": 0.019880380491368765,
+              "rydberg_atom_time_us": 1.393461897949957,
+              "max_normalization_error": 2.220446049250313e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            },
+            {
+              "residual_rydberg_probability": 0.019367912212977293,
+              "rydberg_atom_time_us": 1.3906911125295351,
+              "max_normalization_error": 1.887379141862766e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            }
+          ],
+          "ideal_features": [
+            0.5213143471009704,
+            0.14454560720180226,
+            0.2473049406287836,
+            0.8821475752065016,
+            0.12076645626318756,
+            0.0730771192497538,
+            0.4950006435524416,
+            -0.17636592126799377,
+            0.09099227543295718,
+            0.2973132252845353
+          ],
+          "coherent_features": [
+            0.46672538285492615,
+            0.6230150151746153,
+            0.4764560612064577,
+            0.8320663925479651,
+            0.26530304878897926,
+            0.3241943542423561,
+            0.3895782317576086,
+            0.28352944138388464,
+            0.5298814475422269,
+            0.5585221317742975
+          ],
+          "noisy_features_mean": [
+            0.49357823386945293,
+            0.580977961470887,
+            0.4694822792490664,
+            0.8074753109553712,
+            0.27248378739262713,
+            0.35966655204611964,
+            0.40628471432923985,
+            0.27854442292091425,
+            0.48501574373167744,
+            0.5379477746840606
+          ],
+          "energy": {
+            "calibration_status": "illustrative",
+            "scheduled_control_window_us_per_shot": 9.320265892149603,
+            "full_cycle_us_per_shot": null,
+            "stage_duration_us": {
+              "encoding": 2.021463102192892,
+              "ansatz": 6.238802789956719,
+              "transfer": 0.5600000000000004,
+              "analog": 0.5
+            },
+            "channels": {
+              "raman_local": {
+                "beam_time_us": 4.819041289793193,
+                "omega_squared_integral_rad2_per_us": 180.24692536465994,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "stark_local": {
+                "beam_time_us": 3.441224602356419,
+                "omega_squared_integral_rad2_per_us": 130.06393400690982,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_local": {
+                "beam_time_us": 0.5600000000000004,
+                "omega_squared_integral_rad2_per_us": 5474.340574470898,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_global": {
+                "beam_time_us": 0.5,
+                "omega_squared_integral_rad2_per_us": 298.98321599033363,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              }
+            },
+            "shots": 1000,
+            "control_optical_j_per_shot": null,
+            "control_electrical_j_per_shot": null,
+            "full_quantum_cycle_j_per_shot": null,
+            "full_quantum_cycle_j_for_requested_shots": null,
+            "classical_preprocessing_training_readout_energy_j": null,
+            "end_to_end_pipeline_energy_j": null,
+            "missing_calibrations": [
+              "raman_local: beam-power calibration",
+              "stark_local: beam-power calibration",
+              "rydberg_local: beam-power calibration",
+              "rydberg_global: beam-power calibration",
+              "complete cycle timing/background and fixed overhead energy"
+            ],
+            "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime."
+          }
+        }
+      ]
+    },
+    "digital": {
+      "n_qubits": 4,
+      "physics": {
+        "n_qubits": 4,
+        "layers": 2,
+        "omega_rad_us": 25.132741228718345,
+        "delta_over_omega": 0.8,
+        "rb_over_a": 0.8700000000000001,
+        "c6_rad_us_um6": 5420441.132650757,
+        "evolution_us": 0.25,
+        "spacing_um": 8.90115867138624,
+        "analog_evolution_us_per_circuit": 0.5
+      },
+      "inputs": [
+        {
+          "mnist_official_test_index": 1134,
+          "label": 3,
+          "ideal_prediction": 3,
+          "coherent_pulse_prediction": 3,
+          "noisy_expected_prediction": 3,
+          "noisy_sampled_prediction": 3,
+          "coherent_pulse_state_fidelity_to_ideal": 0.990851594163405,
+          "noisy_state_fidelity_to_ideal_mean": 0.15883477837402282,
+          "coherent_diagnostics": {
+            "residual_rydberg_probability": 0.003917441965268862,
+            "rydberg_atom_time_us": 45.126049345574486,
+            "max_normalization_error": 4.7789994184199713e-11,
+            "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+          },
+          "noise_diagnostics": [
+            {
+              "residual_rydberg_probability": 0.20654803239478317,
+              "rydberg_atom_time_us": 54.40092841262811,
+              "max_normalization_error": 8.548717289613705e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            },
+            {
+              "residual_rydberg_probability": 0.24562157876586233,
+              "rydberg_atom_time_us": 50.836243766467796,
+              "max_normalization_error": 4.551914400963142e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            }
+          ],
+          "ideal_features": [
+            0.5181177292510081,
+            0.2571020776640422,
+            0.04458285106052737,
+            -0.3512791365515437,
+            0.16091931052335684,
+            -0.003391640126335329,
+            -0.5555538240975667,
+            -0.03972206284573561,
+            0.17145815170332426,
+            0.037595977964213545
+          ],
+          "coherent_features": [
+            0.5221980955667973,
+            0.2623082541212245,
+            0.02535005932307454,
+            -0.2793363435913234,
+            0.16786672723836596,
+            -0.015413046190495966,
+            -0.4920636692954515,
+            -0.00997040495123175,
+            0.177589666211849,
+            0.053823460956265376
+          ],
+          "noisy_features_mean": [
+            0.6129983287330679,
+            0.29649843451899505,
+            -0.23961148312137057,
+            -0.03866240023731493,
+            0.20409242316394854,
+            -0.1751370312677443,
+            -0.1978263596797662,
+            -0.09801610577796882,
+            -0.1405835642469221,
+            0.048467139265881594
+          ],
+          "energy": {
+            "calibration_status": "illustrative",
+            "scheduled_control_window_us_per_shot": 143.62177635054113,
+            "full_cycle_us_per_shot": null,
+            "stage_duration_us": {
+              "encoding": 1.9692880353722215,
+              "ansatz": 6.112488315168719,
+              "digital_entangler": 135.54000000000008
+            },
+            "channels": {
+              "raman_local": {
+                "beam_time_us": 7.777536942977353,
+                "omega_squared_integral_rad2_per_us": 290.7271054250435,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "stark_local": {
+                "beam_time_us": 15.66423940756358,
+                "omega_squared_integral_rad2_per_us": 599.9761232377275,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_local": {
+                "beam_time_us": 120.18000000000004,
+                "omega_squared_integral_rad2_per_us": 47.350414074666304,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              }
+            },
+            "shots": 1000,
+            "control_optical_j_per_shot": null,
+            "control_electrical_j_per_shot": null,
+            "full_quantum_cycle_j_per_shot": null,
+            "full_quantum_cycle_j_for_requested_shots": null,
+            "classical_preprocessing_training_readout_energy_j": null,
+            "end_to_end_pipeline_energy_j": null,
+            "missing_calibrations": [
+              "raman_local: beam-power calibration",
+              "stark_local: beam-power calibration",
+              "rydberg_local: beam-power calibration",
+              "complete cycle timing/background and fixed overhead energy"
+            ],
+            "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime."
+          }
+        },
+        {
+          "mnist_official_test_index": 7692,
+          "label": 3,
+          "ideal_prediction": 3,
+          "coherent_pulse_prediction": 3,
+          "noisy_expected_prediction": 3,
+          "noisy_sampled_prediction": 3,
+          "coherent_pulse_state_fidelity_to_ideal": 0.9878361699577687,
+          "noisy_state_fidelity_to_ideal_mean": 0.15949237447299416,
+          "coherent_diagnostics": {
+            "residual_rydberg_probability": 0.005017310394412989,
+            "rydberg_atom_time_us": 53.53769756763738,
+            "max_normalization_error": 5.996514396144903e-11,
+            "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+          },
+          "noise_diagnostics": [
+            {
+              "residual_rydberg_probability": 0.23830864720852227,
+              "rydberg_atom_time_us": 63.28089011982376,
+              "max_normalization_error": 1.4876988529977098e-14,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            },
+            {
+              "residual_rydberg_probability": 0.3208706246398621,
+              "rydberg_atom_time_us": 62.3883772110949,
+              "max_normalization_error": 9.2148511043888e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            }
+          ],
+          "ideal_features": [
+            0.708370149494999,
+            -0.05233843516791862,
+            0.2856733581013344,
+            -0.005333019852774304,
+            -0.09177563878010007,
+            0.3357316658093464,
+            -0.04712898021295976,
+            0.0046628318560215515,
+            -0.24453612152059737,
+            -0.00239442549932406
+          ],
+          "coherent_features": [
+            0.7201122951742864,
+            -0.0694799347358671,
+            0.2944722740139276,
+            0.02320657518849466,
+            -0.09464676713578937,
+            0.30764239505528623,
+            -0.014417495393513837,
+            0.0026947013096676803,
+            -0.2595259001243365,
+            -0.0064927955051353155
+          ],
+          "noisy_features_mean": [
+            0.5980429420238158,
+            0.13329191812825267,
+            0.21407712698693243,
+            -0.0054934202036079766,
+            0.04123164463637227,
+            0.2802466523332441,
+            -0.01059608167536542,
+            0.06923814535757869,
+            -0.23419156593056611,
+            -0.058157810063166594
+          ],
+          "energy": {
+            "calibration_status": "illustrative",
+            "scheduled_control_window_us_per_shot": 144.04989944929005,
+            "full_cycle_us_per_shot": null,
+            "stage_duration_us": {
+              "encoding": 2.3974111341211426,
+              "ansatz": 6.112488315168719,
+              "digital_entangler": 135.54000000000008
+            },
+            "channels": {
+              "raman_local": {
+                "beam_time_us": 7.951971620456248,
+                "omega_squared_integral_rad2_per_us": 297.61351046723667,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "stark_local": {
+                "beam_time_us": 15.917927828833607,
+                "omega_squared_integral_rad2_per_us": 609.9913406740159,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_local": {
+                "beam_time_us": 120.18000000000004,
+                "omega_squared_integral_rad2_per_us": 47.350414074666304,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              }
+            },
+            "shots": 1000,
+            "control_optical_j_per_shot": null,
+            "control_electrical_j_per_shot": null,
+            "full_quantum_cycle_j_per_shot": null,
+            "full_quantum_cycle_j_for_requested_shots": null,
+            "classical_preprocessing_training_readout_energy_j": null,
+            "end_to_end_pipeline_energy_j": null,
+            "missing_calibrations": [
+              "raman_local: beam-power calibration",
+              "stark_local: beam-power calibration",
+              "rydberg_local: beam-power calibration",
+              "complete cycle timing/background and fixed overhead energy"
+            ],
+            "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime."
+          }
+        },
+        {
+          "mnist_official_test_index": 9596,
+          "label": 8,
+          "ideal_prediction": 8,
+          "coherent_pulse_prediction": 8,
+          "noisy_expected_prediction": 3,
+          "noisy_sampled_prediction": 3,
+          "coherent_pulse_state_fidelity_to_ideal": 0.9853208576043473,
+          "noisy_state_fidelity_to_ideal_mean": 0.0861561619287118,
+          "coherent_diagnostics": {
+            "residual_rydberg_probability": 0.00476989785391233,
+            "rydberg_atom_time_us": 56.25198870807423,
+            "max_normalization_error": 1.6062595697974302e-10,
+            "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+          },
+          "noise_diagnostics": [
+            {
+              "residual_rydberg_probability": 0.25415043617327654,
+              "rydberg_atom_time_us": 65.02741583759104,
+              "max_normalization_error": 4.6629367034256575e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            },
+            {
+              "residual_rydberg_probability": 0.2511407663931819,
+              "rydberg_atom_time_us": 59.90853659806436,
+              "max_normalization_error": 6.5503158452884236e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            }
+          ],
+          "ideal_features": [
+            -0.7146342549673607,
+            0.07718684791367589,
+            -0.038417076259679446,
+            0.07612669656196255,
+            -0.0951236070451322,
+            -0.11683843611692321,
+            -0.07251869572371136,
+            0.07493061820201755,
+            -0.020297448890873426,
+            0.07929399819526317
+          ],
+          "coherent_features": [
+            -0.7205599388441375,
+            0.030456541598394296,
+            -0.1437992777830356,
+            0.0689468265614741,
+            -0.05240063263462735,
+            -0.008027208957928977,
+            -0.061017806998900075,
+            0.06576003489398856,
+            -0.12995543702461368,
+            0.051539415190301474
+          ],
+          "noisy_features_mean": [
+            -0.2819926573110444,
+            0.2584465257745233,
+            0.04404078455619777,
+            0.2196183518909328,
+            -0.15124220060596832,
+            -0.23356262178747844,
+            -0.17430014864190663,
+            0.10877426511750618,
+            -0.006083383038507739,
+            0.1716087939237637
+          ],
+          "energy": {
+            "calibration_status": "illustrative",
+            "scheduled_control_window_us_per_shot": 143.30519101880785,
+            "full_cycle_us_per_shot": null,
+            "stage_duration_us": {
+              "encoding": 1.6527027036389317,
+              "ansatz": 6.112488315168719,
+              "digital_entangler": 135.54000000000008
+            },
+            "channels": {
+              "stark_local": {
+                "beam_time_us": 15.415726730036946,
+                "omega_squared_integral_rad2_per_us": 590.1818761220666,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "raman_local": {
+                "beam_time_us": 7.709464288770699,
+                "omega_squared_integral_rad2_per_us": 288.0397047548361,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_local": {
+                "beam_time_us": 120.18000000000004,
+                "omega_squared_integral_rad2_per_us": 47.350414074666304,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              }
+            },
+            "shots": 1000,
+            "control_optical_j_per_shot": null,
+            "control_electrical_j_per_shot": null,
+            "full_quantum_cycle_j_per_shot": null,
+            "full_quantum_cycle_j_for_requested_shots": null,
+            "classical_preprocessing_training_readout_energy_j": null,
+            "end_to_end_pipeline_energy_j": null,
+            "missing_calibrations": [
+              "stark_local: beam-power calibration",
+              "raman_local: beam-power calibration",
+              "rydberg_local: beam-power calibration",
+              "complete cycle timing/background and fixed overhead energy"
+            ],
+            "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime."
+          }
+        },
+        {
+          "mnist_official_test_index": 4820,
+          "label": 8,
+          "ideal_prediction": 3,
+          "coherent_pulse_prediction": 3,
+          "noisy_expected_prediction": 3,
+          "noisy_sampled_prediction": 3,
+          "coherent_pulse_state_fidelity_to_ideal": 0.9907442518034775,
+          "noisy_state_fidelity_to_ideal_mean": 0.2343522897324857,
+          "coherent_diagnostics": {
+            "residual_rydberg_probability": 0.004451874276356501,
+            "rydberg_atom_time_us": 51.28890867648657,
+            "max_normalization_error": 5.2228887881256014e-11,
+            "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+          },
+          "noise_diagnostics": [
+            {
+              "residual_rydberg_probability": 0.20502844023243672,
+              "rydberg_atom_time_us": 56.629213914307904,
+              "max_normalization_error": 9.769962616701378e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            },
+            {
+              "residual_rydberg_probability": 0.34019837257674385,
+              "rydberg_atom_time_us": 58.005407041393724,
+              "max_normalization_error": 4.884981308350689e-15,
+              "dwell_quadrature": "7 output points per linear segment; approximate diagnostic"
+            }
+          ],
+          "ideal_features": [
+            0.7320504665267655,
+            -0.2652397352089156,
+            0.2968539522233316,
+            0.4596662441259828,
+            -0.21440217725278216,
+            0.3498112991733647,
+            0.5510047022638875,
+            -0.6659744233609797,
+            -0.1990640599436904,
+            0.17682544481877557
+          ],
+          "coherent_features": [
+            0.7335315417536291,
+            -0.26815263258158023,
+            0.30346749670820783,
+            0.4363602203746778,
+            -0.2291698388596744,
+            0.3275994308284302,
+            0.5336155366961448,
+            -0.6514824499882172,
+            -0.20576146628728056,
+            0.16467284331077306
+          ],
+          "noisy_features_mean": [
+            0.8224869549085605,
+            -0.18946967749306376,
+            0.2607984775380143,
+            0.23692805416452684,
+            -0.19369843237385354,
+            0.2774727066799765,
+            0.2511333811960501,
+            -0.2216162440056069,
+            -0.2402880535407722,
+            0.1615028113513523
+          ],
+          "energy": {
+            "calibration_status": "illustrative",
+            "scheduled_control_window_us_per_shot": 143.67395141736182,
+            "full_cycle_us_per_shot": null,
+            "stage_duration_us": {
+              "encoding": 2.021463102192892,
+              "ansatz": 6.112488315168719,
+              "digital_entangler": 135.54000000000008
+            },
+            "channels": {
+              "raman_local": {
+                "beam_time_us": 7.703333399389012,
+                "omega_squared_integral_rad2_per_us": 287.7976669435398,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "stark_local": {
+                "beam_time_us": 15.790618017972593,
+                "omega_squared_integral_rad2_per_us": 604.9653507957129,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              },
+              "rydberg_local": {
+                "beam_time_us": 120.18000000000004,
+                "omega_squared_integral_rad2_per_us": 47.350414074666304,
+                "optical_j_per_shot": null,
+                "electrical_j_per_shot": null
+              }
+            },
+            "shots": 1000,
+            "control_optical_j_per_shot": null,
+            "control_electrical_j_per_shot": null,
+            "full_quantum_cycle_j_per_shot": null,
+            "full_quantum_cycle_j_for_requested_shots": null,
+            "classical_preprocessing_training_readout_energy_j": null,
+            "end_to_end_pipeline_energy_j": null,
+            "missing_calibrations": [
+              "raman_local: beam-power calibration",
+              "stark_local: beam-power calibration",
+              "rydberg_local: beam-power calibration",
+              "complete cycle timing/background and fixed overhead energy"
+            ],
+            "scope": "Laser coefficients use P(t)=bias+k*Omega_eff(t)^2 in W. A two-photon implementation requires calibration including BOTH optical legs. Exposure is not energy. Training/CPU/GPU energy is not inferred from runtime."
+          }
+        }
+      ]
+    }
+  },
+  "runtime_seconds": 147.7373135209982
+}

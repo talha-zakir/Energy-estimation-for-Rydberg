@@ -6,6 +6,12 @@ The physical baseline is [Lu et al., Digital-analog quantum learning on Rydberg 
 
 See [the paired architecture comparison](results/ARCHITECTURE_COMPARISON.md), [the paper shortlist](docs/paper-shortlist.md), [the baseline settings and deviations](docs/baseline.md), [hardware requirements](docs/hardware.md), and [all measured results](results/SUMMARY.md).
 
+## Hardware-informed simulation
+
+An optional **QuTiP three-level pulse backend** now models both architectures with finite-rise controls, Rydberg blockade, storage/Rydberg transfers, decay, dephasing and explicit static-noise assumptions. A separate **QoolQit/Pulser** check compiles and simulates the eight-atom global analog block against SDK device constraints. Full eight-qubit trained schedules have an inspectable energy ledger; full noisy dynamics were checked on a small four-atom MNIST probe.
+
+This is a research model, not device-calibrated hardware. The probe exposes substantial pulse/noise errors, so a trustworthy energy-per-accuracy comparison needs calibration and pulse improvements. Joules remain unknown until measured power/efficiency and overhead data are provided. See [hardware results](hardware_results/SUMMARY.md) and [model, energy equations and setup](docs/pulse-model-and-energy.md). The ideal results below remain separate.
+
 ## Pipeline
 
 ```text

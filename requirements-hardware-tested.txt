@@ -1,0 +1,11 @@
+# Separate environment from the original ideal-baseline lock.
+numpy==2.5.4
+scipy==1.18.1
+scikit-learn==1.8.0
+matplotlib==3.11.2
+threadpoolctl==3.6.0
+qutip==5.3.1
+qoolqit==1.5.0
+pulser==1.10.0
+pulser-core==1.10.0
+pulser-simulation==1.10.0

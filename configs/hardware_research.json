@@ -1,0 +1,39 @@
+{
+  "name": "Shared Rydberg research model, not a calibrated commercial device",
+  "calibration_status": "illustrative",
+  "spacing_um": 8.90115867138624,
+  "c6_rad_us_um6": 5420441.132650757,
+  "raman_omega_rad_us": 6.283185307179586,
+  "stark_rate_rad_us": 6.283185307179586,
+  "gate_omega_rad_us": 0.6283185307179586,
+  "transfer_omega_rad_us": 125.66370614359172,
+  "rise_us": 0.01,
+  "analog_rise_us": 0.01,
+  "addressing": "one local beam; local operations and CNOTs serialized",
+  "noise": {
+    "rydberg_lifetime_us": 150.0,
+    "rydberg_pure_dephasing_us": 300.0,
+    "storage_pure_dephasing_us": 10000.0,
+    "rydberg_decay_to_zero_fraction": 0.5,
+    "amplitude_fraction_std": 0.01,
+    "detuning_std_rad_us": 0.1,
+    "position_std_um": 0.02,
+    "readout_false_positive": 0.01,
+    "readout_false_negative": 0.01
+  },
+  "power_calibration": {
+    "raman_local": {"bias_w": null, "omega_squared_w": null, "wall_efficiency": null},
+    "stark_local": {"bias_w": null, "omega_squared_w": null, "wall_efficiency": null},
+    "rydberg_local": {"bias_w": null, "omega_squared_w": null, "wall_efficiency": null},
+    "rydberg_global": {"bias_w": null, "omega_squared_w": null, "wall_efficiency": null}
+  },
+  "overhead": {
+    "preparation_us": null, "readout_us": null, "reset_us": null,
+    "background_power_w": null, "fixed_energy_j_per_shot": null
+  },
+  "provenance": {
+    "spacing_and_c6": "Lu et al. arXiv:2401.02940v2 physical baseline",
+    "pulse_rates_and_noise": "Explicit research assumptions, not vendor calibration",
+    "power": "Unknown; needs measured beam powers/efficiencies, including both two-photon legs"
+  }
+}

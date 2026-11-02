@@ -1,0 +1,14 @@
+{
+  "digital_analog": {
+    "mean_coherent_fidelity": 0.2601675258433124,
+    "mean_noisy_fidelity": 0.2627528436530176,
+    "mean_noisy_residual_rydberg_probability": 0.022244958986304634,
+    "max_normalization_error": 2.869833259921961e-10
+  },
+  "digital": {
+    "mean_coherent_fidelity": 0.9886882183822496,
+    "mean_noisy_fidelity": 0.1597089011270536,
+    "mean_noisy_residual_rydberg_probability": 0.25773336229808363,
+    "max_normalization_error": 1.6062595697974302e-10
+  }
+}

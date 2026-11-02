@@ -1,0 +1,8447 @@
+[
+  {
+    "start_us": 0.0,
+    "label": "Rz q0",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.01,
+    "label": "Rz q0",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.17487136855776927,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.18487136855776928,
+    "label": "Rz q0",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.1948713685577693,
+    "label": "Ry q1",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.2048713685577693,
+    "label": "Ry q1",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.6948713685577693,
+    "label": "Ry q1",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.7048713685577693,
+    "label": "Rz q1",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.7148713685577693,
+    "label": "Rz q1",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.0814837978944844,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.7963551664522537,
+    "label": "Rz q1",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.8063551664522537,
+    "label": "Ry q2",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.8163551664522537,
+    "label": "Ry q2",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.09183429561216906,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.9081894620644227,
+    "label": "Ry q2",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.9181894620644228,
+    "label": "Ry q3",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 0.9281894620644228,
+    "label": "Ry q3",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.24337614786800466,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.1715656099324274,
+    "label": "Ry q3",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.1815656099324274,
+    "label": "Rz q3",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.1915656099324274,
+    "label": "Rz q3",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.18057079825485675,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.3721364081872842,
+    "label": "Rz q3",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.3821364081872842,
+    "label": "Ry q4",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.3921364081872842,
+    "label": "Ry q4",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.1743126449240033,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.5664490531112876,
+    "label": "Ry q4",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.5764490531112876,
+    "label": "Rz q4",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.5864490531112876,
+    "label": "Rz q4",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.15704441566550312,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.7434934687767907,
+    "label": "Rz q4",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.7534934687767907,
+    "label": "Ry q5",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.7634934687767907,
+    "label": "Ry q5",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.19449243976381658,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.9579859085406073,
+    "label": "Ry q5",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.9679859085406073,
+    "label": "Rz q5",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 1.9779859085406073,
+    "label": "Rz q5",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 2.4679859085406073,
+    "label": "Rz q5",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 2.477985908540607,
+    "label": "Ry q6",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 2.487985908540607,
+    "label": "Ry q6",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.24999970583049563,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 2.7379856143711025,
+    "label": "Ry q6",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 2.7479856143711023,
+    "label": "Rz q6",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 2.757985614371102,
+    "label": "Rz q6",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.30070898336723706,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.0586945977383393,
+    "label": "Rz q6",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.068694597738339,
+    "label": "Ry q7",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.078694597738339,
+    "label": "Ry q7",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.11989153833743695,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.1985861360757757,
+    "label": "Ry q7",
+    "stage": "encoding",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.2085861360757755,
+    "label": "Rz q7",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.2185861360757753,
+    "label": "Rz q7",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.4203846112438868,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.638970747319662,
+    "label": "Rz q7",
+    "stage": "encoding",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.648970747319662,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.6589707473196618,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.014944864935045722,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.6739156122547074,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.683915612254707,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.693915612254707,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.27526354845884454,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.9691791607135514,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.979179160713551,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 3.989179160713551,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.13552505408303986,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 4.124704214796591,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 4.1347042147965904,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 4.14470421479659,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.3106498138678501,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 4.45535402866444,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 4.46535402866444,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 4.47535402866444,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.32338151141693516,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 4.798735540081375,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 4.808735540081375,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 4.8187355400813745,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.4084926252210841,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 5.227228165302458,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 5.237228165302458,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 5.247228165302458,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.7333336298816634,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 5.980561795184121,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 5.990561795184121,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 6.000561795184121,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.4735536319769241,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 6.474115427161045,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 6.484115427161044,
+    "label": "Rz q0",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 6.494115427161044,
+    "label": "Rz q0",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.33578568934875136,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 6.829901116509795,
+    "label": "Rz q0",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 6.839901116509795,
+    "label": "Rz q1",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 6.849901116509795,
+    "label": "Rz q1",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.07738715762634428,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 6.927288274136139,
+    "label": "Rz q1",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 6.937288274136138,
+    "label": "Rz q2",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 6.947288274136138,
+    "label": "Rz q2",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.25489769894278497,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.202185973078923,
+    "label": "Rz q2",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.212185973078923,
+    "label": "Rz q3",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.222185973078923,
+    "label": "Rz q3",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.07427151100390664,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.296457484082829,
+    "label": "Rz q3",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.306457484082829,
+    "label": "Rz q4",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.316457484082829,
+    "label": "Rz q4",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.2025762955996594,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.519033779682488,
+    "label": "Rz q4",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.5290337796824875,
+    "label": "Rz q5",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.539033779682487,
+    "label": "Rz q5",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.1870305889935204,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.726064368676008,
+    "label": "Rz q5",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.736064368676008,
+    "label": "Rz q6",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.746064368676008,
+    "label": "Rz q6",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.17835195358248002,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.924416322258487,
+    "label": "Rz q6",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.934416322258487,
+    "label": "Rz q7",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 7.944416322258487,
+    "label": "Rz q7",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.08866089552339622,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 8.033077217781884,
+    "label": "Rz q7",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 8.043077217781883,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 8.053077217781883,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.4821820860821538,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 8.535259303864038,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 8.545259303864038,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 8.555259303864037,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.2039915956216814,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 8.75925089948572,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 8.76925089948572,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 8.779250899485719,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.328377093735396,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 9.107627993221115,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 9.117627993221115,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 9.127627993221115,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.3966705668614837,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 9.524298560082599,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 9.534298560082599,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 9.544298560082598,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.18909858988006728,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 9.733397149962666,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 9.743397149962666,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 9.753397149962666,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.4888383630520231,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 10.24223551301469,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 10.25223551301469,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 10.262235513014689,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.32267839498052314,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 10.584913907995212,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 10.594913907995211,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 10.604913907995211,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.4033601552126708,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 11.008274063207882,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 11.018274063207881,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 11.028274063207881,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 11.518274063207881,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 11.528274063207881,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 11.538274063207881,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 11.778274063207881,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 11.788274063207881,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 11.79827406320788,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 16.78827406320788,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 16.79827406320788,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 16.808274063207882,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 26.798274063207884,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 26.808274063207886,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 26.818274063207888,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 31.80827406320789,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 31.81827406320789,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 31.828274063207893,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 32.318274063207895,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 32.32827406320789,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 32.33827406320789,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 32.82827406320789,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 32.83827406320789,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 32.84827406320789,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 33.33827406320789,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 33.34827406320789,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 33.35827406320789,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 33.59827406320789,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 33.60827406320789,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 33.618274063207885,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 34.10827406320789,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 34.118274063207885,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 34.12827406320788,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 34.368274063207885,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 34.37827406320788,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 34.38827406320788,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 39.37827406320788,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 39.38827406320788,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 39.39827406320788,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 49.38827406320788,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 49.39827406320788,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 49.40827406320788,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 54.39827406320788,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 54.40827406320788,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 54.418274063207875,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 54.90827406320788,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 54.918274063207875,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 54.92827406320787,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 55.418274063207875,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 55.42827406320787,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 55.43827406320787,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 55.92827406320787,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 55.93827406320787,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 55.94827406320787,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 56.18827406320787,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 56.19827406320787,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 56.20827406320787,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 56.69827406320787,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 56.70827406320787,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 56.718274063207865,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 56.95827406320787,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 56.968274063207865,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 56.97827406320786,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 61.968274063207865,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 61.97827406320786,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 61.98827406320786,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 71.97827406320786,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 71.98827406320787,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 71.99827406320787,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 76.98827406320787,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 76.99827406320787,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 77.00827406320788,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 77.49827406320787,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 77.50827406320788,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 77.51827406320788,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 78.00827406320788,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 78.01827406320788,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 78.02827406320789,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 78.51827406320788,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 78.52827406320789,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 78.5382740632079,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 78.77827406320789,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 78.7882740632079,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 78.7982740632079,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 79.2882740632079,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 79.2982740632079,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 79.3082740632079,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 79.5482740632079,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 79.5582740632079,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 79.56827406320791,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 84.5582740632079,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 84.56827406320791,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 84.57827406320791,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      7
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 94.56827406320791,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 94.57827406320791,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 94.58827406320792,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 99.57827406320791,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 99.58827406320792,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 99.59827406320792,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 100.08827406320792,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 100.09827406320792,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 100.10827406320793,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 100.59827406320792,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 100.60827406320793,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 100.61827406320793,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 101.10827406320793,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 101.11827406320793,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 101.12827406320794,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 101.36827406320793,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 101.37827406320794,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 101.38827406320794,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 101.87827406320794,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 101.88827406320794,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 101.89827406320795,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 102.13827406320794,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 102.14827406320795,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 102.15827406320795,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 107.14827406320795,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 107.15827406320795,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 107.16827406320796,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 117.15827406320795,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 117.16827406320796,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 117.17827406320797,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 122.16827406320796,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 122.17827406320797,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 122.18827406320797,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 122.67827406320797,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 122.68827406320797,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 122.69827406320798,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 123.18827406320797,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 123.19827406320798,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 123.20827406320798,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 123.69827406320798,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 123.70827406320798,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 123.71827406320799,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 123.95827406320798,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 123.96827406320799,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 123.97827406320799,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 124.46827406320799,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 124.47827406320799,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 124.488274063208,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 124.72827406320799,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 124.738274063208,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 124.748274063208,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 129.738274063208,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 129.748274063208,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 129.75827406320798,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 139.748274063208,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 139.75827406320798,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 139.76827406320797,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 144.75827406320798,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 144.76827406320797,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 144.77827406320796,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 145.26827406320797,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 145.27827406320796,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 145.28827406320795,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 145.77827406320796,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 145.78827406320795,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 145.79827406320794,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 146.28827406320795,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 146.29827406320794,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 146.30827406320793,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 146.54827406320794,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 146.55827406320793,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 146.56827406320792,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 147.05827406320793,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 147.06827406320792,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 147.0782740632079,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 147.31827406320792,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 147.3282740632079,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 147.3382740632079,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 152.3282740632079,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 152.3382740632079,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 152.3482740632079,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 162.3382740632079,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 162.3482740632079,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 162.3582740632079,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 167.3482740632079,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 167.3582740632079,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 167.36827406320788,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 167.8582740632079,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 167.86827406320788,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 167.87827406320787,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 168.36827406320788,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 168.37827406320787,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 168.38827406320786,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 168.87827406320787,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 168.88827406320786,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 168.89827406320785,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.13827406320786,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.14827406320785,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.15827406320784,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.34207988931332817,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.50035395252118,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.51035395252117,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.52035395252116,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.05124979864699371,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.57160375116817,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.58160375116816,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.59160375116815,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.1315017838296358,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.72310553499779,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.73310553499778,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.74310553499777,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.20278003886666265,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.94588557386442,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.9558855738644,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 169.9658855738644,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.14677888329753896,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.11266445716194,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.12266445716193,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.00694436204276761,
+    "amplitude_start": 0,
+    "amplitude_stop": 4.363271355485306,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.1296088192047,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.00694436204276761,
+    "amplitude_start": 4.363271355485306,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.13655318124745,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.14655318124744,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.03794570726315168,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.1844988885106,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.1944988885106,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.20449888851059,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.19978724114672414,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.40428612965732,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.4142861296573,
+    "label": "Rz q0",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.4242861296573,
+    "label": "Rz q0",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.5502117332860199,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.97449786294334,
+    "label": "Rz q0",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.98449786294333,
+    "label": "Rz q1",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 170.99449786294332,
+    "label": "Rz q1",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.2662026554288216,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.26070051837215,
+    "label": "Rz q1",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.27070051837214,
+    "label": "Rz q2",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.28070051837213,
+    "label": "Rz q2",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.18096039484942564,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.46166091322155,
+    "label": "Rz q2",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.47166091322154,
+    "label": "Rz q3",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.48166091322153,
+    "label": "Rz q3",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.17613066802437014,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.6577915812459,
+    "label": "Rz q3",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.6677915812459,
+    "label": "Rz q4",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.67779158124588,
+    "label": "Rz q4",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.26982217749528314,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.94761375874117,
+    "label": "Rz q4",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.95761375874116,
+    "label": "Rz q5",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 171.96761375874115,
+    "label": "Rz q5",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.34692476242153114,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 172.3145385211627,
+    "label": "Rz q5",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 172.32453852116268,
+    "label": "Rz q6",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 172.33453852116267,
+    "label": "Rz q6",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.27513224251461127,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 172.6096707636773,
+    "label": "Rz q6",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 172.61967076367728,
+    "label": "Rz q7",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 172.62967076367727,
+    "label": "Rz q7",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.27307727505675033,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 172.90274803873402,
+    "label": "Rz q7",
+    "stage": "ansatz",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 172.912748038734,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 172.922748038734,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.3541616226825266,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 173.27690966141654,
+    "label": "Rx q0",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 173.28690966141653,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 173.29690966141652,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.4796527060205367,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 173.77656236743707,
+    "label": "Rx q1",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 173.78656236743706,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 173.79656236743705,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.14148782653996073,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 173.938050193977,
+    "label": "Rx q2",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 173.948050193977,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 173.958050193977,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.4754859088686124,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 174.4335361028456,
+    "label": "Rx q3",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 174.4435361028456,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 174.4535361028456,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.2460882229724085,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 174.699624325818,
+    "label": "Rx q4",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 174.709624325818,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 174.719624325818,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.262888974088832,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 174.98251329990683,
+    "label": "Rx q5",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 174.99251329990682,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 175.0025132999068,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.23022088185053008,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": -6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 175.23273418175734,
+    "label": "Rx q6",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": -6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 175.24273418175733,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 175.25273418175732,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.1857907966842044,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 175.43852497844154,
+    "label": "Rx q7",
+    "stage": "ansatz",
+    "channel": "raman_local",
+    "operator": "01x",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 175.44852497844153,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 175.45852497844152,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 175.94852497844153,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 175.95852497844152,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 175.9685249784415,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 176.20852497844152,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 176.2185249784415,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 176.2285249784415,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 181.2185249784415,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 181.2285249784415,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 181.2385249784415,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 191.2285249784415,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 191.2385249784415,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 191.24852497844148,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 196.2385249784415,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 196.24852497844148,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 196.25852497844147,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 196.74852497844148,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      0
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 196.75852497844147,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 196.76852497844146,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 197.25852497844147,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 197.26852497844146,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 197.27852497844145,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 197.76852497844146,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 197.77852497844145,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 197.78852497844144,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 198.02852497844145,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 198.03852497844144,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 198.04852497844143,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 198.53852497844144,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 198.54852497844143,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 198.55852497844143,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 198.79852497844143,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 198.80852497844143,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 198.81852497844142,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 203.80852497844143,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 203.81852497844142,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 203.8285249784414,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 213.81852497844142,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 213.8285249784414,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 213.8385249784414,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 218.8285249784414,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 218.8385249784414,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 218.8485249784414,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 219.3385249784414,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 219.3485249784414,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 219.35852497844138,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 219.8485249784414,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 219.85852497844138,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 219.86852497844137,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 220.35852497844138,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 220.36852497844137,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 220.37852497844136,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 220.61852497844137,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 220.62852497844136,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 220.63852497844135,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 221.12852497844136,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 221.13852497844135,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 221.14852497844134,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 221.38852497844135,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 221.39852497844134,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 221.40852497844133,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 226.39852497844134,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 226.40852497844133,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 226.41852497844133,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 236.40852497844133,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 236.41852497844133,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 236.42852497844132,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 241.41852497844133,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 241.42852497844132,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 241.4385249784413,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 241.92852497844132,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 241.9385249784413,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 241.9485249784413,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 242.4385249784413,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 242.4485249784413,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 242.4585249784413,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 242.9485249784413,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 242.9585249784413,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 242.96852497844128,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 243.2085249784413,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 243.21852497844128,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 243.22852497844127,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 243.71852497844128,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 243.72852497844127,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 243.73852497844126,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 243.97852497844127,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 243.98852497844126,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 243.99852497844125,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 248.98852497844126,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 248.99852497844125,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 249.00852497844124,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      7
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 258.99852497844125,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 259.00852497844124,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 259.01852497844123,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 264.00852497844124,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 264.01852497844123,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 264.0285249784412,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 264.51852497844123,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 264.5285249784412,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 264.5385249784412,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 265.0285249784412,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 265.0385249784412,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 265.0485249784412,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 265.5385249784412,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 265.5485249784412,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 265.5585249784412,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 265.7985249784412,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      7
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 265.8085249784412,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 265.8185249784412,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 266.3085249784412,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 266.3185249784412,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 266.3285249784412,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 266.5685249784412,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 266.5785249784412,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 266.58852497844117,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 271.5785249784412,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 271.58852497844117,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 271.59852497844116,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 281.58852497844117,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 281.59852497844116,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 281.60852497844115,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 286.59852497844116,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 286.60852497844115,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 286.61852497844114,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 287.10852497844115,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      1
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 287.11852497844114,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 287.12852497844113,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 287.61852497844114,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 287.62852497844113,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 287.6385249784411,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 288.12852497844113,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 288.1385249784411,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 288.1485249784411,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 288.3885249784411,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      2
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 288.3985249784411,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 288.4085249784411,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 288.8985249784411,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 288.9085249784411,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 288.9185249784411,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 289.1585249784411,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 289.1685249784411,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 289.1785249784411,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 294.1685249784411,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 294.1785249784411,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 294.1885249784411,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 304.1785249784411,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 304.1885249784411,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 304.19852497844107,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 309.1885249784411,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 309.19852497844107,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 309.20852497844106,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 309.69852497844107,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      3
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 309.70852497844106,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 309.71852497844105,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 310.20852497844106,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 310.21852497844105,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 310.22852497844104,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 310.71852497844105,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 310.72852497844104,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 310.73852497844103,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 310.97852497844104,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      4
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 310.98852497844103,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 310.998524978441,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 311.48852497844103,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 311.498524978441,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 311.508524978441,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 311.748524978441,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 311.758524978441,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 311.768524978441,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 316.758524978441,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 316.768524978441,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 316.778524978441,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 9.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 326.768524978441,
+    "label": "CZ: target 2pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 326.778524978441,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 326.788524978441,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 4.99,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0.6283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 331.778524978441,
+    "label": "CZ: control pi",
+    "stage": "digital_entangler",
+    "channel": "rydberg_local",
+    "operator": "1rx",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0.6283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 331.788524978441,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 331.798524978441,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 332.288524978441,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      5
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 332.298524978441,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 332.30852497844097,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 332.798524978441,
+    "label": "CZ phase correction",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 332.80852497844097,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 332.81852497844096,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.49,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 333.30852497844097,
+    "label": "H: Z",
+    "stage": "digital_entangler",
+    "channel": "stark_local",
+    "operator": "01z",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 333.31852497844096,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 0,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 333.32852497844095,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.24,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 6.283185307179586,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  },
+  {
+    "start_us": 333.56852497844096,
+    "label": "H: Y",
+    "stage": "digital_entangler",
+    "channel": "raman_local",
+    "operator": "01y",
+    "targets": [
+      6
+    ],
+    "duration_us": 0.01,
+    "amplitude_start": 6.283185307179586,
+    "amplitude_stop": 0,
+    "detuning_start": 0.0,
+    "detuning_stop": 0.0
+  }
+]
