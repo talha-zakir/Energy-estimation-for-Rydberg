@@ -97,17 +97,56 @@ def rotation(angle, axis):
                      [-1j * np.sin(angle / 2), np.cos(angle / 2)]])
 
 
+def cnot_pairs(n):
+    """Lu's noiseless digital block, zero-based: even bonds, then odd bonds."""
+    return [(q, q + 1) for start in (0, 1) for q in range(start, n - 1, 2)]
+
+
+def digital_entangler(n):
+    """Compile explicit directed CNOT gates into an ideal permutation operator.
+
+    Each pair is (control, target). This is not a Trotter approximation to H.
+    Later gates act on the output of earlier gates, including shared qubits.
+    """
+    source = np.arange(2**n)
+    destination = source.copy()
+    for control, target in cnot_pairs(n):
+        destination ^= ((destination >> (n - 1 - control)) & 1) << (n - 1 - target)
+    unitary = np.zeros((2**n, 2**n), dtype=complex)
+    unitary[destination, source] = 1
+    return unitary
+
+
 class RydbergCircuit:
-    def __init__(self, physics):
+    def __init__(self, physics, architecture="digital_analog"):
+        if architecture not in ("digital_analog", "digital"):
+            raise ValueError("architecture must be digital_analog or digital")
         self.physics = physics
+        self.architecture = architecture
         self.n = physics.n_qubits
-        self.unitary = expm(-1j * physics.evolution_us * hamiltonian(physics))
+        self.unitary = (digital_entangler(self.n) if architecture == "digital" else
+                        expm(-1j * physics.evolution_us * hamiltonian(physics)))
         z = 1 - 2 * bit_table(self.n)
         self.observables = np.column_stack([z] + [z[:, i] * z[:, j]
                      for i, j in combinations(range(self.n), 2)])
         self.n_params = 3 * self.n * physics.layers
         self.forward_calls = 0
         self.sample_circuit_evaluations = 0
+
+    def describe(self):
+        digital = self.architecture == "digital"
+        layers = self.physics.layers
+        return {"architecture": self.architecture, "n_qubits": self.n, "layers": layers,
+                "trainable_parameters": self.n_params,
+                "rotation_gates_per_circuit": self.n_params,
+                "cnot_pairs_per_layer": cnot_pairs(self.n) if digital else [],
+                "cnot_gates_per_circuit": (self.n - 1) * layers if digital else 0,
+                "cnot_sublayers_per_circuit": min(2, self.n - 1) * layers if digital else 0,
+                "analog_blocks_per_circuit": 0 if digital else layers,
+                "analog_evolution_us_per_circuit": 0.0 if digital else layers * self.physics.evolution_us,
+                "hardware_execution_time_us": None,
+                "note": "Logical ansatz counts exclude encoding/readout. Native gate compilation, "
+                        "durations and noise are not modeled."}
 
     def forward(self, initial, parameters, tape=False):
         if np.size(parameters) != self.n_params:

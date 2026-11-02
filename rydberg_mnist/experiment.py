@@ -88,6 +88,7 @@ def run(config, output, cache):
     output = Path(output)
     output.mkdir(parents=True, exist_ok=False)
     physics = Physics(**config["physics"])
+    architecture = config.get("architecture", "digital_analog")
     digits = np.array(config["digits"])
     if len(set(digits)) != len(digits) or len(digits) < 2 or np.any((digits < 0) | (digits > 9)):
         raise ValueError("digits must contain 2..10 unique MNIST labels")
@@ -105,7 +106,10 @@ def run(config, output, cache):
     pca = PCA(n_components=2 * physics.n_qubits, svd_solver="full")
     components = [pca.fit_transform(pixels[0]), pca.transform(pixels[1]), pca.transform(pixels[2])]
     states = [product_states(encode_angles(x)) for x in components]
-    circuit = RydbergCircuit(physics)
+    circuit = RydbergCircuit(physics, architecture)
+    prefix = "digital" if architecture == "digital" else "rydberg"
+    frozen_name = f"frozen_{prefix}_linear"
+    trained_name = f"trained_{prefix}_linear"
     initial = rng.uniform(-np.pi, np.pi, circuit.n_params)
     alphas = config["alpha_grid"]
 
@@ -123,17 +127,17 @@ def run(config, output, cache):
     feature_sets["encoding_only_linear"] = [circuit.features(s) for s in states]
     frozen_outputs = [circuit.forward(s, initial) for s in states]
     selected_outputs = [circuit.forward(s, selected) for s in states]
-    feature_sets["frozen_rydberg_linear"] = [circuit.features(s) for s in frozen_outputs]
-    feature_sets["trained_rydberg_linear"] = [circuit.features(s) for s in selected_outputs]
+    feature_sets[frozen_name] = [circuit.features(s) for s in frozen_outputs]
+    feature_sets[trained_name] = [circuit.features(s) for s in selected_outputs]
     if config["shots"]:
         shot_rng = np.random.default_rng(config["seed"] + 10000)
-        feature_sets["trained_rydberg_linear_shots"] = [
+        feature_sets[trained_name + "_shots"] = [
             circuit.features(s, config["shots"], shot_rng) for s in selected_outputs]
 
     models = {}
     # Lock readouts before evaluating any model on the test labels.
     for name, features in feature_sets.items():
-        if name == "trained_rydberg_linear":
+        if name == trained_name:
             alpha = quantum_alpha
             w, b = fit_readout(features[0], onehot[0], alpha)
         else:
@@ -144,7 +148,7 @@ def run(config, output, cache):
     archive = {"parameters": selected, "initial_parameters": initial,
                "pca_components": pca.components_, "pca_mean": pca.mean_,
                "pca_std": pca_std, "digits": digits,
-               "physics_json": json.dumps(asdict(physics))}
+               "physics_json": json.dumps(asdict(physics)), "architecture": architecture}
     for name, features in feature_sets.items():
         alpha, w, b = models[name]
         metrics[name] = {"alpha": float(alpha), "feature_count": features[0].shape[1]}
@@ -157,7 +161,9 @@ def run(config, output, cache):
 
     norms = np.concatenate([np.sum(np.abs(s)**2, axis=1) for s in selected_outputs])
     report = {"status": "CPU simulation; not a hardware experiment or paper reproduction",
-              "config": config, "physics": physics.describe(), "optimizer": optimizer,
+              "architecture": architecture, "circuit": circuit.describe(),
+              "config": config, "physics": physics.describe() if architecture == "digital_analog" else None,
+              "optimizer": optimizer,
               "models": metrics, "pca_explained_variance_ratio_sum": float(pca.explained_variance_ratio_.sum()),
               "max_state_norm_error": float(np.max(np.abs(norms - 1))),
               "runtime_seconds": time.perf_counter() - start,
@@ -196,20 +202,28 @@ def plot_report(report, history, output):
     plt.close(fig)
 
 
-def predict_saved(model_path, images, model_name="trained_rydberg_linear"):
+def predict_saved(model_path, images, model_name=None):
     """Predict exact-expectation labels from uint8-like (N,784) MNIST images."""
-    if model_name.endswith("_shots"):
+    if model_name is not None and model_name.endswith("_shots"):
         raise ValueError("Sampled inference needs an explicit shot budget/RNG; use the experiment runner")
     with np.load(model_path, allow_pickle=False) as saved:
         physics = Physics(**json.loads(str(saved["physics_json"])))
+        # Archives from the initial analog experiments predate this selector.
+        architecture = str(saved["architecture"]) if "architecture" in saved else "digital_analog"
+        prefix = "digital" if architecture == "digital" else "rydberg"
+        if model_name is None:
+            model_name = f"trained_{prefix}_linear"
+        if model_name not in ("classical_pca_linear", "encoding_only_linear",
+                              f"frozen_{prefix}_linear", f"trained_{prefix}_linear"):
+            raise ValueError(f"Model {model_name!r} is not an exact model for {architecture}")
         components = (np.asarray(images, dtype=float) / 255 - saved["pca_mean"]) @ saved["pca_components"].T
         if model_name == "classical_pca_linear":
             features = components / saved["pca_std"]
         else:
-            circuit = RydbergCircuit(physics)
+            circuit = RydbergCircuit(physics, architecture)
             states = product_states(encode_angles(components))
             if model_name != "encoding_only_linear":
-                key = "initial_parameters" if model_name == "frozen_rydberg_linear" else "parameters"
+                key = "initial_parameters" if model_name == f"frozen_{prefix}_linear" else "parameters"
                 states = circuit.forward(states, saved[key])
             features = circuit.features(states)
         scores = features @ saved[model_name + "_weights"] + saved[model_name + "_bias"]
@@ -222,10 +236,14 @@ def main():
     parser.add_argument("--output", required=True, help="New directory; existing outputs are never overwritten")
     parser.add_argument("--cache", default="data/mnist")
     parser.add_argument("--seed", type=int)
+    parser.add_argument("--architecture", choices=("digital_analog", "digital"),
+                        help="Override the config's circuit architecture")
     args = parser.parse_args()
     config = json.loads(Path(args.config).read_text())
     if args.seed is not None:
         config["seed"] = args.seed
+    if args.architecture is not None:
+        config["architecture"] = args.architecture
     with threadpool_limits(limits=config.get("threads", 4)):
         run(config, args.output, args.cache)
 

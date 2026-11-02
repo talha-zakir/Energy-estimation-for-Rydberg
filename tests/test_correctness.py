@@ -1,4 +1,5 @@
 import unittest
+from unittest.mock import patch
 from itertools import combinations
 
 import numpy as np
@@ -6,7 +7,8 @@ from scipy.linalg import expm
 
 from rydberg_mnist.data import split_indices
 from rydberg_mnist.quantum import (Physics, RydbergCircuit, encode_angles,
-                                  product_states, hamiltonian, apply_gate, rotation)
+                                  product_states, hamiltonian, apply_gate, rotation,
+                                  digital_entangler)
 from rydberg_mnist.readout import fit_readout, projected_loss
 
 
@@ -76,8 +78,13 @@ class LearningTests(unittest.TestCase):
         np.testing.assert_allclose(fitted_b, b, atol=1e-12)
 
     def test_projected_gradient_finite_difference(self):
+        for architecture in ("digital_analog", "digital"):
+            with self.subTest(architecture=architecture):
+                self.check_projected_gradient(architecture)
+
+    def check_projected_gradient(self, architecture):
         rng = np.random.default_rng(1)
-        c = RydbergCircuit(Physics(n_qubits=3, layers=2))
+        c = RydbergCircuit(Physics(n_qubits=3, layers=2), architecture)
         states = product_states(rng.uniform(0, np.pi, (13, 6)))
         labels = np.eye(3)[rng.integers(0, 3, 13)]
         theta = rng.normal(size=c.n_params)
@@ -100,6 +107,41 @@ class LearningTests(unittest.TestCase):
         for x, y in zip(a, b):
             np.testing.assert_array_equal(x, y)
             self.assertEqual(set(labels[x]), {3, 8})
+
+
+class DigitalTests(unittest.TestCase):
+    def test_cnot_truth_table_and_direction(self):
+        # 0->1 followed by 1->2, with q0 the most significant bit.
+        expected_destination = [0, 1, 3, 2, 7, 6, 4, 5]
+        u = digital_entangler(3)
+        np.testing.assert_array_equal(u.argmax(axis=0), expected_destination)
+        np.testing.assert_array_equal(u.conj().T @ u, np.eye(8))
+
+    def test_even_then_odd_bond_order(self):
+        # (0->1, 2->3) then (1->2): |1000> becomes |1110>, not |1111>.
+        u = digital_entangler(4)
+        self.assertEqual(np.argmax(u[:, 8]), 14)
+        # An entangler with overlapping CNOTs is generally NOT its own inverse.
+        self.assertFalse(np.array_equal(u, u.conj().T))
+
+    def test_digital_does_not_build_analog_evolution(self):
+        with patch("rydberg_mnist.quantum.hamiltonian", side_effect=AssertionError("analog H used")), \
+             patch("rydberg_mnist.quantum.expm", side_effect=AssertionError("analog evolution used")):
+            circuit = RydbergCircuit(Physics(), "digital")
+        counts = circuit.describe()
+        self.assertEqual(counts["rotation_gates_per_circuit"], 48)
+        self.assertEqual(counts["cnot_gates_per_circuit"], 14)
+        self.assertEqual(counts["analog_blocks_per_circuit"], 0)
+        self.assertEqual(counts["analog_evolution_us_per_circuit"], 0)
+        self.assertIsNone(counts["hardware_execution_time_us"])
+
+    def test_digital_norm_and_adjoint(self):
+        rng = np.random.default_rng(12)
+        circuit = RydbergCircuit(Physics(n_qubits=4, layers=2), "digital")
+        states = product_states(rng.uniform(0, np.pi, (7, 8)))
+        parameters = rng.normal(size=circuit.n_params)
+        result = circuit.forward(states, parameters)
+        np.testing.assert_allclose(np.sum(abs(result)**2, axis=1), 1, atol=1e-12)
 
 
 if __name__ == "__main__":

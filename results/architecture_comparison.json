@@ -1,0 +1,162 @@
+{
+  "All ten digits": {
+    "pairs": [
+      {
+        "seed": 7,
+        "analog_directory": "mnist_10class_seed7",
+        "digital_directory": "mnist_10class_digital_seed7",
+        "pairing_checks_passed": true,
+        "exact": {
+          "digital_analog": 0.78,
+          "digital": 0.708,
+          "digital_minus_analog": -0.07200000000000006
+        },
+        "shots": {
+          "digital_analog": 0.78,
+          "digital": 0.7,
+          "digital_minus_analog": -0.08000000000000007
+        }
+      },
+      {
+        "seed": 11,
+        "analog_directory": "mnist_10class_seed11",
+        "digital_directory": "mnist_10class_digital_seed11",
+        "pairing_checks_passed": true,
+        "exact": {
+          "digital_analog": 0.792,
+          "digital": 0.69,
+          "digital_minus_analog": -0.10200000000000009
+        },
+        "shots": {
+          "digital_analog": 0.786,
+          "digital": 0.694,
+          "digital_minus_analog": -0.09200000000000008
+        }
+      },
+      {
+        "seed": 19,
+        "analog_directory": "mnist_10class_seed19",
+        "digital_directory": "mnist_10class_digital_seed19",
+        "pairing_checks_passed": true,
+        "exact": {
+          "digital_analog": 0.734,
+          "digital": 0.656,
+          "digital_minus_analog": -0.07799999999999996
+        },
+        "shots": {
+          "digital_analog": 0.734,
+          "digital": 0.656,
+          "digital_minus_analog": -0.07799999999999996
+        }
+      }
+    ],
+    "exact": {
+      "digital_analog": {
+        "mean": 0.7686666666666667,
+        "sample_std": 0.030615900008546783
+      },
+      "digital": {
+        "mean": 0.6846666666666666,
+        "sample_std": 0.02640706976045111
+      },
+      "digital_minus_analog": {
+        "mean": -0.08400000000000003,
+        "sample_std": 0.01587450786638758
+      }
+    },
+    "shots": {
+      "digital_analog": {
+        "mean": 0.7666666666666666,
+        "sample_std": 0.02844878439113585
+      },
+      "digital": {
+        "mean": 0.6833333333333332,
+        "sample_std": 0.023860706890897664
+      },
+      "digital_minus_analog": {
+        "mean": -0.08333333333333337,
+        "sample_std": 0.00757187779440041
+      }
+    }
+  },
+  "3 vs 8": {
+    "pairs": [
+      {
+        "seed": 7,
+        "analog_directory": "mnist_3_8_seed7",
+        "digital_directory": "mnist_3_8_digital_seed7",
+        "pairing_checks_passed": true,
+        "exact": {
+          "digital_analog": 0.96,
+          "digital": 0.94,
+          "digital_minus_analog": -0.020000000000000018
+        },
+        "shots": {
+          "digital_analog": 0.96,
+          "digital": 0.9375,
+          "digital_minus_analog": -0.022499999999999964
+        }
+      },
+      {
+        "seed": 11,
+        "analog_directory": "mnist_3_8_seed11",
+        "digital_directory": "mnist_3_8_digital_seed11",
+        "pairing_checks_passed": true,
+        "exact": {
+          "digital_analog": 0.945,
+          "digital": 0.9025,
+          "digital_minus_analog": -0.04249999999999998
+        },
+        "shots": {
+          "digital_analog": 0.9425,
+          "digital": 0.905,
+          "digital_minus_analog": -0.03749999999999998
+        }
+      },
+      {
+        "seed": 19,
+        "analog_directory": "mnist_3_8_seed19",
+        "digital_directory": "mnist_3_8_digital_seed19",
+        "pairing_checks_passed": true,
+        "exact": {
+          "digital_analog": 0.9525,
+          "digital": 0.9175,
+          "digital_minus_analog": -0.03500000000000003
+        },
+        "shots": {
+          "digital_analog": 0.95,
+          "digital": 0.92,
+          "digital_minus_analog": -0.029999999999999916
+        }
+      }
+    ],
+    "exact": {
+      "digital_analog": {
+        "mean": 0.9525,
+        "sample_std": 0.007500000000000007
+      },
+      "digital": {
+        "mean": 0.9199999999999999,
+        "sample_std": 0.01887458608817686
+      },
+      "digital_minus_analog": {
+        "mean": -0.03250000000000001,
+        "sample_std": 0.011456439237389586
+      }
+    },
+    "shots": {
+      "digital_analog": {
+        "mean": 0.9508333333333333,
+        "sample_std": 0.008779711460710597
+      },
+      "digital": {
+        "mean": 0.9208333333333334,
+        "sample_std": 0.016266017746619264
+      },
+      "digital_minus_analog": {
+        "mean": -0.029999999999999954,
+        "sample_std": 0.007500000000000007
+      }
+    }
+  }
+}

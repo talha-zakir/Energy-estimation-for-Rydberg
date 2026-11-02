@@ -1,10 +1,10 @@
 # Rydberg classification baseline
 
-MNIST sanity checks for a reusable **digital–analog Rydberg variational classifier with a linear regression readout**. This repository currently runs on a CPU simulator. It does not submit jobs to a quantum device.
+MNIST sanity checks for reusable **digital–analog and digital-only Rydberg variational classifiers with a linear regression readout**. This repository currently runs on a CPU simulator. It does not submit jobs to a quantum device.
 
 The physical baseline is [Lu et al., Digital-analog quantum learning on Rydberg atom arrays](https://arxiv.org/abs/2401.02940), using its [public Julia implementation](https://github.com/jz-lu/daqml) as a reference. Our independent Python implementation changes the readout and training objective as requested; **these runs are an adaptation, not a reproduction of the paper's published accuracies**.
 
-See [the paper shortlist](docs/paper-shortlist.md), [the baseline settings and deviations](docs/baseline.md), [hardware requirements](docs/hardware.md), and [measured results](results/SUMMARY.md).
+See [the paired architecture comparison](results/ARCHITECTURE_COMPARISON.md), [the paper shortlist](docs/paper-shortlist.md), [the baseline settings and deviations](docs/baseline.md), [hardware requirements](docs/hardware.md), and [all measured results](results/SUMMARY.md).
 
 ## Pipeline
 
@@ -13,11 +13,13 @@ Original MNIST, official train/test split
     -> stratified training / validation / held-out test subsets
     -> PCA fitted only on training images (16 components)
     -> product-state angle encoding (8 qubits)
-    -> 2 layers: local RX-RZ-RX rotations + Rydberg Hamiltonian evolution
+    -> 2 layers: local RX-RZ-RX rotations + chosen entangler
     -> Z_i and Z_i Z_j expectation values (36 features)
     -> multi-output linear least-squares regression on one-hot targets
     -> argmax of class scores
 ```
+
+The digital–analog entangler is global Rydberg Hamiltonian evolution. The digital-only entangler is an explicit nearest-neighbor CNOT circuit: gates on bonds (0,1), (2,3), (4,5), (6,7), followed by (1,2), (3,4), (5,6). It follows the reference's noiseless digital baseline. It does not approximate the analog Hamiltonian. At two layers, both versions have 48 trainable angles; the digital circuit has 14 logical CNOTs. No Rydberg pulse errors or native CNOT decomposition are simulated.
 
 Only the rotation angles are variational quantum parameters. Linear readout weights are solved analytically at each training evaluation. L2 regularization is selected on validation data; `alpha=0` selects ordinary linear regression. Scores are not probabilities. This is not regression on the numeric labels 0–9.
 
@@ -38,9 +40,20 @@ python -m rydberg_mnist.experiment --config configs/mnist_10class.json --output 
 
 # Additional seed, with a new output directory
 python -m rydberg_mnist.experiment --config configs/mnist_10class.json --seed 23 --output results/new_seed23
+
+# Matched digital-only experiments
+python -m rydberg_mnist.experiment --config configs/mnist_3_8_digital.json --output results/new_binary_digital
+python -m rydberg_mnist.experiment --config configs/mnist_10class_digital.json --output results/new_tenclass_digital
+
+# The architecture can also be selected without a separate config
+python -m rydberg_mnist.experiment --config configs/mnist_3_8.json --architecture digital --output results/another_digital
+
+# Summarize all runs, then validate matched architecture pairs
+python -m rydberg_mnist.summarize
+python -m rydberg_mnist.compare
 ```
 
-The first run downloads original MNIST IDX files to `data/mnist/` and verifies their published MD5 checksums. No substitute digits dataset is used. Data files are excluded from Git. Output directories must be new to prevent overwriting experiments.
+The first run downloads original MNIST IDX files to `data/mnist/` and verifies their published MD5 checksums. No substitute digits dataset is used. Data files are excluded from Git. Output directories must be new to prevent overwriting experiments. For new paired studies, place runs under a separate root and pass `--root that_directory` to both summary commands. The comparison deliberately rejects duplicate task/seed/architecture entries rather than choosing a result silently.
 
 Each run saves metrics, confusion matrices, confidence intervals, training history, split indices, predictions, model/PCA parameters, runtime, and a comparison figure. `model.npz` can be reused for inference:
 
@@ -49,13 +62,15 @@ from rydberg_mnist.experiment import predict_saved
 
 # images: uint8 MNIST images flattened to (N, 784), values 0..255
 labels = predict_saved("results/mnist_10class_seed7/model.npz", images)
+# The saved model chooses the correct architecture automatically.
+digital_labels = predict_saved("results/mnist_10class_digital_seed7/model.npz", images)
 ```
 
 ## Comparisons and correctness
 
 All methods share identical data subsets and training-only PCA. Comparisons include linear regression on PCA features, encoding-only quantum measurements, a frozen random Rydberg circuit, trained Rydberg rotations, and a finite-shot readout of the trained circuit. The encoding-only comparison retains the nonlinear angle encoding and pairwise measurements, making it a stronger ablation than removing only the entangler from a random circuit.
 
-Tests check the Hamiltonian against an independent Kronecker construction, a solvable noninteracting Rabi limit, state normalization, qubit ordering, correlated sampling, analytic gradients against finite differences, linear regression, split separation, and saved-model inference.
+Tests check the Hamiltonian against an independent Kronecker construction, a solvable noninteracting Rabi limit, CNOT truth tables/direction/order, state normalization, qubit ordering, correlated sampling, both architectures' gradients against finite differences, linear regression, split separation, saved-model inference (including earlier archives), and rejection of unmatched architecture comparisons.
 
 ## Limits and next research step
 

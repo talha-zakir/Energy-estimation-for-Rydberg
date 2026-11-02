@@ -30,6 +30,18 @@ All pairs interact; interactions are not truncated at nearest neighbors. Qubit z
 
 **Reference discrepancy:** the inspected author CLI sets `--evo_time` to `0.87` by default, whereas the manuscript motivates `0.25 us`. We explicitly choose the manuscript's `0.25 us`; the choice is stored in each configuration. Do not silently equate those values.
 
+## Digital-only implementation
+
+Select `architecture: "digital"` in a config or use `--architecture digital`. The default remains `digital_analog`, including for earlier saved models that have no architecture field.
+
+The digital variant retains the product-state encoding and the same RX-RZ-RX rotation layers. Each global analog block is replaced with the reference implementation's noiseless CNOT pattern (`ent_cx` in `gates.jl`). In zero-based indexing on eight qubits, a block applies CNOTs 0→1, 2→3, 4→5, 6→7, followed by 1→2, 3→4, 5→6. The lower-index qubit is the control. The first group acts before the second. Its inverse reverses the order; the whole block is not generally self-inverse.
+
+The simulator compiles these explicit gates into a permutation matrix for batched statevector evaluation. It does not build or exponentiate a Rydberg Hamiltonian for the digital variant. This is a different ansatz, not a Trotterization of the analog circuit. Ideal CNOTs follow the noiseless reference; the paper's noise-aware generalized entangling gates are not implemented here.
+
+For two layers on eight qubits, both architectures have 48 trainable rotation angles and 36 measured features. The digital variant uses 14 logical CNOT gates in four disjoint-pair sublayers; the analog variant uses two global blocks, totaling 0.5 us of analog evolution. These are logical counts, not matched physical depth, gate fidelity, execution time or energy. A CNOT may require additional local rotations around a native Rydberg entangling gate; no such compilation cost is assumed.
+
+The digital configs keep the same data sizes, seed list, shot budget, alpha search grid, optimizer and iteration limit as their analog counterparts. Alpha is selected separately by the same validation rule. `python -m rydberg_mnist.compare` verifies split indices, labels, PCA, initial angles and control-model predictions before producing paired comparisons. The original analog artifacts are preserved. Because the earlier analog test scores were already inspected, this first comparison is exploratory.
+
 ## Preprocessing retained or clarified
 
 PCA reduces images to `2*n_qubits` values. The first half gives theta and the second half phi in a product state `cos(theta/2)|0> + exp(i*phi)sin(theta/2)|1>`. Following the public notebook, each image's theta half and phi half are separately shifted/scaled into `[0, pi]`. Constant halves map to zero to avoid division by zero. PCA is fitted on the training subset only.

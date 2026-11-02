@@ -1,0 +1,8 @@
+{
+  "architecture": "digital",
+  "digits": [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], "seed": 7,
+  "n_train": 1000, "n_val": 200, "n_test": 500,
+  "maxiter": 40, "shots": 1000, "threads": 4,
+  "alpha_grid": [0.0, 0.001, 0.01, 0.1, 1.0, 10.0],
+  "physics": {"n_qubits": 8, "layers": 2}
+}

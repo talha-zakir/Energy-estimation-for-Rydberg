@@ -1,4 +1,5 @@
 """Aggregate committed experiments: python -m rydberg_mnist.summarize."""
+import argparse
 import json
 from pathlib import Path
 
@@ -10,15 +11,18 @@ def summarize(root="results"):
     groups = {}
     for path in sorted(root.glob("*/metrics.json")):
         report = json.loads(path.read_text())
-        key = tuple(report["config"]["digits"])
+        key = (tuple(report["config"]["digits"]), report.get("architecture", "digital_analog"))
         groups.setdefault(key, []).append((path.parent, report))
     lines = ["# Initial MNIST results", "", "CPU statevector simulations, not QPU results. "
              "Each run uses 1,000 training examples and 200 validation examples. "
              "Binary tests use 400 official-test examples; ten-class tests use 500. "
-             "Physics and two-layer architecture are fixed across tasks.", ""]
+             "Both architectures use two layers and identical trainable parameter counts. "
+             "See [the paired architecture comparison](ARCHITECTURE_COMPARISON.md).", ""]
     aggregates = {}
-    for digits, runs in groups.items():
-        label = "MNIST 3 vs 8" if digits == (3, 8) else "MNIST all ten digits"
+    for (digits, architecture), runs in groups.items():
+        runs.sort(key=lambda run: run[1]["config"]["seed"])
+        task_label = "MNIST 3 vs 8" if digits == (3, 8) else "MNIST all ten digits"
+        label = f"{task_label} — {architecture}"
         seeds = [r["config"]["seed"] for _, r in runs]
         lines += [f"## {label}", "", f"Seeds: {seeds}. Values are mean test accuracy ± sample "
                   "standard deviation across runs (percentage points). Seeds vary both the "
@@ -44,8 +48,8 @@ def summarize(root="results"):
                          f"optimizer converged: {status['converged']}.")
         lines.append("")
     lines += ["## Interpretation", "",
-              "Training improves on the frozen random Rydberg circuit in these runs. "
-              "The encoding-only control is competitive, and these experiments do not "
+              "Compare each trained model with its corresponding frozen circuit. "
+              "The encoding-only control remains relevant, and these experiments do not "
               "establish a benefit attributable to Rydberg interactions or quantum advantage. "
               "The classical comparison uses only 16 PCA features; it is not a state-of-the-art "
               "MNIST benchmark. The held-out subsets are small and overlap across seeds.", "",
@@ -65,4 +69,6 @@ def summarize(root="results"):
 
 
 if __name__ == "__main__":
-    summarize()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--root", default="results")
+    summarize(parser.parse_args().root)
