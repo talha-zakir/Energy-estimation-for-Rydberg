@@ -1,0 +1,8 @@
+{
+  "digits": [3, 8], "seed": 7,
+  "n_train": 1000, "n_val": 200, "n_test": 400,
+  "maxiter": 40, "shots": 1000, "threads": 4,
+  "alpha_grid": [0.0, 0.001, 0.01, 0.1, 1.0, 10.0],
+  "physics": {"n_qubits": 8, "layers": 2, "delta_over_omega": 0.8,
+              "rb_over_a": 0.87, "evolution_us": 0.25}
+}

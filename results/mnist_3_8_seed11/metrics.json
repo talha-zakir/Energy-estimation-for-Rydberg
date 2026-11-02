@@ -1,0 +1,388 @@
+{
+  "status": "CPU simulation; not a hardware experiment or paper reproduction",
+  "config": {
+    "digits": [
+      3,
+      8
+    ],
+    "seed": 11,
+    "n_train": 1000,
+    "n_val": 200,
+    "n_test": 400,
+    "maxiter": 40,
+    "shots": 1000,
+    "threads": 4,
+    "alpha_grid": [
+      0.0,
+      0.001,
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "physics": {
+      "n_qubits": 8,
+      "layers": 2,
+      "delta_over_omega": 0.8,
+      "rb_over_a": 0.87,
+      "evolution_us": 0.25
+    }
+  },
+  "physics": {
+    "n_qubits": 8,
+    "layers": 2,
+    "omega_rad_us": 25.132741228718345,
+    "delta_over_omega": 0.8,
+    "rb_over_a": 0.87,
+    "c6_rad_us_um6": 5420441.132650757,
+    "evolution_us": 0.25,
+    "spacing_um": 8.90115867138624,
+    "analog_evolution_us_per_circuit": 0.5
+  },
+  "optimizer": {
+    "method": "L-BFGS-B with exact adjoint / variable projection",
+    "objective_evaluations": 45,
+    "iterations": 40,
+    "converged": false,
+    "message": "STOP: TOTAL NO. OF ITERATIONS REACHED LIMIT",
+    "checkpoint_selection": "minimum validation MSE",
+    "selected_iteration": 6,
+    "alpha": 1.0
+  },
+  "models": {
+    "classical_pca_linear": {
+      "alpha": 10.0,
+      "feature_count": 16,
+      "train": {
+        "accuracy": 0.945,
+        "balanced_accuracy": 0.9449442879098361,
+        "correct": 945,
+        "n": 1000,
+        "accuracy_wilson95": [
+          0.9290912862059457,
+          0.9575027740521667
+        ],
+        "confusion_matrix": [
+          [
+            485,
+            27
+          ],
+          [
+            28,
+            460
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.935,
+        "balanced_accuracy": 0.9348739495798319,
+        "correct": 187,
+        "n": 200,
+        "accuracy_wilson95": [
+          0.8919799625008207,
+          0.9616240123502404
+        ],
+        "confusion_matrix": [
+          [
+            96,
+            6
+          ],
+          [
+            7,
+            91
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.9575,
+        "balanced_accuracy": 0.9573329331732694,
+        "correct": 383,
+        "n": 400,
+        "accuracy_wilson95": [
+          0.9329974034029175,
+          0.9732985304483749
+        ],
+        "confusion_matrix": [
+          [
+            197,
+            7
+          ],
+          [
+            10,
+            186
+          ]
+        ]
+      }
+    },
+    "encoding_only_linear": {
+      "alpha": 0.0,
+      "feature_count": 36,
+      "train": {
+        "accuracy": 0.945,
+        "balanced_accuracy": 0.9448482325819672,
+        "correct": 945,
+        "n": 1000,
+        "accuracy_wilson95": [
+          0.9290912862059457,
+          0.9575027740521667
+        ],
+        "confusion_matrix": [
+          [
+            487,
+            25
+          ],
+          [
+            30,
+            458
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.925,
+        "balanced_accuracy": 0.9252701080432173,
+        "correct": 185,
+        "n": 200,
+        "accuracy_wilson95": [
+          0.8799554020266798,
+          0.9540254929427476
+        ],
+        "confusion_matrix": [
+          [
+            93,
+            9
+          ],
+          [
+            6,
+            92
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.955,
+        "balanced_accuracy": 0.9546818727490997,
+        "correct": 382,
+        "n": 400,
+        "accuracy_wilson95": [
+          0.929994720438381,
+          0.9713487766159096
+        ],
+        "confusion_matrix": [
+          [
+            198,
+            6
+          ],
+          [
+            12,
+            184
+          ]
+        ]
+      }
+    },
+    "frozen_rydberg_linear": {
+      "alpha": 1.0,
+      "feature_count": 36,
+      "train": {
+        "accuracy": 0.827,
+        "balanced_accuracy": 0.8266361424180328,
+        "correct": 827,
+        "n": 1000,
+        "accuracy_wilson95": [
+          0.8023160584363541,
+          0.8491811498881464
+        ],
+        "confusion_matrix": [
+          [
+            431,
+            81
+          ],
+          [
+            92,
+            396
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.83,
+        "balanced_accuracy": 0.8299319727891157,
+        "correct": 166,
+        "n": 200,
+        "accuracy_wilson95": [
+          0.7718399896049648,
+          0.8757216464889435
+        ],
+        "confusion_matrix": [
+          [
+            85,
+            17
+          ],
+          [
+            17,
+            81
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.855,
+        "balanced_accuracy": 0.8543417366946778,
+        "correct": 342,
+        "n": 400,
+        "accuracy_wilson95": [
+          0.8171160037000451,
+          0.8861300214741816
+        ],
+        "confusion_matrix": [
+          [
+            181,
+            23
+          ],
+          [
+            35,
+            161
+          ]
+        ]
+      }
+    },
+    "trained_rydberg_linear": {
+      "alpha": 1.0,
+      "feature_count": 36,
+      "train": {
+        "accuracy": 0.954,
+        "balanced_accuracy": 0.9541175717213115,
+        "correct": 954,
+        "n": 1000,
+        "accuracy_wilson95": [
+          0.9391874888881304,
+          0.9653376871954269
+        ],
+        "confusion_matrix": [
+          [
+            486,
+            26
+          ],
+          [
+            20,
+            468
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.93,
+        "balanced_accuracy": 0.9297719087635055,
+        "correct": 186,
+        "n": 200,
+        "accuracy_wilson95": [
+          0.8859442178331628,
+          0.9578482170770813
+        ],
+        "confusion_matrix": [
+          [
+            96,
+            6
+          ],
+          [
+            8,
+            90
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.945,
+        "balanced_accuracy": 0.945078031212485,
+        "correct": 378,
+        "n": 400,
+        "accuracy_wilson95": [
+          0.9181319717303434,
+          0.9634017781359406
+        ],
+        "confusion_matrix": [
+          [
+            192,
+            12
+          ],
+          [
+            10,
+            186
+          ]
+        ]
+      }
+    },
+    "trained_rydberg_linear_shots": {
+      "alpha": 1.0,
+      "feature_count": 36,
+      "train": {
+        "accuracy": 0.953,
+        "balanced_accuracy": 0.9530449538934427,
+        "correct": 953,
+        "n": 1000,
+        "accuracy_wilson95": [
+          0.9380597525405758,
+          0.9644730773401544
+        ],
+        "confusion_matrix": [
+          [
+            487,
+            25
+          ],
+          [
+            22,
+            466
+          ]
+        ]
+      },
+      "validation": {
+        "accuracy": 0.93,
+        "balanced_accuracy": 0.9297719087635055,
+        "correct": 186,
+        "n": 200,
+        "accuracy_wilson95": [
+          0.8859442178331628,
+          0.9578482170770813
+        ],
+        "confusion_matrix": [
+          [
+            96,
+            6
+          ],
+          [
+            8,
+            90
+          ]
+        ]
+      },
+      "test": {
+        "accuracy": 0.9425,
+        "balanced_accuracy": 0.9425270108043218,
+        "correct": 377,
+        "n": 400,
+        "accuracy_wilson95": [
+          0.9151985747985072,
+          0.9613827382707756
+        ],
+        "confusion_matrix": [
+          [
+            192,
+            12
+          ],
+          [
+            11,
+            185
+          ]
+        ]
+      }
+    }
+  },
+  "pca_explained_variance_ratio_sum": 0.6054983017459228,
+  "max_state_norm_error": 2.886579864025407e-15,
+  "runtime_seconds": 45.622509718999936,
+  "simulation_counters": {
+    "forward_calls": 135,
+    "sample_circuit_evaluations": 98600,
+    "note": "Simulator workload counts; adjoint backward passes excluded. Not QPU shots or energy."
+  },
+  "versions": {
+    "python": "3.12.14",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "scikit-learn": "1.8.0"
+  }
+}
