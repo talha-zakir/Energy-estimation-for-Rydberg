@@ -2,6 +2,8 @@
 
 The [generated estimates](../estimates/literature_rydberg/SUMMARY.md) apply two published energy-accounting methods to the saved MNIST pulse schedules. They include digital-only, digital–analog and the separate Pasqal-native analog classifier. All quantum jobs so far ran in CPU simulation. These estimates describe hypothetical hardware execution, not the energy used by that simulation.
 
+The [paired QRC/VQC study](../hardware_results/pasqal_qrc_mnist_3_8_seed7/SUMMARY.md) reuses these same source parameters and adds explicit shot allocations and reset/readout charges for each destructive reservoir-prefix measurement. See its [method](qrc-vqc-comparison.md) for feature caching, finite-shot budgets and training-versus-inference accounting.
+
 ## Primary sources and accounting boundaries
 
 | Source | Published reference | Use here |

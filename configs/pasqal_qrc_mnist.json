@@ -1,0 +1,13 @@
+{
+  "architecture": "pasqal_qrc",
+  "reference_run": "hardware_results/pasqal_native_mnist_3_8_seed7",
+  "readout_slots": [1, 2, 3, 4],
+  "total_shots_per_prediction": 1000,
+  "shots_per_readout": 1000,
+  "noise_trajectories": 8,
+  "sampling_seed": 17007,
+  "literature_config": "configs/literature_energy.json",
+  "threads": 4,
+  "reservoir_selection": "Use the VQC's archived initialization; no search over reservoirs or test-driven tuning",
+  "hardware_target_assumption": "Same pinned Pasqal FRESNEL target as the reference VQC; all execution is local Pulser simulation"
+}

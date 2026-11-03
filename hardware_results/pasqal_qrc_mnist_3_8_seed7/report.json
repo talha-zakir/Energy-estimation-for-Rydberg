@@ -1,0 +1,892 @@
+{
+  "status": "Local QoolQit/Pulser QRC versus saved Pasqal-native VQC; no hardware submission",
+  "config": {
+    "architecture": "pasqal_qrc",
+    "reference_run": "hardware_results/pasqal_native_mnist_3_8_seed7",
+    "readout_slots": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "total_shots_per_prediction": 1000,
+    "shots_per_readout": 1000,
+    "noise_trajectories": 8,
+    "sampling_seed": 17007,
+    "literature_config": "configs/literature_energy.json",
+    "threads": 4,
+    "reservoir_selection": "Use the VQC's archived initialization; no search over reservoirs or test-driven tuning",
+    "hardware_target_assumption": "Same pinned Pasqal FRESNEL target as the reference VQC; all execution is local Pulser simulation"
+  },
+  "native_config": {
+    "architecture": "pasqal_native_analog",
+    "target": "configs/pasqal_target.json",
+    "digits": [
+      3,
+      8
+    ],
+    "seed": 7,
+    "n_qubits": 4,
+    "input_slots": 4,
+    "slot_duration_ns": 128,
+    "rise_ns": 16,
+    "amplitude_fraction_of_limit": 0.8,
+    "detuning_to_amplitude_ratio": 1.5,
+    "n_train": 80,
+    "n_val": 20,
+    "n_test": 40,
+    "iterations": 12,
+    "checkpoint_every": 4,
+    "spsa_learning_rate": 2.0,
+    "spsa_perturbation": 0.2,
+    "alpha_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "shots": 1000,
+    "noise_trajectories": 1,
+    "threads": 4
+  },
+  "target": {
+    "schema_version": 1,
+    "kind": "pasqal_sdk_target",
+    "provider": "Pasqal",
+    "target_device": "FRESNEL",
+    "device_json": "pasqal_fresnel_device.json",
+    "device_sha256": "77cae02afd05a9470683e72294e7f4b1c1e7f2e686ca886a243fe4f4ab351ea1",
+    "snapshot_source": "Unauthenticated public device-specification API via PasqalCloudConnection().fetch_available_devices()",
+    "retrieved_at_utc": "2026-11-02T23:14:42.820203+00:00",
+    "account_access_verified": false,
+    "live_calibration_verified": false,
+    "calibration_status": "public_device_snapshot_not_live_calibration",
+    "power_calibration": {
+      "rydberg_global": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      }
+    },
+    "overhead": {
+      "preparation_us": null,
+      "readout_us": null,
+      "reset_us": null,
+      "background_power_w": null,
+      "fixed_energy_j_per_shot": null
+    },
+    "references": [
+      "https://docs.pasqal.com/qpu-emulators/qpus/",
+      "https://docs.pasqal.com/qoolqit/extended_usage/device_noise/"
+    ]
+  },
+  "reference_provenance": {
+    "directory": "hardware_results/pasqal_native_mnist_3_8_seed7",
+    "model.npz_sha256": "da83b9c7085d71aa51d8504078cd48f318a1ad3c401a801f0e7c33a6d1ceb897",
+    "report.json_sha256": "9f7aa76d76db8b238abe13e19fae96b2b59a919a76b34a2822117c97efbd1156",
+    "splits_predictions.npz_sha256": "79d7086e4bbc3045bdb8ae4fc3ae20fd3c91901f06c43331c0126d952f591195"
+  },
+  "pairing": {
+    "identical_split_indices": true,
+    "identical_training_only_pca": true,
+    "identical_target_geometry_and_encoding": true,
+    "identical_noise_and_detector_model": true,
+    "readouts_fitted_on_coherent_train_only": true,
+    "all_model_selection_before_test_scoring": true,
+    "coherent_vqc_and_endpoint_predictions_reproduce_archive": true,
+    "reservoir_biases_equal_archived_vqc_initialization": true,
+    "matching_limit": "Temporal QRC has more readout features and prefix executions; ansatz/optimization budgets differ"
+  },
+  "protocol": {
+    "reset_between_images_and_prefix_runs": true,
+    "prefix_readouts_are_separate_destructive_experiments": true,
+    "shared_prefix_hardware_shots": false,
+    "equal_total_shots_allocation": [
+      250,
+      250,
+      250,
+      250
+    ],
+    "equal_shots_per_node_allocation": [
+      1000,
+      1000,
+      1000,
+      1000
+    ],
+    "vqc_and_endpoint_shots_per_image": 1000,
+    "quantum_training_steps_qrc": 0,
+    "readout_selection": "validation MSE over the archived alpha grid",
+    "noise_expectations": "Include device dynamics; precede detector errors",
+    "finite_shots": "Include SDK detector/SPAM; small-budget counts are random subsets of the large sample",
+    "training_hardware_budget": "Hypothetical finite-shot replay; exact-expectation training ran on CPU",
+    "noise_seed": 17007,
+    "noise_trajectories": 8
+  },
+  "models": {
+    "classical_pca_linear": {
+      "feature_count": 8,
+      "quantum_parameters_trained": 0,
+      "conditions": {
+        "coherent": {
+          "accuracy": 0.875,
+          "balanced_accuracy": 0.875,
+          "correct": 35,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.7388757932976187,
+            0.9454058022645873
+          ],
+          "confusion_matrix": [
+            [
+              18,
+              2
+            ],
+            [
+              3,
+              17
+            ]
+          ]
+        }
+      }
+    },
+    "vqc": {
+      "feature_count": 10,
+      "quantum_parameters_trained": 8,
+      "alpha": 0.01,
+      "conditions": {
+        "coherent": {
+          "accuracy": 0.525,
+          "balanced_accuracy": 0.525,
+          "correct": 21,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.37497106853929735,
+            0.6706477044981831
+          ],
+          "confusion_matrix": [
+            [
+              10,
+              10
+            ],
+            [
+              9,
+              11
+            ]
+          ]
+        },
+        "device_noise_expectations": {
+          "accuracy": 0.525,
+          "balanced_accuracy": 0.525,
+          "correct": 21,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.37497106853929735,
+            0.6706477044981831
+          ],
+          "confusion_matrix": [
+            [
+              10,
+              10
+            ],
+            [
+              9,
+              11
+            ]
+          ]
+        },
+        "equal_total_shots": {
+          "accuracy": 0.55,
+          "balanced_accuracy": 0.55,
+          "correct": 22,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.39828829888440775,
+            0.6929492471905531
+          ],
+          "confusion_matrix": [
+            [
+              10,
+              10
+            ],
+            [
+              8,
+              12
+            ]
+          ]
+        }
+      }
+    },
+    "qrc_endpoint": {
+      "feature_count": 10,
+      "quantum_parameters_trained": 0,
+      "alpha": 0.01,
+      "conditions": {
+        "coherent": {
+          "accuracy": 0.575,
+          "balanced_accuracy": 0.575,
+          "correct": 23,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.42194800436059987,
+            0.7149083147518411
+          ],
+          "confusion_matrix": [
+            [
+              12,
+              8
+            ],
+            [
+              9,
+              11
+            ]
+          ]
+        },
+        "device_noise_expectations": {
+          "accuracy": 0.55,
+          "balanced_accuracy": 0.55,
+          "correct": 22,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.39828829888440775,
+            0.6929492471905531
+          ],
+          "confusion_matrix": [
+            [
+              12,
+              8
+            ],
+            [
+              10,
+              10
+            ]
+          ]
+        },
+        "equal_total_shots": {
+          "accuracy": 0.575,
+          "balanced_accuracy": 0.575,
+          "correct": 23,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.42194800436059987,
+            0.7149083147518411
+          ],
+          "confusion_matrix": [
+            [
+              12,
+              8
+            ],
+            [
+              9,
+              11
+            ]
+          ]
+        }
+      }
+    },
+    "qrc_temporal": {
+      "feature_count": 40,
+      "quantum_parameters_trained": 0,
+      "alpha": 1.0,
+      "conditions": {
+        "coherent": {
+          "accuracy": 0.8,
+          "balanced_accuracy": 0.8,
+          "correct": 32,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.6524239261814333,
+            0.8950013502683314
+          ],
+          "confusion_matrix": [
+            [
+              17,
+              3
+            ],
+            [
+              5,
+              15
+            ]
+          ]
+        },
+        "device_noise_expectations": {
+          "accuracy": 0.8,
+          "balanced_accuracy": 0.8,
+          "correct": 32,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.6524239261814333,
+            0.8950013502683314
+          ],
+          "confusion_matrix": [
+            [
+              17,
+              3
+            ],
+            [
+              5,
+              15
+            ]
+          ]
+        },
+        "equal_total_shots": {
+          "accuracy": 0.8,
+          "balanced_accuracy": 0.8,
+          "correct": 32,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.6524239261814333,
+            0.8950013502683314
+          ],
+          "confusion_matrix": [
+            [
+              17,
+              3
+            ],
+            [
+              5,
+              15
+            ]
+          ]
+        },
+        "equal_shots_per_node": {
+          "accuracy": 0.775,
+          "balanced_accuracy": 0.7749999999999999,
+          "correct": 31,
+          "n": 40,
+          "accuracy_wilson95": [
+            0.6249660359590695,
+            0.8768404674532148
+          ],
+          "confusion_matrix": [
+            [
+              17,
+              3
+            ],
+            [
+              6,
+              14
+            ]
+          ]
+        }
+      }
+    }
+  },
+  "simulator_sequence_executions": {
+    "qrc": 720,
+    "vqc_test_reevaluation": 80
+  },
+  "runtime_seconds": 69.90964879999956,
+  "versions": {
+    "qoolqit": "1.5.0",
+    "pulser-core": "1.10.0",
+    "pulser-simulation": "1.10.0",
+    "qutip": "5.3.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.8.0"
+  },
+  "energy": {
+    "status": "Conditional literature transfer; no measured Pasqal energy or provider pricing",
+    "configuration": {
+      "schema_version": 1,
+      "sources": {
+        "alves2026": {
+          "title": "Energetics of Rydberg-atom Quantum Computation",
+          "authors": "\u00d3scar Alves, Marco Pezzutto, Yasser Omar",
+          "version": "arXiv:2601.03141v2, 18 May 2026",
+          "url": "https://arxiv.org/html/2601.03141v2",
+          "boundary": "Radiation-source energy; excludes electrical conversion, control electronics, HVAC and host processing",
+          "platform": "Paper's cesium gate-model experimental reference, not Pasqal FRESNEL",
+          "locators": [
+            "Section IV.1 radiation-source table",
+            "Section IV.2 baseline/preparation/measurement table"
+          ]
+        },
+        "carrasco2026": {
+          "title": "Energy efficiency of quantum computers",
+          "authors": "Miquel Carrasco-Codina et al.",
+          "version": "arXiv:2605.15090v2, 31 August 2026",
+          "url": "https://arxiv.org/html/2605.15090v2",
+          "boundary": "Reference machine/facility electrical power including HVAC and hardware-control computers",
+          "platform": "Harvard rubidium-87 n=53 digital neutral-atom reference; not Pasqal calibration",
+          "locators": [
+            "Section 6.2.1",
+            "Equation 18",
+            "Appendix A.4, Tables 8 and 9"
+          ]
+        },
+        "pasqal2023": {
+          "title": "Quantum Computing to Greener Calculations",
+          "url": "https://www.pasqal.com/blog/quantum-computing-rethinking-energy-consumption/",
+          "version": "Vendor article dated 5 October 2023",
+          "boundary": "Historical vendor total-power statement; not a research paper or a current FRESNEL measurement",
+          "locator": "Neutral atoms, a greener quantum architecture: approximately 2.6 kW"
+        }
+      },
+      "alves_reference": {
+        "microwave_radiation_w": 0.0574,
+        "blue_source_w": 0.1,
+        "infrared_global_source_w": 11.0,
+        "trap_source_w_per_trap": 0.01,
+        "reference_traps": 49,
+        "cooling_source_w": 0.001,
+        "cooling_s": 0.1,
+        "pumping_source_w": 0.001,
+        "pumping_s": 0.01,
+        "measurement_beams": 4,
+        "measurement_source_w_per_beam": 0.00022,
+        "measurement_s": 0.09,
+        "reproduction": {
+          "microwave_us": 615.999,
+          "blue_us": 279.581,
+          "infrared_us": 54.454,
+          "trap_on_s": 0.2009,
+          "repetitions": 700,
+          "paper_computation_mj_rounded": 0.662,
+          "paper_total_j_rounded": 69.5
+        }
+      },
+      "carrasco_reference": {
+        "components": [
+          {
+            "name": "Trap lasers",
+            "count": 1,
+            "unit_w": 1500
+          },
+          {
+            "name": "Lasers for Rydberg gates",
+            "count": 1,
+            "unit_w": 1900
+          },
+          {
+            "name": "Other lasers A",
+            "count": 2,
+            "unit_w": 900
+          },
+          {
+            "name": "Other lasers B",
+            "count": 7,
+            "unit_w": 150
+          },
+          {
+            "name": "Magnetic field generation",
+            "count": 1,
+            "unit_w": 1050
+          },
+          {
+            "name": "Camera",
+            "count": 1,
+            "unit_w": 155
+          },
+          {
+            "name": "Vacuum pump",
+            "count": 1,
+            "unit_w": 100
+          },
+          {
+            "name": "Classical computers",
+            "count": 1,
+            "unit_w": 150
+          },
+          {
+            "name": "HVAC",
+            "count": 1,
+            "unit_w": 7500
+          },
+          {
+            "name": "Other electronics",
+            "count": 1,
+            "unit_w": 2000
+          },
+          {
+            "name": "Small laser chillers",
+            "count": 5,
+            "unit_w": 600
+          },
+          {
+            "name": "Large laser chillers",
+            "count": 2,
+            "unit_w": 1000
+          }
+        ],
+        "reset_s": 0.01,
+        "measurement_s": 0.01,
+        "clock_s": 0.0005,
+        "transport_s": 0.0005,
+        "transport_per_layer": 0.25,
+        "reload_s": 0.5,
+        "layers_per_reload": 2400,
+        "extra_continuous_reload_components_w": [
+          350,
+          1500,
+          700
+        ]
+      },
+      "transferred_scenarios": {
+        "radiation_source": {
+          "trap_count": 49,
+          "raman_to_microwave_power_mapping": "Assumption: charge Raman controls at the paper's derived microwave radiation power; mechanisms differ",
+          "blue_global_scaling": "Assumption: one local-blue reference power per illuminated atom; shared infrared beam counted once",
+          "constant_on_power": "Assumption: reference source powers held fixed for pulse-on windows, regardless of simulated Rabi rate. Not a Rabi-power calibration or validated architecture ranking."
+        },
+        "system_power_scenarios": [
+          {
+            "id": "harvard_paper_reference",
+            "power_from": "carrasco_components",
+            "source": "carrasco2026"
+          },
+          {
+            "id": "pasqal_historical_power_transfer",
+            "power_w": 2600,
+            "source": "pasqal2023"
+          }
+        ],
+        "schedule_timing": {
+          "reset_from": "carrasco_reference.reset_s",
+          "measurement_from": "carrasco_reference.measurement_s",
+          "transport_events": 0,
+          "reconfiguration_layers": 0,
+          "reloads_per_shot": 0,
+          "assumption": "Our compiled recipes keep a fixed register; no motion/reconfiguration/reloading is charged. Their real overheads need calibration; paper reset/readout times are transferred as a scenario."
+        },
+        "shots_per_prediction": 1000,
+        "shot_sensitivity": [
+          100,
+          1000,
+          10000
+        ],
+        "reset_plus_readout_sensitivity_s": [
+          0.002,
+          0.02,
+          0.2
+        ],
+        "electricity_tariff_per_kwh": 0.25,
+        "currency": "EUR",
+        "tariff_status": "Illustrative user-changeable arithmetic assumption, not a market quote or QPU service price",
+        "n_atoms": 4
+      }
+    },
+    "source_config_sha256": "80512cee05922947393343b683f082c4a7567c30cc136685e6171fc23d2b9e93",
+    "inference": {
+      "vqc": {
+        "images": 40,
+        "shots_per_image": 1000,
+        "prefix_experiments_per_image": 1,
+        "physical_shots": 40000,
+        "system_scenarios": {
+          "harvard_paper_reference": {
+            "mean_kwh_per_image": 0.12336531710819443,
+            "total_kwh": 4.934612684327777,
+            "total_allocated_hardware_s": 800.0272759999999,
+            "total_electricity_cost": 1.2336531710819443,
+            "currency": "EUR"
+          },
+          "pasqal_historical_power_transfer": {
+            "mean_kwh_per_image": 0.01444493692777778,
+            "total_kwh": 0.5777974771111111,
+            "total_allocated_hardware_s": 800.0272759999999,
+            "total_electricity_cost": 0.14444936927777777,
+            "currency": "EUR"
+          }
+        },
+        "source_radiation_j_per_image": {
+          "mean": 98.197307791,
+          "min": 98.19726142,
+          "max": 98.19730898
+        },
+        "measured_energy_j": null,
+        "end_to_end_pipeline_energy_j": null,
+        "provider_bill": null
+      },
+      "qrc_endpoint": {
+        "images": 40,
+        "shots_per_image": 1000,
+        "prefix_experiments_per_image": 1,
+        "physical_shots": 40000,
+        "system_scenarios": {
+          "harvard_paper_reference": {
+            "mean_kwh_per_image": 0.12336531572038192,
+            "total_kwh": 4.934612628815277,
+            "total_allocated_hardware_s": 800.0272669999999,
+            "total_electricity_cost": 1.2336531572038192,
+            "currency": "EUR"
+          },
+          "pasqal_historical_power_transfer": {
+            "mean_kwh_per_image": 0.014444936765277777,
+            "total_kwh": 0.5777974706111111,
+            "total_allocated_hardware_s": 800.0272669999999,
+            "total_electricity_cost": 0.14444936765277777,
+            "currency": "EUR"
+          }
+        },
+        "source_radiation_j_per_image": {
+          "mean": 98.19730511575001,
+          "min": 98.19717819000002,
+          "max": 98.19730898
+        },
+        "measured_energy_j": null,
+        "end_to_end_pipeline_energy_j": null,
+        "provider_bill": null
+      },
+      "qrc_temporal_equal_total_shots": {
+        "images": 40,
+        "shots_per_image": 1000,
+        "prefix_experiments_per_image": 4,
+        "physical_shots": 40000,
+        "system_scenarios": {
+          "harvard_paper_reference": {
+            "mean_kwh_per_image": 0.12336413203197047,
+            "total_kwh": 4.934565281278819,
+            "total_allocated_hardware_s": 800.01959075,
+            "total_electricity_cost": 1.2336413203197047,
+            "currency": "EUR"
+          },
+          "pasqal_historical_power_transfer": {
+            "mean_kwh_per_image": 0.014444798166319444,
+            "total_kwh": 0.5777919266527778,
+            "total_allocated_hardware_s": 800.01959075,
+            "total_electricity_cost": 0.14444798166319445,
+            "currency": "EUR"
+          }
+        },
+        "source_radiation_j_per_image": {
+          "mean": 98.19502335043751,
+          "min": 98.19499340250002,
+          "max": 98.1950261
+        },
+        "measured_energy_j": null,
+        "end_to_end_pipeline_energy_j": null,
+        "provider_bill": null
+      },
+      "qrc_temporal_equal_shots_per_node": {
+        "images": 40,
+        "shots_per_image": 4000,
+        "prefix_experiments_per_image": 4,
+        "physical_shots": 160000,
+        "system_scenarios": {
+          "harvard_paper_reference": {
+            "mean_kwh_per_image": 0.4934565281278819,
+            "total_kwh": 19.738261125115276,
+            "total_allocated_hardware_s": 3200.078363,
+            "total_electricity_cost": 4.934565281278819,
+            "currency": "EUR"
+          },
+          "pasqal_historical_power_transfer": {
+            "mean_kwh_per_image": 0.05777919266527778,
+            "total_kwh": 2.311167706611111,
+            "total_allocated_hardware_s": 3200.078363,
+            "total_electricity_cost": 0.5777919266527778,
+            "currency": "EUR"
+          }
+        },
+        "source_radiation_j_per_image": {
+          "mean": 392.78009340175004,
+          "min": 392.77997361000007,
+          "max": 392.7801044
+        },
+        "measured_energy_j": null,
+        "end_to_end_pipeline_energy_j": null,
+        "provider_bill": null
+      }
+    },
+    "training_projection": {
+      "qrc_endpoint": {
+        "images": 100,
+        "shots_per_image": 1000,
+        "prefix_experiments_per_image": 1,
+        "physical_shots": 100000,
+        "system_scenarios": {
+          "harvard_paper_reference": {
+            "mean_kwh_per_image": 0.12336531698483334,
+            "total_kwh": 12.33653169848333,
+            "total_allocated_hardware_s": 2000.0681879999997,
+            "total_electricity_cost": 3.0841329246208327,
+            "currency": "EUR"
+          },
+          "pasqal_historical_power_transfer": {
+            "mean_kwh_per_image": 0.014444936913333328,
+            "total_kwh": 1.4444936913333333,
+            "total_allocated_hardware_s": 2000.0681879999997,
+            "total_electricity_cost": 0.3611234228333333,
+            "currency": "EUR"
+          }
+        },
+        "source_radiation_j_per_image": {
+          "mean": 98.19730755319998,
+          "min": 98.19721386,
+          "max": 98.19730898
+        },
+        "measured_energy_j": null,
+        "end_to_end_pipeline_energy_j": null,
+        "provider_bill": null,
+        "circuit_feature_evaluations": 100,
+        "feature_cache_reused_for_all_linear_fits": true
+      },
+      "qrc_temporal_equal_total_shots": {
+        "images": 100,
+        "shots_per_image": 1000,
+        "prefix_experiments_per_image": 4,
+        "physical_shots": 100000,
+        "system_scenarios": {
+          "harvard_paper_reference": {
+            "mean_kwh_per_image": 0.12336413234808331,
+            "total_kwh": 12.336413234808333,
+            "total_allocated_hardware_s": 2000.048982,
+            "total_electricity_cost": 3.0841033087020833,
+            "currency": "EUR"
+          },
+          "pasqal_historical_power_transfer": {
+            "mean_kwh_per_image": 0.014444798203333333,
+            "total_kwh": 1.4444798203333333,
+            "total_allocated_hardware_s": 2000.048982,
+            "total_electricity_cost": 0.36111995508333333,
+            "currency": "EUR"
+          }
+        },
+        "source_radiation_j_per_image": {
+          "mean": 98.19502395979998,
+          "min": 98.1949755675,
+          "max": 98.1950261
+        },
+        "measured_energy_j": null,
+        "end_to_end_pipeline_energy_j": null,
+        "provider_bill": null,
+        "circuit_feature_evaluations": 400,
+        "feature_cache_reused_for_all_linear_fits": true
+      },
+      "qrc_temporal_equal_shots_per_node": {
+        "images": 100,
+        "shots_per_image": 4000,
+        "prefix_experiments_per_image": 4,
+        "physical_shots": 400000,
+        "system_scenarios": {
+          "harvard_paper_reference": {
+            "mean_kwh_per_image": 0.49345652939233325,
+            "total_kwh": 49.34565293923333,
+            "total_allocated_hardware_s": 8000.195928,
+            "total_electricity_cost": 12.336413234808333,
+            "currency": "EUR"
+          },
+          "pasqal_historical_power_transfer": {
+            "mean_kwh_per_image": 0.05777919281333333,
+            "total_kwh": 5.777919281333333,
+            "total_allocated_hardware_s": 8000.195928,
+            "total_electricity_cost": 1.4444798203333333,
+            "currency": "EUR"
+          }
+        },
+        "source_radiation_j_per_image": {
+          "mean": 392.78009583919993,
+          "min": 392.77990227,
+          "max": 392.7801044
+        },
+        "measured_energy_j": null,
+        "end_to_end_pipeline_energy_j": null,
+        "provider_bill": null,
+        "circuit_feature_evaluations": 400,
+        "feature_cache_reused_for_all_linear_fits": true
+      },
+      "vqc": {
+        "circuit_feature_evaluation_breakdown": {
+          "initial_alpha_selection": 100,
+          "spsa_objective_inputs": 1920,
+          "validation_checkpoint_inputs": 400,
+          "final_readout_fit_inputs": 80
+        },
+        "circuit_feature_evaluations": 2500,
+        "shots_per_evaluation": 1000,
+        "physical_shots": 2500000,
+        "system_scenarios": {
+          "harvard_paper_reference": {
+            "total_kwh": 308.41329277048607,
+            "total_electricity_cost": 77.10332319262152,
+            "total_allocated_hardware_s": 50001.70474999999,
+            "currency": "EUR"
+          },
+          "pasqal_historical_power_transfer": {
+            "total_kwh": 36.11234231944445,
+            "total_electricity_cost": 9.028085579861111,
+            "total_allocated_hardware_s": 50001.70474999999,
+            "currency": "EUR"
+          }
+        },
+        "measured_energy_j": null,
+        "duration_assumption": "Selected VQC's representative compiled duration; optimization pulse traces are unavailable"
+      }
+    },
+    "training_scope": "Hypothetical finite-shot execution of the recorded training recipes. Training actually used exact coherent expectations on CPU; noisy finite-shot hardware training would change the learned readouts and SPSA trajectory. External classical energy, loading/retries/idle allocation remain unmeasured. A 20 ms reset/readout assumption is transferred, with zero extra motion/reloads."
+  },
+  "paired_comparisons": {
+    "qrc_endpoint__coherent": {
+      "qrc_minus_vqc_accuracy": 0.04999999999999993,
+      "vqc_correct_qrc_wrong": 1,
+      "qrc_correct_vqc_wrong": 3,
+      "mcnemar_exact_two_sided_p": 0.625,
+      "scope": "Exploratory paired test; one reused test subset and sampling seed, multiple comparisons unadjusted"
+    },
+    "qrc_endpoint__device_noise_expectations": {
+      "qrc_minus_vqc_accuracy": 0.025000000000000022,
+      "vqc_correct_qrc_wrong": 1,
+      "qrc_correct_vqc_wrong": 2,
+      "mcnemar_exact_two_sided_p": 1.0,
+      "scope": "Exploratory paired test; one reused test subset and sampling seed, multiple comparisons unadjusted"
+    },
+    "qrc_endpoint__equal_total_shots": {
+      "qrc_minus_vqc_accuracy": 0.02499999999999991,
+      "vqc_correct_qrc_wrong": 1,
+      "qrc_correct_vqc_wrong": 2,
+      "mcnemar_exact_two_sided_p": 1.0,
+      "scope": "Exploratory paired test; one reused test subset and sampling seed, multiple comparisons unadjusted"
+    },
+    "qrc_temporal__coherent": {
+      "qrc_minus_vqc_accuracy": 0.275,
+      "vqc_correct_qrc_wrong": 3,
+      "qrc_correct_vqc_wrong": 14,
+      "mcnemar_exact_two_sided_p": 0.012725830078125,
+      "scope": "Exploratory paired test; one reused test subset and sampling seed, multiple comparisons unadjusted"
+    },
+    "qrc_temporal__device_noise_expectations": {
+      "qrc_minus_vqc_accuracy": 0.275,
+      "vqc_correct_qrc_wrong": 3,
+      "qrc_correct_vqc_wrong": 14,
+      "mcnemar_exact_two_sided_p": 0.012725830078125,
+      "scope": "Exploratory paired test; one reused test subset and sampling seed, multiple comparisons unadjusted"
+    },
+    "qrc_temporal__equal_total_shots": {
+      "qrc_minus_vqc_accuracy": 0.25,
+      "vqc_correct_qrc_wrong": 2,
+      "qrc_correct_vqc_wrong": 12,
+      "mcnemar_exact_two_sided_p": 0.012939453125,
+      "scope": "Exploratory paired test; one reused test subset and sampling seed, multiple comparisons unadjusted"
+    }
+  },
+  "pulse_accounting": {
+    "qrc": {
+      "1": {
+        "mean": 0.2980000000000002,
+        "min": 0.2980000000000002,
+        "max": 0.2980000000000002
+      },
+      "2": {
+        "mean": 0.4257000000000003,
+        "min": 0.4170000000000003,
+        "max": 0.4260000000000003
+      },
+      "3": {
+        "mean": 0.5537000000000004,
+        "min": 0.5440000000000004,
+        "max": 0.5540000000000004
+      },
+      "4": {
+        "mean": 0.6816750000000005,
+        "min": 0.6710000000000005,
+        "max": 0.6820000000000005
+      }
+    },
+    "vqc": {
+      "mean": 0.6819000000000004,
+      "min": 0.6780000000000005,
+      "max": 0.6820000000000005
+    }
+  }
+}

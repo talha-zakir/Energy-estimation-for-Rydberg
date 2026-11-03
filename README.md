@@ -16,6 +16,8 @@ This is a research model, not device-calibrated hardware. The probe exposes subs
 
 **Paper-based energy/cost estimates are available:** [results and figures](estimates/literature_rydberg/SUMMARY.md), [methods and source papers](docs/literature-energy-cost.md), and [editable parameters](configs/literature_energy.json). The estimator reproduces Alves et al.'s Rydberg energy example and separately uses Carrasco-Codina et al.'s electrical component inventory. It applies explicit scenarios to 400 saved inputs per original architecture and 40 Pasqal-native inputs, with shot/overhead sensitivity and an illustrative electricity tariff. These are literature transfers, not measured Pasqal costs or evidence of an energy advantage.
 
+**Quantum reservoir computing is implemented:** [paired QRC/VQC accuracy and cost results](hardware_results/pasqal_qrc_mnist_3_8_seed7/SUMMARY.md), [method and QRC papers](docs/qrc-vqc-comparison.md), and [config](configs/pasqal_qrc_mnist.json). A fixed reservoir uses the native VQC's exact split, PCA, atoms and global input encoding, and trains only a linear readout. Endpoint and temporal-prefix readouts are compared with the saved VQC, including device noise, equal total-shot budgets and separate training/inference energy projections. This is local QoolQit/Pulser simulation on the pinned Pasqal target.
+
 ## Pipeline
 
 ```text
