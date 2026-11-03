@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "kind": "pasqal_sdk_target",
+  "provider": "Pasqal",
+  "target_device": "FRESNEL",
+  "device_json": "device_snapshot.json",
+  "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+  "snapshot_source": "Unauthenticated public device-specification API via PasqalCloudConnection().fetch_available_devices()",
+  "retrieved_at_utc": "2026-11-03T01:19:43.279993+00:00",
+  "account_access_verified": false,
+  "live_calibration_verified": false,
+  "calibration_status": "public_device_snapshot_not_live_calibration",
+  "power_calibration": {
+    "rydberg_global": {
+      "bias_w": null,
+      "omega_squared_w": null,
+      "wall_efficiency": null
+    }
+  },
+  "overhead": {
+    "preparation_us": null,
+    "readout_us": null,
+    "reset_us": null,
+    "background_power_w": null,
+    "fixed_energy_j_per_shot": null
+  },
+  "references": [
+    "https://docs.pasqal.com/qpu-emulators/qpus/",
+    "https://docs.pasqal.com/qoolqit/extended_usage/device_noise/"
+  ],
+  "target_label": "FRESNEL beta / public FRESNEL identifier",
+  "generation_verification": "Provider lists QPU-FRESNEL-100PQ as Orion Beta; account-specific device generation is unverified"
+}

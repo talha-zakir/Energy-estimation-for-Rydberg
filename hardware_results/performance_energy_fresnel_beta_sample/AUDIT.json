@@ -1,0 +1,35 @@
+{
+  "status": "passed",
+  "repeats": [
+    {
+      "seed": 7,
+      "requests_verified": 10576,
+      "shots_verified": 2644000,
+      "all_saved_checkpoint_features_reconstructed_from_joint_counts": true,
+      "validation_only_selection_and_stopping_verified": true,
+      "all_consumed_training_and_unique_test_passes_verified": true,
+      "saved_head_predictions_and_export_program_hashes_verified": true,
+      "calibrated_energy_remains_unknown": true
+    },
+    {
+      "seed": 11,
+      "requests_verified": 10576,
+      "shots_verified": 2644000,
+      "all_saved_checkpoint_features_reconstructed_from_joint_counts": true,
+      "validation_only_selection_and_stopping_verified": true,
+      "all_consumed_training_and_unique_test_passes_verified": true,
+      "saved_head_predictions_and_export_program_hashes_verified": true,
+      "calibrated_energy_remains_unknown": true
+    },
+    {
+      "seed": 19,
+      "requests_verified": 9760,
+      "shots_verified": 2440000,
+      "all_saved_checkpoint_features_reconstructed_from_joint_counts": true,
+      "validation_only_selection_and_stopping_verified": true,
+      "all_consumed_training_and_unique_test_passes_verified": true,
+      "saved_head_predictions_and_export_program_hashes_verified": true,
+      "calibrated_energy_remains_unknown": true
+    }
+  ]
+}
