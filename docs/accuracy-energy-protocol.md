@@ -1,5 +1,8 @@
 # Energy needed to reach an accuracy target
 
+> Optional legacy accuracy-target study. The primary study is now the [full-training performance/resource protocol](performance-energy-protocol.md), which treats accuracy as an outcome and charges all consumed work regardless of checkpoint selection. Existing reports and commands remain supported.
+
+
 The [finite-shot sample](../hardware_results/accuracy_energy_fresnel_beta_sample/SUMMARY.md) replaces a fixed-iteration cost ratio with a measurable question: **what energy and shot budget does each learning method consume before meeting a predeclared validation accuracy, and how does that model perform on held-out images?** A large energy difference is a hypothesis to test. It is not imposed on the experiment.
 
 ## Common learning system

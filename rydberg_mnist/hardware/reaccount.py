@@ -14,6 +14,9 @@ def read_ledger(path):
     for row in rows:
         for key in ("request_id", "checkpoint", "source_index", "prefix", "shots", "noise_seed"):
             row[key] = int(row[key])
+        for key in ("logical_request_id", "job_index", "job_count", "submitted_jobs"):
+            if key in row:
+                row[key] = int(row[key])
         for key in ("control_us", "omega_squared_integral_rad2_per_us"):
             row[key] = float(row[key]) if row[key] else None
         for key in ("measured_attempted_shots", "measured_active_duration_s", "measured_whole_program_electrical_j"):
@@ -46,6 +49,10 @@ def recompute(report, source, calibration, classical=None):
                 values = [classical_measurement(classical, part, target) for part in components]
                 value = sum(values) if all(v is not None for v in values) else None
             return budget(rows, calibration, target, literature, value)
+        if report.get("protocol_id") == "full_training_performance_energy_v1":
+            from .performance_energy import account_repeat
+            account_repeat(repetition, records, energy)
+            continue
         for algorithm in ("qrc", "vqc"):
             own = [r for r in records if r["algorithm"] == algorithm]
             repetition["complete_study_execution_budget"][algorithm] = energy(own, f"seed{seed}/{algorithm}/full_study")
@@ -72,7 +79,7 @@ def recompute(report, source, calibration, classical=None):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--source", required=True, help="Completed accuracy_energy run directory")
+    parser.add_argument("--source", required=True, help="Completed performance_energy or legacy accuracy_energy directory")
     parser.add_argument("--calibration", required=True)
     parser.add_argument("--classical-measurements")
     parser.add_argument("--output", required=True)
@@ -88,7 +95,10 @@ def main():
         "calibration_sha256": hashlib.sha256(Path(args.calibration).read_bytes()).hexdigest(),
         "physics_or_training_rerun": False}
     output = Path(args.output); output.mkdir(parents=True, exist_ok=False)
-    from .accuracy_energy_summary import summarize
+    if report.get("protocol_id") == "full_training_performance_energy_v1":
+        from .performance_energy_summary import summarize
+    else:
+        from .accuracy_energy_summary import summarize
     summarize(report, output)
     (output/"report.json").write_text(json.dumps(report, indent=2)+"\n")
 

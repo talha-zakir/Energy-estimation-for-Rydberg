@@ -52,15 +52,27 @@ def budget(records, calibration, target, literature, classical_energy_j=None):
         if isinstance(record["shots"], bool) or not isinstance(record["shots"], int) or record["shots"] < 1:
             raise ValueError("Execution records require positive integer shot counts")
         finite_nonnegative(record["control_us"], "compiled control duration")
+        jobs = record.get("submitted_jobs", 1)
+        if isinstance(jobs, bool) or not isinstance(jobs, int) or jobs < 1:
+            raise ValueError("Execution records require a positive submitted-job count")
+        attempted = record.get("measured_attempted_shots")
+        if attempted is not None and (isinstance(attempted, bool) or not isinstance(attempted, int)
+                                       or attempted < record["shots"]):
+            raise ValueError("Measured attempts must include all returned shots")
+        if (attempted is not None or jobs > 1) and not record.get("measurement_source_record"):
+            raise ValueError("Attempt/retry measurements require provenance")
     shots = sum(r["shots"] for r in records)
     control_s = sum(r["control_us"]*1e-6*r["shots"] for r in records)
     power, cycle, attempts = (calibration[key] for key in
                              ("electrical_power_w", "full_cycle_s_per_attempt", "attempts_per_returned_shot"))
     measured = calibration["calibration_status"] == "measured"
-    shot_energy = power*cycle*attempts*shots if measured else None
+    submitted = sum(r.get("submitted_jobs", 1) for r in records)
+    attempted = (sum(r.get("measured_attempted_shots") if r.get("measured_attempted_shots") is not None
+                     else attempts*r["shots"] for r in records) if measured else None)
+    shot_energy = power*cycle*attempted if measured else None
     setup = calibration["setup_energy_j_per_program"]
     setup_included = calibration.get("cycle_includes_program_setup", False)
-    setup_energy = (0. if setup_included else len(records)*setup) if measured and (setup_included or setup is not None) else None
+    setup_energy = (0. if setup_included else submitted*setup) if measured and (setup_included or setup is not None) else None
     # External classical measurements must belong to THIS workload, not a
     # calibration run. The supplied per-run value is never scaled by shot count.
     classical = classical_energy_j
@@ -103,6 +115,8 @@ def budget(records, calibration, target, literature, classical_energy_j=None):
         item["electricity_cost"] = None if tariff is None else item["kwh"]*tariff
         item["currency"] = transferred["currency"]
     return {"requested_returned_shots": shots, "pulse_program_requests": len(records),
+        "submitted_jobs_including_reported_retries": submitted,
+        "measured_or_calibration_modeled_attempts": attempted,
         "compiled_control_s_for_requested_shots": control_s,
         "calibrated_shot_execution_energy_j": shot_energy, "calibrated_setup_energy_j": setup_energy,
         "measured_external_classical_energy_j": classical, "complete_workflow_energy_j": total,

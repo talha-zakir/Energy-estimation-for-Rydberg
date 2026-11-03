@@ -196,8 +196,11 @@ def run(config, output, cache="data/mnist", backend_factory=None, profile_factor
                 key+"_bias": selected_head.bias, key+"_test_features": features})
             for prefix, shots in zip(engine.readout_slots, engine.allocation):
                 sequence = profile.sequence(data[2][0], parameters, prefix)
-                entry = profile.export_example(sequence, folder/f"{key}_prefix{prefix}.json", shots)
-                export.append(entry)
+                jobs = engine.job_shots(shots)
+                for job, job_shots in enumerate(jobs):
+                    suffix = "" if len(jobs) == 1 else f"_job{job}"
+                    entry = profile.export_example(sequence, folder/f"{key}_prefix{prefix}{suffix}.json", job_shots)
+                    export.append(entry)
         def energy(records):
             return budget(records, calibration, profile.target, literature)
         target_results = {}

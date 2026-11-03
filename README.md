@@ -18,7 +18,7 @@ This is a research model, not device-calibrated hardware. The probe exposes subs
 
 **Quantum reservoir computing is implemented:** [paired QRC/VQC accuracy and cost results](hardware_results/pasqal_qrc_mnist_3_8_seed7/SUMMARY.md), [method and QRC papers](docs/qrc-vqc-comparison.md), and [config](configs/pasqal_qrc_mnist.json). A fixed reservoir uses the native VQC's exact split, PCA, atoms and global input encoding, and trains only a linear readout. Endpoint and temporal-prefix readouts are compared with the saved VQC, including device noise, equal total-shot budgets and separate training/inference energy projections. This is local QoolQit/Pulser simulation on the pinned Pasqal target.
 
-**The current energy-to-accuracy protocol** uses [FRESNEL-beta-informed settings and finite-shot training](hardware_results/accuracy_energy_fresnel_beta_sample/SUMMARY.md), with the same temporal features and linear regression procedure for QRC and VQC. It repeats paired runs, reports energy/shot budgets at declared validation targets, and preserves unreachable targets. [Device/compiler and execution adapters](docs/accuracy-energy-protocol.md) support other targets; measured power/cycle/program evidence can update saved costs without retraining. FRESNEL-specific calibrated totals remain unknown until measurements are supplied. This protocol supersedes interpreting the earlier fixed-budget training ratio as an equal-accuracy energy advantage.
+**The primary comparison now trains both methods and reports accuracy as an outcome:** [full-training results](hardware_results/performance_energy_fresnel_beta_sample/SUMMARY.md), [protocol](docs/performance-energy-protocol.md), and [configuration](configs/performance_energy_fresnel_beta.json). Both use the same four atoms, unique MNIST splits, finite-shot temporal features, and linear regression procedure. VQC stops at a validation-loss plateau or safety cap; every optimizer evaluation, validation repetition and discarded checkpoint remains in its consumed cost, even if step zero is selected. Both selected and terminal accuracies are reported. The pinned public FRESNEL profile remains provisional for the account's beta QPU, and calibrated electrical joules remain unknown. The [earlier accuracy-target protocol](docs/accuracy-energy-protocol.md) and its [historical results](hardware_results/accuracy_energy_fresnel_beta_sample/SUMMARY.md) remain available separately. Neither study establishes a hardware-energy advantage.
 
 ## Pipeline
 
@@ -45,6 +45,9 @@ Python 3.11+ is recommended for `requirements-tested.txt` (these runs used Pytho
 python -m pip install -r requirements-tested.txt
 python -m pip install --no-deps -e .
 python -m unittest discover -s tests -v
+
+# Primary native analog QRC/VQC full-training study
+python -m rydberg_mnist.hardware.performance_energy --output hardware_results/new_performance_energy
 
 # Paper-aligned binary task: digits 3 and 8
 python -m rydberg_mnist.experiment --config configs/mnist_3_8.json --output results/new_binary

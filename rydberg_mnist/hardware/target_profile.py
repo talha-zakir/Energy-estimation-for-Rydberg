@@ -69,7 +69,9 @@ class AnalogProfile:
             register = Register(coordinates).with_automatic_layout(device)
         device.validate_register(register)
         actual = np.array(list(register.qubits.values()))
-        distances = np.linalg.norm(np.diff(actual, axis=0), axis=1)
+        pairwise = np.linalg.norm(actual[:, None]-actual[None, :], axis=2)
+        np.fill_diagonal(pairwise, np.inf)
+        distances = pairwise.min(axis=1)
         interactions = device.interaction_coeff/distances**6
         calibrated = device.register_is_from_calibrated_layout(register)
         metadata = {"target_device": device.name, "device_sha256": target["device_sha256"],
@@ -82,6 +84,8 @@ class AnalogProfile:
             "layout_traps": register.layout.number_of_traps, "layout_precalibrated": calibrated,
             "layout_calibration_required": not calibrated,
             "hardware_submission_verified": False,
+            "account_specific_spec_verified": bool(target.get("account_specific_spec_verified", False)),
+            "device_max_runs_per_job": device.max_runs,
             "published_regime_source": "https://arxiv.org/html/2407.02553v1#A2.SS2",
             "scope": "Comparable driving/interaction/encoding/probing scales adapted within target constraints; "
                      "not a reproduction or a provider-confirmed operating optimum"}
@@ -112,6 +116,12 @@ class AnalogProfile:
     def export_example(self, sequence, path, shots):
         """Offline export only; account/layout/server validation is still required."""
         path = Path(path)
+        if isinstance(shots, bool) or not isinstance(shots, int) or not 1 <= shots <= self.device.max_runs:
+            raise ValueError("Export job exceeds device shot limit")
+        if sequence.device != self.device:
+            raise ValueError("Export sequence differs from the selected device snapshot")
+        self.device.validate_register(sequence.register)
+        QPUBackend.validate_sequence(sequence, mimic_qpu=True)
         payload = sequence.to_abstract_repr()
         path.write_text(payload+"\n")
         return {"sequence_file": path.name, "sequence_sha256": hashlib.sha256(payload.encode()).hexdigest(),
