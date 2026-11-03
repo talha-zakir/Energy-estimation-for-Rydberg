@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "calibration_status": "unavailable",
+  "target_device": "FRESNEL",
+  "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+  "boundary": "whole_machine_electrical",
+  "electrical_power_w": null,
+  "full_cycle_s_per_attempt": null,
+  "attempts_per_returned_shot": null,
+  "setup_energy_j_per_program": null,
+  "external_classical_energy_j": null,
+  "cycle_includes_control_and_loading_readout_reset": true,
+  "provenance": {
+    "measured_at_utc": null,
+    "instrument_or_provider_record": null,
+    "measurement_scope": null,
+    "measurement_uncertainty": null
+  },
+  "scope": "No FRESNEL-specific power/cycle measurements supplied. Public SDK pulse/noise specifications are not electrical measurements. Populate from traceable measurements; missing values must not be replaced with zero."
+}

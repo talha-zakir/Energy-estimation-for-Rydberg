@@ -18,6 +18,8 @@ This is a research model, not device-calibrated hardware. The probe exposes subs
 
 **Quantum reservoir computing is implemented:** [paired QRC/VQC accuracy and cost results](hardware_results/pasqal_qrc_mnist_3_8_seed7/SUMMARY.md), [method and QRC papers](docs/qrc-vqc-comparison.md), and [config](configs/pasqal_qrc_mnist.json). A fixed reservoir uses the native VQC's exact split, PCA, atoms and global input encoding, and trains only a linear readout. Endpoint and temporal-prefix readouts are compared with the saved VQC, including device noise, equal total-shot budgets and separate training/inference energy projections. This is local QoolQit/Pulser simulation on the pinned Pasqal target.
 
+**The current energy-to-accuracy protocol** uses [FRESNEL-beta-informed settings and finite-shot training](hardware_results/accuracy_energy_fresnel_beta_sample/SUMMARY.md), with the same temporal features and linear regression procedure for QRC and VQC. It repeats paired runs, reports energy/shot budgets at declared validation targets, and preserves unreachable targets. [Device/compiler and execution adapters](docs/accuracy-energy-protocol.md) support other targets; measured power/cycle/program evidence can update saved costs without retraining. FRESNEL-specific calibrated totals remain unknown until measurements are supplied. This protocol supersedes interpreting the earlier fixed-budget training ratio as an equal-accuracy energy advantage.
+
 ## Pipeline
 
 ```text

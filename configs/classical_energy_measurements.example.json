@@ -1,0 +1,6 @@
+{
+  "schema_version": 1,
+  "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+  "workloads": {},
+  "instructions": "Populate workload-specific meter records, for example key seed7/qrc/train_to_step0. Each entry needs energy_j, measured_at_utc, source_record, and scope. Do not transfer a calibration-run CPU measurement to a different workflow."
+}

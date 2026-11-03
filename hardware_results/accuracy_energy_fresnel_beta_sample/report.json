@@ -1,0 +1,3487 @@
+{
+  "status": "Finite-shot, noisy, common-readout comparison; calibration completeness reported explicitly",
+  "config": {
+    "target": "configs/fresnel_beta_target.json",
+    "calibration": "configs/fresnel_beta_calibration.json",
+    "literature_config": "configs/literature_energy_fresnel_beta.json",
+    "digits": [
+      3,
+      8
+    ],
+    "n_train": 80,
+    "n_val": 20,
+    "n_test": 40,
+    "repeat_seeds": [
+      7,
+      11,
+      19
+    ],
+    "accuracy_targets": [
+      0.7,
+      0.8,
+      0.9
+    ],
+    "test_accuracy_tolerance": 0.05,
+    "regime": {
+      "n_qubits": 4,
+      "input_slots": 4,
+      "mixing_fraction_of_max": 0.5,
+      "interaction_to_mixing": 1.0,
+      "encoding_to_mixing": 1.0,
+      "phase_per_slot": 2.0,
+      "layout_slug": null,
+      "trap_ids": null
+    },
+    "readout_slots": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "shots_per_image": 1000,
+    "noise_trajectories": 2,
+    "alpha_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "vqc_steps": 8,
+    "minibatch_size": 8,
+    "checkpoint_every": 4,
+    "spsa_learning_rate": 0.2,
+    "spsa_perturbation": 0.15,
+    "parameter_bound": 2.0,
+    "early_stop_all_targets": true,
+    "threads": 4,
+    "scope": "Three-repeat exploratory finite-shot sample, not fully converged training. Targets are selected on validation only; hardware-account generation and power/cycle calibration remain unverified."
+  },
+  "device_profile": {
+    "target_device": "FRESNEL",
+    "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+    "compiler": "Pulser global analog pulses, explicit layout, SDK QPU validation",
+    "atomic_coordinates_um": [
+      [
+        -10.971113,
+        0.0
+      ],
+      [
+        -3.657038,
+        0.0
+      ],
+      [
+        3.657038,
+        0.0
+      ],
+      [
+        10.971113,
+        0.0
+      ]
+    ],
+    "nearest_neighbor_spacing_um": [
+      7.314075000000001,
+      7.314076,
+      7.314075000000001
+    ],
+    "mixing_rad_us": 5.654866776461628,
+    "encoding_rad_us": 5.654866776461628,
+    "interaction_to_mixing_actual": [
+      1.0000003034081866,
+      0.9999994830721981,
+      1.0000003034081866
+    ],
+    "encoding_to_mixing": 1.0,
+    "slot_duration_ns": 356,
+    "rise_ns": 72,
+    "mixing_phase_per_slot_actual": 2.0131325724203393,
+    "layout_traps": 60,
+    "layout_precalibrated": false,
+    "layout_calibration_required": true,
+    "hardware_submission_verified": false,
+    "published_regime_source": "https://arxiv.org/html/2407.02553v1#A2.SS2",
+    "scope": "Comparable driving/interaction/encoding/probing scales adapted within target constraints; not a reproduction or a provider-confirmed operating optimum"
+  },
+  "target": {
+    "schema_version": 1,
+    "kind": "pasqal_sdk_target",
+    "provider": "Pasqal",
+    "target_device": "FRESNEL",
+    "device_json": "fresnel_beta_device.json",
+    "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+    "snapshot_source": "Unauthenticated public device-specification API via PasqalCloudConnection().fetch_available_devices()",
+    "retrieved_at_utc": "2026-11-03T01:19:43.279993+00:00",
+    "account_access_verified": false,
+    "live_calibration_verified": false,
+    "calibration_status": "public_device_snapshot_not_live_calibration",
+    "power_calibration": {
+      "rydberg_global": {
+        "bias_w": null,
+        "omega_squared_w": null,
+        "wall_efficiency": null
+      }
+    },
+    "overhead": {
+      "preparation_us": null,
+      "readout_us": null,
+      "reset_us": null,
+      "background_power_w": null,
+      "fixed_energy_j_per_shot": null
+    },
+    "references": [
+      "https://docs.pasqal.com/qpu-emulators/qpus/",
+      "https://docs.pasqal.com/qoolqit/extended_usage/device_noise/"
+    ],
+    "target_label": "FRESNEL beta / public FRESNEL identifier",
+    "generation_verification": "Provider lists QPU-FRESNEL-100PQ as Orion Beta; account-specific device generation is unverified"
+  },
+  "calibration": {
+    "schema_version": 1,
+    "calibration_status": "unavailable",
+    "target_device": "FRESNEL",
+    "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+    "boundary": "whole_machine_electrical",
+    "electrical_power_w": null,
+    "full_cycle_s_per_attempt": null,
+    "attempts_per_returned_shot": null,
+    "setup_energy_j_per_program": null,
+    "external_classical_energy_j": null,
+    "cycle_includes_control_and_loading_readout_reset": true,
+    "provenance": {
+      "measured_at_utc": null,
+      "instrument_or_provider_record": null,
+      "measurement_scope": null,
+      "measurement_uncertainty": null
+    },
+    "scope": "No FRESNEL-specific power/cycle measurements supplied. Public SDK pulse/noise specifications are not electrical measurements. Populate from traceable measurements; missing values must not be replaced with zero."
+  },
+  "literature_configuration": {
+    "schema_version": 1,
+    "sources": {
+      "alves2026": {
+        "title": "Energetics of Rydberg-atom Quantum Computation",
+        "authors": "\u00d3scar Alves, Marco Pezzutto, Yasser Omar",
+        "version": "arXiv:2601.03141v2, 18 May 2026",
+        "url": "https://arxiv.org/html/2601.03141v2",
+        "boundary": "Radiation-source energy; excludes electrical conversion, control electronics, HVAC and host processing",
+        "platform": "Paper's cesium gate-model experimental reference, not Pasqal FRESNEL",
+        "locators": [
+          "Section IV.1 radiation-source table",
+          "Section IV.2 baseline/preparation/measurement table"
+        ]
+      },
+      "carrasco2026": {
+        "title": "Energy efficiency of quantum computers",
+        "authors": "Miquel Carrasco-Codina et al.",
+        "version": "arXiv:2605.15090v2, 31 August 2026",
+        "url": "https://arxiv.org/html/2605.15090v2",
+        "boundary": "Reference machine/facility electrical power including HVAC and hardware-control computers",
+        "platform": "Harvard rubidium-87 n=53 digital neutral-atom reference; not Pasqal calibration",
+        "locators": [
+          "Section 6.2.1",
+          "Equation 18",
+          "Appendix A.4, Tables 8 and 9"
+        ]
+      },
+      "pasqal2023": {
+        "title": "Quantum Computing to Greener Calculations",
+        "url": "https://www.pasqal.com/blog/quantum-computing-rethinking-energy-consumption/",
+        "version": "Vendor article dated 5 October 2023",
+        "boundary": "Historical vendor total-power statement; not a research paper or a current FRESNEL measurement",
+        "locator": "Neutral atoms, a greener quantum architecture: approximately 2.6 kW"
+      }
+    },
+    "alves_reference": {
+      "microwave_radiation_w": 0.0574,
+      "blue_source_w": 0.1,
+      "infrared_global_source_w": 11.0,
+      "trap_source_w_per_trap": 0.01,
+      "reference_traps": 49,
+      "cooling_source_w": 0.001,
+      "cooling_s": 0.1,
+      "pumping_source_w": 0.001,
+      "pumping_s": 0.01,
+      "measurement_beams": 4,
+      "measurement_source_w_per_beam": 0.00022,
+      "measurement_s": 0.09,
+      "reproduction": {
+        "microwave_us": 615.999,
+        "blue_us": 279.581,
+        "infrared_us": 54.454,
+        "trap_on_s": 0.2009,
+        "repetitions": 700,
+        "paper_computation_mj_rounded": 0.662,
+        "paper_total_j_rounded": 69.5
+      }
+    },
+    "carrasco_reference": {
+      "components": [
+        {
+          "name": "Trap lasers",
+          "count": 1,
+          "unit_w": 1500
+        },
+        {
+          "name": "Lasers for Rydberg gates",
+          "count": 1,
+          "unit_w": 1900
+        },
+        {
+          "name": "Other lasers A",
+          "count": 2,
+          "unit_w": 900
+        },
+        {
+          "name": "Other lasers B",
+          "count": 7,
+          "unit_w": 150
+        },
+        {
+          "name": "Magnetic field generation",
+          "count": 1,
+          "unit_w": 1050
+        },
+        {
+          "name": "Camera",
+          "count": 1,
+          "unit_w": 155
+        },
+        {
+          "name": "Vacuum pump",
+          "count": 1,
+          "unit_w": 100
+        },
+        {
+          "name": "Classical computers",
+          "count": 1,
+          "unit_w": 150
+        },
+        {
+          "name": "HVAC",
+          "count": 1,
+          "unit_w": 7500
+        },
+        {
+          "name": "Other electronics",
+          "count": 1,
+          "unit_w": 2000
+        },
+        {
+          "name": "Small laser chillers",
+          "count": 5,
+          "unit_w": 600
+        },
+        {
+          "name": "Large laser chillers",
+          "count": 2,
+          "unit_w": 1000
+        }
+      ],
+      "reset_s": 0.01,
+      "measurement_s": 0.01,
+      "clock_s": 0.0005,
+      "transport_s": 0.0005,
+      "transport_per_layer": 0.25,
+      "reload_s": 0.5,
+      "layers_per_reload": 2400,
+      "extra_continuous_reload_components_w": [
+        350,
+        1500,
+        700
+      ]
+    },
+    "transferred_scenarios": {
+      "radiation_source": {
+        "trap_count": 49,
+        "raman_to_microwave_power_mapping": "Assumption: charge Raman controls at the paper's derived microwave radiation power; mechanisms differ",
+        "blue_global_scaling": "Assumption: one local-blue reference power per illuminated atom; shared infrared beam counted once",
+        "constant_on_power": "Assumption: reference source powers held fixed for pulse-on windows, regardless of simulated Rabi rate. Not a Rabi-power calibration or validated architecture ranking."
+      },
+      "system_power_scenarios": [
+        {
+          "id": "harvard_paper_reference",
+          "power_from": "carrasco_components",
+          "source": "carrasco2026"
+        },
+        {
+          "id": "pasqal_historical_power_transfer",
+          "power_w": 2600,
+          "source": "pasqal2023"
+        }
+      ],
+      "schedule_timing": {
+        "reset_from": "carrasco_reference.reset_s",
+        "measurement_from": "carrasco_reference.measurement_s",
+        "transport_events": 0,
+        "reconfiguration_layers": 0,
+        "reloads_per_shot": 0,
+        "assumption": "Our compiled recipes keep a fixed register; no motion/reconfiguration/reloading is charged. Their real overheads need calibration; paper reset/readout times are transferred as a scenario."
+      },
+      "shots_per_prediction": 1000,
+      "shot_sensitivity": [
+        100,
+        1000,
+        10000
+      ],
+      "reset_plus_readout_sensitivity_s": [
+        0.002,
+        0.02,
+        0.2
+      ],
+      "electricity_tariff_per_kwh": 0.25,
+      "currency": "EUR",
+      "tariff_status": "Illustrative user-changeable arithmetic assumption, not a market quote or QPU service price"
+    },
+    "fresnel_beta_nominal_throughput": {
+      "shots_per_s": 0.25,
+      "source": "https://www.scaleway.com/en/docs/quantum-computing/additional-content/pasqal-qpus/",
+      "locator": "Table: QPU-FRESNEL-100PQ, Orion Beta, shots 0.25hz",
+      "retrieved_date": "2026-11-03",
+      "status": "published_provider_specification_not_measured_account_cycle",
+      "caveat": "Page prose also calls available hardware Orion Gamma. The table specifically labels this entry Beta; confirm generation/device ID for the actual booked QPU."
+    }
+  },
+  "input_sha256": {
+    "target": "9b67abcc7fc7e22657c41771406ad08283e8fff304c2ce07143f41a33c97656d",
+    "calibration": "dbb44d4783f2958e93c4c119b9fe294f776b58c881c61bc042de805f09ec4858",
+    "literature_config": "763250739e2984ee86a4bc2f7ccb5805c1bf33692a276e14a0b6ea220f77aff9"
+  },
+  "protocol": {
+    "quantum_features_identical_for_both_methods": true,
+    "linear_head": "Training-only feature scaling + multi-output linear least squares / ridge; same alpha grid and validation MSE",
+    "training_and_validation_use_finite_shot_device_noise_and_spam": true,
+    "no_exact_expectation_training": true,
+    "selection_uses_test_labels": false,
+    "target_rule": "First checkpoint meeting predeclared validation accuracy; unreachable targets are censored",
+    "hardware_training_recipe": "Alternating sampled linear-head fits and minibatch SPSA with a fixed head between checkpoints",
+    "common_shots_per_image": 1000,
+    "test_matching_rule": "Report both independent held-out scores and flag compatibility within the declared tolerance; never tune to test accuracy",
+    "prior_test_inspection": "Exploratory sample; earlier work used some of the same official test images",
+    "default_energy_calibration": "Unknown until traceable target-specific measurements are supplied",
+    "hardware_jobs_submitted_by_default": false
+  },
+  "repeats": [
+    {
+      "seed": 7,
+      "backend": "local_noisy_finite_shot_simulation",
+      "checkpoints": {
+        "qrc": [
+          {
+            "iteration": 0,
+            "validation_accuracy": 0.75,
+            "validation_mse": 0.15781627910302598,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 400
+          }
+        ],
+        "vqc": [
+          {
+            "iteration": 0,
+            "validation_accuracy": 0.75,
+            "validation_mse": 0.15781627910302598,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 800
+          },
+          {
+            "iteration": 4,
+            "validation_accuracy": 0.7,
+            "validation_mse": 0.19821561458598175,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 264000,
+            "cumulative_pulse_programs": 1056,
+            "ledger_end": 1456
+          },
+          {
+            "iteration": 8,
+            "validation_accuracy": 0.7,
+            "validation_mse": 0.16314798582972312,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 428000,
+            "cumulative_pulse_programs": 1712,
+            "ledger_end": 2112
+          }
+        ]
+      },
+      "targets": {
+        "0.7": {
+          "target_validation_accuracy": 0.7,
+          "algorithms": {
+            "qrc": {
+              "status": "validation_target_reached",
+              "checkpoint": {
+                "iteration": 0,
+                "validation_accuracy": 0.75,
+                "validation_mse": 0.15781627910302598,
+                "alpha": 10.0,
+                "cumulative_requested_shots": 100000,
+                "cumulative_pulse_programs": 400,
+                "ledger_end": 400
+              },
+              "held_out_test": {
+                "accuracy": 0.85,
+                "balanced_accuracy": 0.8500000000000001,
+                "correct": 34,
+                "n": 40,
+                "accuracy_wilson95": [
+                  0.7092737396097997,
+                  0.9293890829149256
+                ],
+                "confusion_matrix": [
+                  [
+                    18,
+                    2
+                  ],
+                  [
+                    4,
+                    16
+                  ]
+                ]
+              },
+              "energy_to_validation_target": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.10533875,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412339.046943754,
+                    "kwh": 12.336760846373265,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.084190211593316,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200273.8807500005,
+                    "kwh": 1.4445205224305557,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.36113013060763893,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "held_out_inference_energy": {
+                "requested_returned_shots": 40000,
+                "pulse_program_requests": 160,
+                "compiled_control_s_for_requested_shots": 0.042118749999999996,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 17764935.24684375,
+                    "kwh": 4.934704235234375,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.2336760588085938,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 2080109.50875,
+                    "kwh": 0.577808196875,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.14445204921875,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 3552800000.0,
+                    "kwh": 986.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 246.72222222222223,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 416000000.0,
+                    "kwh": 115.55555555555556,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 28.88888888888889,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "training_plus_held_out_inference_energy": {
+                "requested_returned_shots": 140000,
+                "pulse_program_requests": 560,
+                "compiled_control_s_for_requested_shots": 0.1474575,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 62177274.2937875,
+                    "kwh": 17.27146508160764,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 4.31786627040191,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 7280383.3895000005,
+                    "kwh": 2.022328719305556,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.505582179826389,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 12434800000.0,
+                    "kwh": 3454.1111111111113,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 863.5277777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1456000000.0,
+                    "kwh": 404.44444444444446,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 101.11111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            },
+            "vqc": {
+              "status": "validation_target_reached",
+              "checkpoint": {
+                "iteration": 0,
+                "validation_accuracy": 0.75,
+                "validation_mse": 0.15781627910302598,
+                "alpha": 10.0,
+                "cumulative_requested_shots": 100000,
+                "cumulative_pulse_programs": 400,
+                "ledger_end": 800
+              },
+              "held_out_test": {
+                "accuracy": 0.85,
+                "balanced_accuracy": 0.8500000000000001,
+                "correct": 34,
+                "n": 40,
+                "accuracy_wilson95": [
+                  0.7092737396097997,
+                  0.9293890829149256
+                ],
+                "confusion_matrix": [
+                  [
+                    18,
+                    2
+                  ],
+                  [
+                    4,
+                    16
+                  ]
+                ]
+              },
+              "energy_to_validation_target": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.10533875,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412339.046943754,
+                    "kwh": 12.336760846373265,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.084190211593316,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200273.8807500005,
+                    "kwh": 1.4445205224305557,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.36113013060763893,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "held_out_inference_energy": {
+                "requested_returned_shots": 40000,
+                "pulse_program_requests": 160,
+                "compiled_control_s_for_requested_shots": 0.042118749999999996,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 17764935.24684375,
+                    "kwh": 4.934704235234375,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.2336760588085938,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 2080109.50875,
+                    "kwh": 0.577808196875,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.14445204921875,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 3552800000.0,
+                    "kwh": 986.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 246.72222222222223,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 416000000.0,
+                    "kwh": 115.55555555555556,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 28.88888888888889,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "training_plus_held_out_inference_energy": {
+                "requested_returned_shots": 140000,
+                "pulse_program_requests": 560,
+                "compiled_control_s_for_requested_shots": 0.1474575,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 62177274.2937875,
+                    "kwh": 17.27146508160764,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 4.31786627040191,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 7280383.3895000005,
+                    "kwh": 2.022328719305556,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.505582179826389,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 12434800000.0,
+                    "kwh": 3454.1111111111113,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 863.5277777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1456000000.0,
+                    "kwh": 404.44444444444446,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 101.11111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            }
+          },
+          "paired_target_reached": true,
+          "held_out_accuracy_difference_qrc_minus_vqc": 0.0,
+          "held_out_accuracies_within_declared_tolerance": true
+        },
+        "0.8": {
+          "target_validation_accuracy": 0.8,
+          "algorithms": {
+            "qrc": {
+              "status": "not_reached_within_budget",
+              "best_validation_accuracy": 0.75,
+              "training_budget_spent": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.10533875,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412339.046943754,
+                    "kwh": 12.336760846373265,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.084190211593316,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200273.8807500005,
+                    "kwh": 1.4445205224305557,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.36113013060763893,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            },
+            "vqc": {
+              "status": "not_reached_within_budget",
+              "best_validation_accuracy": 0.75,
+              "training_budget_spent": {
+                "requested_returned_shots": 428000,
+                "pulse_program_requests": 1712,
+                "compiled_control_s_for_requested_shots": 0.45089425,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 190084812.10682124,
+                    "kwh": 52.801336696339234,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 13.200334174084809,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 22257172.32505,
+                    "kwh": 6.182547868069444,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.545636967017361,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 38014960000.0,
+                    "kwh": 10559.711111111112,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 2639.927777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 4451200000.0,
+                    "kwh": 1236.4444444444443,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 309.1111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            }
+          },
+          "paired_target_reached": false
+        },
+        "0.9": {
+          "target_validation_accuracy": 0.9,
+          "algorithms": {
+            "qrc": {
+              "status": "not_reached_within_budget",
+              "best_validation_accuracy": 0.75,
+              "training_budget_spent": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.10533875,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412339.046943754,
+                    "kwh": 12.336760846373265,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.084190211593316,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200273.8807500005,
+                    "kwh": 1.4445205224305557,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.36113013060763893,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            },
+            "vqc": {
+              "status": "not_reached_within_budget",
+              "best_validation_accuracy": 0.75,
+              "training_budget_spent": {
+                "requested_returned_shots": 428000,
+                "pulse_program_requests": 1712,
+                "compiled_control_s_for_requested_shots": 0.45089425,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 190084812.10682124,
+                    "kwh": 52.801336696339234,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 13.200334174084809,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 22257172.32505,
+                    "kwh": 6.182547868069444,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.545636967017361,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 38014960000.0,
+                    "kwh": 10559.711111111112,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 2639.927777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 4451200000.0,
+                    "kwh": 1236.4444444444443,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 309.1111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            }
+          },
+          "paired_target_reached": false
+        }
+      },
+      "validation_selected_fallback": {
+        "qrc": {
+          "checkpoint": {
+            "iteration": 0,
+            "validation_accuracy": 0.75,
+            "validation_mse": 0.15781627910302598,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 400
+          },
+          "held_out_test": {
+            "accuracy": 0.85,
+            "balanced_accuracy": 0.8500000000000001,
+            "correct": 34,
+            "n": 40,
+            "accuracy_wilson95": [
+              0.7092737396097997,
+              0.9293890829149256
+            ],
+            "confusion_matrix": [
+              [
+                18,
+                2
+              ],
+              [
+                4,
+                16
+              ]
+            ]
+          }
+        },
+        "vqc": {
+          "checkpoint": {
+            "iteration": 0,
+            "validation_accuracy": 0.75,
+            "validation_mse": 0.15781627910302598,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 800
+          },
+          "held_out_test": {
+            "accuracy": 0.85,
+            "balanced_accuracy": 0.8500000000000001,
+            "correct": 34,
+            "n": 40,
+            "accuracy_wilson95": [
+              0.7092737396097997,
+              0.9293890829149256
+            ],
+            "confusion_matrix": [
+              [
+                18,
+                2
+              ],
+              [
+                4,
+                16
+              ]
+            ]
+          }
+        }
+      },
+      "classical_linear_test": {
+        "accuracy": 0.875,
+        "balanced_accuracy": 0.875,
+        "correct": 35,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.7388757932976187,
+          0.9454058022645873
+        ],
+        "confusion_matrix": [
+          [
+            18,
+            2
+          ],
+          [
+            3,
+            17
+          ]
+        ]
+      },
+      "complete_study_execution_budget": {
+        "qrc": {
+          "requested_returned_shots": 140000,
+          "pulse_program_requests": 560,
+          "compiled_control_s_for_requested_shots": 0.1474575,
+          "calibrated_shot_execution_energy_j": null,
+          "calibrated_setup_energy_j": null,
+          "measured_external_classical_energy_j": null,
+          "complete_workflow_energy_j": null,
+          "measured_program_electrical_energy_j": null,
+          "complete_measured_workflow_energy_j": null,
+          "complete_workflow_kwh": null,
+          "calibration_status": "unavailable",
+          "literature_scenarios": {
+            "harvard_paper_reference": {
+              "electrical_j": 62177274.2937875,
+              "kwh": 17.27146508160764,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 4.31786627040191,
+              "currency": "EUR"
+            },
+            "pasqal_historical_power_transfer": {
+              "electrical_j": 7280383.3895000005,
+              "kwh": 2.022328719305556,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 0.505582179826389,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__harvard_paper_reference": {
+              "electrical_j": 12434800000.0,
+              "kwh": 3454.1111111111113,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 863.5277777777778,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__pasqal_historical_power_transfer": {
+              "electrical_j": 1456000000.0,
+              "kwh": 404.44444444444446,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 101.11111111111111,
+              "currency": "EUR"
+            }
+          },
+          "missing_measurements": [
+            "electrical_power_w",
+            "full_cycle_s_per_attempt",
+            "attempts_per_returned_shot",
+            "setup_energy_j_per_program",
+            "external_classical_energy_for_this_workload_j"
+          ],
+          "hardware_execution_energy_measured_here": false,
+          "provider_bill": null
+        },
+        "vqc": {
+          "requested_returned_shots": 468000,
+          "pulse_program_requests": 1872,
+          "compiled_control_s_for_requested_shots": 0.493013,
+          "calibrated_shot_execution_energy_j": null,
+          "calibrated_setup_energy_j": null,
+          "measured_external_classical_energy_j": null,
+          "complete_workflow_energy_j": null,
+          "measured_program_electrical_energy_j": null,
+          "complete_measured_workflow_energy_j": null,
+          "complete_workflow_kwh": null,
+          "calibration_status": "unavailable",
+          "literature_scenarios": {
+            "harvard_paper_reference": {
+              "electrical_j": 207849747.353665,
+              "kwh": 57.73604093157361,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 14.434010232893403,
+              "currency": "EUR"
+            },
+            "pasqal_historical_power_transfer": {
+              "electrical_j": 24337281.8338,
+              "kwh": 6.760356064944444,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 1.690089016236111,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__harvard_paper_reference": {
+              "electrical_j": 41567760000.0,
+              "kwh": 11546.6,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 2886.65,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__pasqal_historical_power_transfer": {
+              "electrical_j": 4867200000.0,
+              "kwh": 1352.0,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 338.0,
+              "currency": "EUR"
+            }
+          },
+          "missing_measurements": [
+            "electrical_power_w",
+            "full_cycle_s_per_attempt",
+            "attempts_per_returned_shot",
+            "setup_energy_j_per_program",
+            "external_classical_energy_for_this_workload_j"
+          ],
+          "hardware_execution_energy_measured_here": false,
+          "provider_bill": null
+        }
+      },
+      "feature_count_each": 40,
+      "export_examples": [
+        {
+          "sequence_file": "qrc_step0_prefix1.json",
+          "sequence_sha256": "ec09b35f13817fd1e619d173e3dc357fec0429aac5dcf465488b0c97e38c1fd7",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "qrc_step0_prefix2.json",
+          "sequence_sha256": "93af19df9b6d1365ad606dbd7908e3b53b77ff568ec8e7a65158c8bdc8cc401c",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "qrc_step0_prefix3.json",
+          "sequence_sha256": "8a1b8bfd64c339f14737a8c2310a6a425f65489f9deea02817a90950cda3ba02",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "qrc_step0_prefix4.json",
+          "sequence_sha256": "0919cc5592e5682357e4d7a086272ac623623c2080dae7f8a382a10fbf38bca5",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix1.json",
+          "sequence_sha256": "ec09b35f13817fd1e619d173e3dc357fec0429aac5dcf465488b0c97e38c1fd7",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix2.json",
+          "sequence_sha256": "93af19df9b6d1365ad606dbd7908e3b53b77ff568ec8e7a65158c8bdc8cc401c",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix3.json",
+          "sequence_sha256": "8a1b8bfd64c339f14737a8c2310a6a425f65489f9deea02817a90950cda3ba02",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix4.json",
+          "sequence_sha256": "0919cc5592e5682357e4d7a086272ac623623c2080dae7f8a382a10fbf38bca5",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        }
+      ],
+      "pca_explained_variance": 0.5264835844059208
+    },
+    {
+      "seed": 11,
+      "backend": "local_noisy_finite_shot_simulation",
+      "checkpoints": {
+        "qrc": [
+          {
+            "iteration": 0,
+            "validation_accuracy": 0.8,
+            "validation_mse": 0.14044003254843312,
+            "alpha": 1.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 400
+          }
+        ],
+        "vqc": [
+          {
+            "iteration": 0,
+            "validation_accuracy": 0.8,
+            "validation_mse": 0.14044003254843312,
+            "alpha": 1.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 800
+          },
+          {
+            "iteration": 4,
+            "validation_accuracy": 0.8,
+            "validation_mse": 0.14463790009568628,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 264000,
+            "cumulative_pulse_programs": 1056,
+            "ledger_end": 1456
+          },
+          {
+            "iteration": 8,
+            "validation_accuracy": 0.7,
+            "validation_mse": 0.22909490036179808,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 428000,
+            "cumulative_pulse_programs": 1712,
+            "ledger_end": 2112
+          }
+        ]
+      },
+      "targets": {
+        "0.7": {
+          "target_validation_accuracy": 0.7,
+          "algorithms": {
+            "qrc": {
+              "status": "validation_target_reached",
+              "checkpoint": {
+                "iteration": 0,
+                "validation_accuracy": 0.8,
+                "validation_mse": 0.14044003254843312,
+                "alpha": 1.0,
+                "cumulative_requested_shots": 100000,
+                "cumulative_pulse_programs": 400,
+                "ledger_end": 400
+              },
+              "held_out_test": {
+                "accuracy": 0.825,
+                "balanced_accuracy": 0.825,
+                "correct": 33,
+                "n": 40,
+                "accuracy_wilson95": [
+                  0.6804970794560755,
+                  0.9125469700311694
+                ],
+                "confusion_matrix": [
+                  [
+                    18,
+                    2
+                  ],
+                  [
+                    5,
+                    15
+                  ]
+                ]
+              },
+              "energy_to_validation_target": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.1053955,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412340.3070775,
+                    "kwh": 12.336761196410416,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.084190299102604,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200274.0283,
+                    "kwh": 1.4445205634166667,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.36113014085416667,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "held_out_inference_energy": {
+                "requested_returned_shots": 40000,
+                "pulse_program_requests": 160,
+                "compiled_control_s_for_requested_shots": 0.042159499999999996,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 17764936.1516975,
+                    "kwh": 4.934704486582639,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.2336761216456598,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 2080109.6147,
+                    "kwh": 0.5778082263055556,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.1444520565763889,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 3552800000.0,
+                    "kwh": 986.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 246.72222222222223,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 416000000.0,
+                    "kwh": 115.55555555555556,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 28.88888888888889,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "training_plus_held_out_inference_energy": {
+                "requested_returned_shots": 140000,
+                "pulse_program_requests": 560,
+                "compiled_control_s_for_requested_shots": 0.147555,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 62177276.458775,
+                    "kwh": 17.271465682993057,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 4.317866420748264,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 7280383.643,
+                    "kwh": 2.022328789722222,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.5055821974305555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 12434800000.0,
+                    "kwh": 3454.1111111111113,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 863.5277777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1456000000.0,
+                    "kwh": 404.44444444444446,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 101.11111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            },
+            "vqc": {
+              "status": "validation_target_reached",
+              "checkpoint": {
+                "iteration": 0,
+                "validation_accuracy": 0.8,
+                "validation_mse": 0.14044003254843312,
+                "alpha": 1.0,
+                "cumulative_requested_shots": 100000,
+                "cumulative_pulse_programs": 400,
+                "ledger_end": 800
+              },
+              "held_out_test": {
+                "accuracy": 0.825,
+                "balanced_accuracy": 0.825,
+                "correct": 33,
+                "n": 40,
+                "accuracy_wilson95": [
+                  0.6804970794560755,
+                  0.9125469700311694
+                ],
+                "confusion_matrix": [
+                  [
+                    18,
+                    2
+                  ],
+                  [
+                    5,
+                    15
+                  ]
+                ]
+              },
+              "energy_to_validation_target": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.1053955,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412340.3070775,
+                    "kwh": 12.336761196410416,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.084190299102604,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200274.0283,
+                    "kwh": 1.4445205634166667,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.36113014085416667,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "held_out_inference_energy": {
+                "requested_returned_shots": 40000,
+                "pulse_program_requests": 160,
+                "compiled_control_s_for_requested_shots": 0.042159499999999996,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 17764936.1516975,
+                    "kwh": 4.934704486582639,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.2336761216456598,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 2080109.6147,
+                    "kwh": 0.5778082263055556,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.1444520565763889,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 3552800000.0,
+                    "kwh": 986.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 246.72222222222223,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 416000000.0,
+                    "kwh": 115.55555555555556,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 28.88888888888889,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "training_plus_held_out_inference_energy": {
+                "requested_returned_shots": 140000,
+                "pulse_program_requests": 560,
+                "compiled_control_s_for_requested_shots": 0.147555,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 62177276.458775,
+                    "kwh": 17.271465682993057,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 4.317866420748264,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 7280383.643,
+                    "kwh": 2.022328789722222,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.5055821974305555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 12434800000.0,
+                    "kwh": 3454.1111111111113,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 863.5277777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1456000000.0,
+                    "kwh": 404.44444444444446,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 101.11111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            }
+          },
+          "paired_target_reached": true,
+          "held_out_accuracy_difference_qrc_minus_vqc": 0.0,
+          "held_out_accuracies_within_declared_tolerance": true
+        },
+        "0.8": {
+          "target_validation_accuracy": 0.8,
+          "algorithms": {
+            "qrc": {
+              "status": "validation_target_reached",
+              "checkpoint": {
+                "iteration": 0,
+                "validation_accuracy": 0.8,
+                "validation_mse": 0.14044003254843312,
+                "alpha": 1.0,
+                "cumulative_requested_shots": 100000,
+                "cumulative_pulse_programs": 400,
+                "ledger_end": 400
+              },
+              "held_out_test": {
+                "accuracy": 0.825,
+                "balanced_accuracy": 0.825,
+                "correct": 33,
+                "n": 40,
+                "accuracy_wilson95": [
+                  0.6804970794560755,
+                  0.9125469700311694
+                ],
+                "confusion_matrix": [
+                  [
+                    18,
+                    2
+                  ],
+                  [
+                    5,
+                    15
+                  ]
+                ]
+              },
+              "energy_to_validation_target": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.1053955,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412340.3070775,
+                    "kwh": 12.336761196410416,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.084190299102604,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200274.0283,
+                    "kwh": 1.4445205634166667,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.36113014085416667,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "held_out_inference_energy": {
+                "requested_returned_shots": 40000,
+                "pulse_program_requests": 160,
+                "compiled_control_s_for_requested_shots": 0.042159499999999996,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 17764936.1516975,
+                    "kwh": 4.934704486582639,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.2336761216456598,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 2080109.6147,
+                    "kwh": 0.5778082263055556,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.1444520565763889,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 3552800000.0,
+                    "kwh": 986.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 246.72222222222223,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 416000000.0,
+                    "kwh": 115.55555555555556,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 28.88888888888889,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "training_plus_held_out_inference_energy": {
+                "requested_returned_shots": 140000,
+                "pulse_program_requests": 560,
+                "compiled_control_s_for_requested_shots": 0.147555,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 62177276.458775,
+                    "kwh": 17.271465682993057,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 4.317866420748264,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 7280383.643,
+                    "kwh": 2.022328789722222,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.5055821974305555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 12434800000.0,
+                    "kwh": 3454.1111111111113,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 863.5277777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1456000000.0,
+                    "kwh": 404.44444444444446,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 101.11111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            },
+            "vqc": {
+              "status": "validation_target_reached",
+              "checkpoint": {
+                "iteration": 0,
+                "validation_accuracy": 0.8,
+                "validation_mse": 0.14044003254843312,
+                "alpha": 1.0,
+                "cumulative_requested_shots": 100000,
+                "cumulative_pulse_programs": 400,
+                "ledger_end": 800
+              },
+              "held_out_test": {
+                "accuracy": 0.825,
+                "balanced_accuracy": 0.825,
+                "correct": 33,
+                "n": 40,
+                "accuracy_wilson95": [
+                  0.6804970794560755,
+                  0.9125469700311694
+                ],
+                "confusion_matrix": [
+                  [
+                    18,
+                    2
+                  ],
+                  [
+                    5,
+                    15
+                  ]
+                ]
+              },
+              "energy_to_validation_target": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.1053955,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412340.3070775,
+                    "kwh": 12.336761196410416,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.084190299102604,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200274.0283,
+                    "kwh": 1.4445205634166667,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.36113014085416667,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "held_out_inference_energy": {
+                "requested_returned_shots": 40000,
+                "pulse_program_requests": 160,
+                "compiled_control_s_for_requested_shots": 0.042159499999999996,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 17764936.1516975,
+                    "kwh": 4.934704486582639,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.2336761216456598,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 2080109.6147,
+                    "kwh": 0.5778082263055556,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.1444520565763889,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 3552800000.0,
+                    "kwh": 986.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 246.72222222222223,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 416000000.0,
+                    "kwh": 115.55555555555556,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 28.88888888888889,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "training_plus_held_out_inference_energy": {
+                "requested_returned_shots": 140000,
+                "pulse_program_requests": 560,
+                "compiled_control_s_for_requested_shots": 0.147555,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 62177276.458775,
+                    "kwh": 17.271465682993057,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 4.317866420748264,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 7280383.643,
+                    "kwh": 2.022328789722222,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.5055821974305555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 12434800000.0,
+                    "kwh": 3454.1111111111113,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 863.5277777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1456000000.0,
+                    "kwh": 404.44444444444446,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 101.11111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            }
+          },
+          "paired_target_reached": true,
+          "held_out_accuracy_difference_qrc_minus_vqc": 0.0,
+          "held_out_accuracies_within_declared_tolerance": true
+        },
+        "0.9": {
+          "target_validation_accuracy": 0.9,
+          "algorithms": {
+            "qrc": {
+              "status": "not_reached_within_budget",
+              "best_validation_accuracy": 0.8,
+              "training_budget_spent": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.1053955,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412340.3070775,
+                    "kwh": 12.336761196410416,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.084190299102604,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200274.0283,
+                    "kwh": 1.4445205634166667,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.36113014085416667,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            },
+            "vqc": {
+              "status": "not_reached_within_budget",
+              "best_validation_accuracy": 0.8,
+              "training_budget_spent": {
+                "requested_returned_shots": 428000,
+                "pulse_program_requests": 1712,
+                "compiled_control_s_for_requested_shots": 0.45107775,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 190084816.18143874,
+                    "kwh": 52.80133782817743,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 13.200334457044358,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 22257172.80215,
+                    "kwh": 6.182548000597222,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.5456370001493056,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 38014960000.0,
+                    "kwh": 10559.711111111112,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 2639.927777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 4451200000.0,
+                    "kwh": 1236.4444444444443,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 309.1111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            }
+          },
+          "paired_target_reached": false
+        }
+      },
+      "validation_selected_fallback": {
+        "qrc": {
+          "checkpoint": {
+            "iteration": 0,
+            "validation_accuracy": 0.8,
+            "validation_mse": 0.14044003254843312,
+            "alpha": 1.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 400
+          },
+          "held_out_test": {
+            "accuracy": 0.825,
+            "balanced_accuracy": 0.825,
+            "correct": 33,
+            "n": 40,
+            "accuracy_wilson95": [
+              0.6804970794560755,
+              0.9125469700311694
+            ],
+            "confusion_matrix": [
+              [
+                18,
+                2
+              ],
+              [
+                5,
+                15
+              ]
+            ]
+          }
+        },
+        "vqc": {
+          "checkpoint": {
+            "iteration": 0,
+            "validation_accuracy": 0.8,
+            "validation_mse": 0.14044003254843312,
+            "alpha": 1.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 800
+          },
+          "held_out_test": {
+            "accuracy": 0.825,
+            "balanced_accuracy": 0.825,
+            "correct": 33,
+            "n": 40,
+            "accuracy_wilson95": [
+              0.6804970794560755,
+              0.9125469700311694
+            ],
+            "confusion_matrix": [
+              [
+                18,
+                2
+              ],
+              [
+                5,
+                15
+              ]
+            ]
+          }
+        }
+      },
+      "classical_linear_test": {
+        "accuracy": 0.925,
+        "balanced_accuracy": 0.925,
+        "correct": 37,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.8013546984090248,
+          0.9741644432281419
+        ],
+        "confusion_matrix": [
+          [
+            18,
+            2
+          ],
+          [
+            1,
+            19
+          ]
+        ]
+      },
+      "complete_study_execution_budget": {
+        "qrc": {
+          "requested_returned_shots": 140000,
+          "pulse_program_requests": 560,
+          "compiled_control_s_for_requested_shots": 0.147555,
+          "calibrated_shot_execution_energy_j": null,
+          "calibrated_setup_energy_j": null,
+          "measured_external_classical_energy_j": null,
+          "complete_workflow_energy_j": null,
+          "measured_program_electrical_energy_j": null,
+          "complete_measured_workflow_energy_j": null,
+          "complete_workflow_kwh": null,
+          "calibration_status": "unavailable",
+          "literature_scenarios": {
+            "harvard_paper_reference": {
+              "electrical_j": 62177276.458775,
+              "kwh": 17.271465682993057,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 4.317866420748264,
+              "currency": "EUR"
+            },
+            "pasqal_historical_power_transfer": {
+              "electrical_j": 7280383.643,
+              "kwh": 2.022328789722222,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 0.5055821974305555,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__harvard_paper_reference": {
+              "electrical_j": 12434800000.0,
+              "kwh": 3454.1111111111113,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 863.5277777777778,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__pasqal_historical_power_transfer": {
+              "electrical_j": 1456000000.0,
+              "kwh": 404.44444444444446,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 101.11111111111111,
+              "currency": "EUR"
+            }
+          },
+          "missing_measurements": [
+            "electrical_power_w",
+            "full_cycle_s_per_attempt",
+            "attempts_per_returned_shot",
+            "setup_energy_j_per_program",
+            "external_classical_energy_for_this_workload_j"
+          ],
+          "hardware_execution_energy_measured_here": false,
+          "provider_bill": null
+        },
+        "vqc": {
+          "requested_returned_shots": 468000,
+          "pulse_program_requests": 1872,
+          "compiled_control_s_for_requested_shots": 0.49323724999999996,
+          "calibrated_shot_execution_energy_j": null,
+          "calibrated_setup_energy_j": null,
+          "measured_external_classical_energy_j": null,
+          "complete_workflow_energy_j": null,
+          "measured_program_electrical_energy_j": null,
+          "complete_measured_workflow_energy_j": null,
+          "complete_workflow_kwh": null,
+          "calibration_status": "unavailable",
+          "literature_scenarios": {
+            "harvard_paper_reference": {
+              "electrical_j": 207849752.33313626,
+              "kwh": 57.73604231476007,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 14.434010578690017,
+              "currency": "EUR"
+            },
+            "pasqal_historical_power_transfer": {
+              "electrical_j": 24337282.41685,
+              "kwh": 6.760356226902778,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 1.6900890567256945,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__harvard_paper_reference": {
+              "electrical_j": 41567760000.0,
+              "kwh": 11546.6,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 2886.65,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__pasqal_historical_power_transfer": {
+              "electrical_j": 4867200000.0,
+              "kwh": 1352.0,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 338.0,
+              "currency": "EUR"
+            }
+          },
+          "missing_measurements": [
+            "electrical_power_w",
+            "full_cycle_s_per_attempt",
+            "attempts_per_returned_shot",
+            "setup_energy_j_per_program",
+            "external_classical_energy_for_this_workload_j"
+          ],
+          "hardware_execution_energy_measured_here": false,
+          "provider_bill": null
+        }
+      },
+      "feature_count_each": 40,
+      "export_examples": [
+        {
+          "sequence_file": "qrc_step0_prefix1.json",
+          "sequence_sha256": "3d32fce8c2fd000d93cd05428b45f301b26c92e0b3f00bc2ab6624b55f7385ed",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "qrc_step0_prefix2.json",
+          "sequence_sha256": "16423cd15f9d2a96fb31b27f417189bd151ef6e71aad21831e1fbf998ebeea41",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "qrc_step0_prefix3.json",
+          "sequence_sha256": "d62ee051f8fe02823086cb86402919fe2ffa5c07b52d79b1d4432f717a1b9e26",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "qrc_step0_prefix4.json",
+          "sequence_sha256": "70dd709b46d85aef20ff13ab5bf297d462941fb5e5382cf0cca63aacf822f26c",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix1.json",
+          "sequence_sha256": "3d32fce8c2fd000d93cd05428b45f301b26c92e0b3f00bc2ab6624b55f7385ed",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix2.json",
+          "sequence_sha256": "16423cd15f9d2a96fb31b27f417189bd151ef6e71aad21831e1fbf998ebeea41",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix3.json",
+          "sequence_sha256": "d62ee051f8fe02823086cb86402919fe2ffa5c07b52d79b1d4432f717a1b9e26",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix4.json",
+          "sequence_sha256": "70dd709b46d85aef20ff13ab5bf297d462941fb5e5382cf0cca63aacf822f26c",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        }
+      ],
+      "pca_explained_variance": 0.531095308696784
+    },
+    {
+      "seed": 19,
+      "backend": "local_noisy_finite_shot_simulation",
+      "checkpoints": {
+        "qrc": [
+          {
+            "iteration": 0,
+            "validation_accuracy": 0.75,
+            "validation_mse": 0.12945557177499334,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 400
+          }
+        ],
+        "vqc": [
+          {
+            "iteration": 0,
+            "validation_accuracy": 0.75,
+            "validation_mse": 0.12945557177499334,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 800
+          },
+          {
+            "iteration": 4,
+            "validation_accuracy": 0.75,
+            "validation_mse": 0.15397386338268826,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 264000,
+            "cumulative_pulse_programs": 1056,
+            "ledger_end": 1456
+          },
+          {
+            "iteration": 8,
+            "validation_accuracy": 0.75,
+            "validation_mse": 0.1587029164507668,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 428000,
+            "cumulative_pulse_programs": 1712,
+            "ledger_end": 2112
+          }
+        ]
+      },
+      "targets": {
+        "0.7": {
+          "target_validation_accuracy": 0.7,
+          "algorithms": {
+            "qrc": {
+              "status": "validation_target_reached",
+              "checkpoint": {
+                "iteration": 0,
+                "validation_accuracy": 0.75,
+                "validation_mse": 0.12945557177499334,
+                "alpha": 10.0,
+                "cumulative_requested_shots": 100000,
+                "cumulative_pulse_programs": 400,
+                "ledger_end": 400
+              },
+              "held_out_test": {
+                "accuracy": 0.925,
+                "balanced_accuracy": 0.925,
+                "correct": 37,
+                "n": 40,
+                "accuracy_wilson95": [
+                  0.8013546984090248,
+                  0.9741644432281419
+                ],
+                "confusion_matrix": [
+                  [
+                    19,
+                    1
+                  ],
+                  [
+                    2,
+                    18
+                  ]
+                ]
+              },
+              "energy_to_validation_target": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.10536124999999999,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412339.54655625,
+                    "kwh": 12.336760985154514,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.0841902462886286,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200273.93925,
+                    "kwh": 1.4445205386805555,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.3611301346701389,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "held_out_inference_energy": {
+                "requested_returned_shots": 40000,
+                "pulse_program_requests": 160,
+                "compiled_control_s_for_requested_shots": 0.042144,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 17764935.80752,
+                    "kwh": 4.934704390977777,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.2336760977444443,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 2080109.5744,
+                    "kwh": 0.5778082151111111,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.14445205377777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 3552800000.0,
+                    "kwh": 986.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 246.72222222222223,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 416000000.0,
+                    "kwh": 115.55555555555556,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 28.88888888888889,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "training_plus_held_out_inference_energy": {
+                "requested_returned_shots": 140000,
+                "pulse_program_requests": 560,
+                "compiled_control_s_for_requested_shots": 0.14750525,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 62177275.35407625,
+                    "kwh": 17.27146537613229,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 4.317866344033073,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 7280383.51365,
+                    "kwh": 2.0223287537916668,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.5055821884479167,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 12434800000.0,
+                    "kwh": 3454.1111111111113,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 863.5277777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1456000000.0,
+                    "kwh": 404.44444444444446,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 101.11111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            },
+            "vqc": {
+              "status": "validation_target_reached",
+              "checkpoint": {
+                "iteration": 0,
+                "validation_accuracy": 0.75,
+                "validation_mse": 0.12945557177499334,
+                "alpha": 10.0,
+                "cumulative_requested_shots": 100000,
+                "cumulative_pulse_programs": 400,
+                "ledger_end": 800
+              },
+              "held_out_test": {
+                "accuracy": 0.925,
+                "balanced_accuracy": 0.925,
+                "correct": 37,
+                "n": 40,
+                "accuracy_wilson95": [
+                  0.8013546984090248,
+                  0.9741644432281419
+                ],
+                "confusion_matrix": [
+                  [
+                    19,
+                    1
+                  ],
+                  [
+                    2,
+                    18
+                  ]
+                ]
+              },
+              "energy_to_validation_target": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.10536124999999999,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412339.54655625,
+                    "kwh": 12.336760985154514,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.0841902462886286,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200273.93925,
+                    "kwh": 1.4445205386805555,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.3611301346701389,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "held_out_inference_energy": {
+                "requested_returned_shots": 40000,
+                "pulse_program_requests": 160,
+                "compiled_control_s_for_requested_shots": 0.042144,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 17764935.80752,
+                    "kwh": 4.934704390977777,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.2336760977444443,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 2080109.5744,
+                    "kwh": 0.5778082151111111,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.14445205377777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 3552800000.0,
+                    "kwh": 986.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 246.72222222222223,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 416000000.0,
+                    "kwh": 115.55555555555556,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 28.88888888888889,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              },
+              "training_plus_held_out_inference_energy": {
+                "requested_returned_shots": 140000,
+                "pulse_program_requests": 560,
+                "compiled_control_s_for_requested_shots": 0.14750525,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 62177275.35407625,
+                    "kwh": 17.27146537613229,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 4.317866344033073,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 7280383.51365,
+                    "kwh": 2.0223287537916668,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.5055821884479167,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 12434800000.0,
+                    "kwh": 3454.1111111111113,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 863.5277777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1456000000.0,
+                    "kwh": 404.44444444444446,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 101.11111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            }
+          },
+          "paired_target_reached": true,
+          "held_out_accuracy_difference_qrc_minus_vqc": 0.0,
+          "held_out_accuracies_within_declared_tolerance": true
+        },
+        "0.8": {
+          "target_validation_accuracy": 0.8,
+          "algorithms": {
+            "qrc": {
+              "status": "not_reached_within_budget",
+              "best_validation_accuracy": 0.75,
+              "training_budget_spent": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.10536124999999999,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412339.54655625,
+                    "kwh": 12.336760985154514,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.0841902462886286,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200273.93925,
+                    "kwh": 1.4445205386805555,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.3611301346701389,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            },
+            "vqc": {
+              "status": "not_reached_within_budget",
+              "best_validation_accuracy": 0.75,
+              "training_budget_spent": {
+                "requested_returned_shots": 428000,
+                "pulse_program_requests": 1712,
+                "compiled_control_s_for_requested_shots": 0.450947,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 190084813.27813497,
+                    "kwh": 52.80133702170416,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 13.20033425542604,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 22257172.462199997,
+                    "kwh": 6.182547906166666,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.5456369765416664,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 38014960000.0,
+                    "kwh": 10559.711111111112,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 2639.927777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 4451200000.0,
+                    "kwh": 1236.4444444444443,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 309.1111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            }
+          },
+          "paired_target_reached": false
+        },
+        "0.9": {
+          "target_validation_accuracy": 0.9,
+          "algorithms": {
+            "qrc": {
+              "status": "not_reached_within_budget",
+              "best_validation_accuracy": 0.75,
+              "training_budget_spent": {
+                "requested_returned_shots": 100000,
+                "pulse_program_requests": 400,
+                "compiled_control_s_for_requested_shots": 0.10536124999999999,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 44412339.54655625,
+                    "kwh": 12.336760985154514,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 3.0841902462886286,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 5200273.93925,
+                    "kwh": 1.4445205386805555,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 0.3611301346701389,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 8882000000.0,
+                    "kwh": 2467.222222222222,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 616.8055555555555,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 1040000000.0,
+                    "kwh": 288.8888888888889,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 72.22222222222223,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            },
+            "vqc": {
+              "status": "not_reached_within_budget",
+              "best_validation_accuracy": 0.75,
+              "training_budget_spent": {
+                "requested_returned_shots": 428000,
+                "pulse_program_requests": 1712,
+                "compiled_control_s_for_requested_shots": 0.450947,
+                "calibrated_shot_execution_energy_j": null,
+                "calibrated_setup_energy_j": null,
+                "measured_external_classical_energy_j": null,
+                "complete_workflow_energy_j": null,
+                "measured_program_electrical_energy_j": null,
+                "complete_measured_workflow_energy_j": null,
+                "complete_workflow_kwh": null,
+                "calibration_status": "unavailable",
+                "literature_scenarios": {
+                  "harvard_paper_reference": {
+                    "electrical_j": 190084813.27813497,
+                    "kwh": 52.80133702170416,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 13.20033425542604,
+                    "currency": "EUR"
+                  },
+                  "pasqal_historical_power_transfer": {
+                    "electrical_j": 22257172.462199997,
+                    "kwh": 6.182547906166666,
+                    "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+                    "electricity_cost": 1.5456369765416664,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__harvard_paper_reference": {
+                    "electrical_j": 38014960000.0,
+                    "kwh": 10559.711111111112,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 2639.927777777778,
+                    "currency": "EUR"
+                  },
+                  "nominal_beta_throughput__pasqal_historical_power_transfer": {
+                    "electrical_j": 4451200000.0,
+                    "kwh": 1236.4444444444443,
+                    "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+                    "electricity_cost": 309.1111111111111,
+                    "currency": "EUR"
+                  }
+                },
+                "missing_measurements": [
+                  "electrical_power_w",
+                  "full_cycle_s_per_attempt",
+                  "attempts_per_returned_shot",
+                  "setup_energy_j_per_program",
+                  "external_classical_energy_for_this_workload_j"
+                ],
+                "hardware_execution_energy_measured_here": false,
+                "provider_bill": null
+              }
+            }
+          },
+          "paired_target_reached": false
+        }
+      },
+      "validation_selected_fallback": {
+        "qrc": {
+          "checkpoint": {
+            "iteration": 0,
+            "validation_accuracy": 0.75,
+            "validation_mse": 0.12945557177499334,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 400
+          },
+          "held_out_test": {
+            "accuracy": 0.925,
+            "balanced_accuracy": 0.925,
+            "correct": 37,
+            "n": 40,
+            "accuracy_wilson95": [
+              0.8013546984090248,
+              0.9741644432281419
+            ],
+            "confusion_matrix": [
+              [
+                19,
+                1
+              ],
+              [
+                2,
+                18
+              ]
+            ]
+          }
+        },
+        "vqc": {
+          "checkpoint": {
+            "iteration": 0,
+            "validation_accuracy": 0.75,
+            "validation_mse": 0.12945557177499334,
+            "alpha": 10.0,
+            "cumulative_requested_shots": 100000,
+            "cumulative_pulse_programs": 400,
+            "ledger_end": 800
+          },
+          "held_out_test": {
+            "accuracy": 0.925,
+            "balanced_accuracy": 0.925,
+            "correct": 37,
+            "n": 40,
+            "accuracy_wilson95": [
+              0.8013546984090248,
+              0.9741644432281419
+            ],
+            "confusion_matrix": [
+              [
+                19,
+                1
+              ],
+              [
+                2,
+                18
+              ]
+            ]
+          }
+        }
+      },
+      "classical_linear_test": {
+        "accuracy": 0.9,
+        "balanced_accuracy": 0.9,
+        "correct": 36,
+        "n": 40,
+        "accuracy_wilson95": [
+          0.7694792561952611,
+          0.9604211124044252
+        ],
+        "confusion_matrix": [
+          [
+            18,
+            2
+          ],
+          [
+            2,
+            18
+          ]
+        ]
+      },
+      "complete_study_execution_budget": {
+        "qrc": {
+          "requested_returned_shots": 140000,
+          "pulse_program_requests": 560,
+          "compiled_control_s_for_requested_shots": 0.14750525,
+          "calibrated_shot_execution_energy_j": null,
+          "calibrated_setup_energy_j": null,
+          "measured_external_classical_energy_j": null,
+          "complete_workflow_energy_j": null,
+          "measured_program_electrical_energy_j": null,
+          "complete_measured_workflow_energy_j": null,
+          "complete_workflow_kwh": null,
+          "calibration_status": "unavailable",
+          "literature_scenarios": {
+            "harvard_paper_reference": {
+              "electrical_j": 62177275.35407625,
+              "kwh": 17.27146537613229,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 4.317866344033073,
+              "currency": "EUR"
+            },
+            "pasqal_historical_power_transfer": {
+              "electrical_j": 7280383.51365,
+              "kwh": 2.0223287537916668,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 0.5055821884479167,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__harvard_paper_reference": {
+              "electrical_j": 12434800000.0,
+              "kwh": 3454.1111111111113,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 863.5277777777778,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__pasqal_historical_power_transfer": {
+              "electrical_j": 1456000000.0,
+              "kwh": 404.44444444444446,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 101.11111111111111,
+              "currency": "EUR"
+            }
+          },
+          "missing_measurements": [
+            "electrical_power_w",
+            "full_cycle_s_per_attempt",
+            "attempts_per_returned_shot",
+            "setup_energy_j_per_program",
+            "external_classical_energy_for_this_workload_j"
+          ],
+          "hardware_execution_energy_measured_here": false,
+          "provider_bill": null
+        },
+        "vqc": {
+          "requested_returned_shots": 468000,
+          "pulse_program_requests": 1872,
+          "compiled_control_s_for_requested_shots": 0.493091,
+          "calibrated_shot_execution_energy_j": null,
+          "calibrated_setup_energy_j": null,
+          "measured_external_classical_energy_j": null,
+          "complete_workflow_energy_j": null,
+          "measured_program_electrical_energy_j": null,
+          "complete_measured_workflow_energy_j": null,
+          "complete_workflow_kwh": null,
+          "calibration_status": "unavailable",
+          "literature_scenarios": {
+            "harvard_paper_reference": {
+              "electrical_j": 207849749.085655,
+              "kwh": 57.73604141268194,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 14.434010353170486,
+              "currency": "EUR"
+            },
+            "pasqal_historical_power_transfer": {
+              "electrical_j": 24337282.0366,
+              "kwh": 6.760356121277778,
+              "scope": "Transferred literature power and operation times; assumes successful shots without retry charge",
+              "electricity_cost": 1.6900890303194445,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__harvard_paper_reference": {
+              "electrical_j": 41567760000.0,
+              "kwh": 11546.6,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 2886.65,
+              "currency": "EUR"
+            },
+            "nominal_beta_throughput__pasqal_historical_power_transfer": {
+              "electrical_j": 4867200000.0,
+              "kwh": 1352.0,
+              "scope": "Conditional power transfer times published beta throughput; neither is account-specific metering",
+              "electricity_cost": 338.0,
+              "currency": "EUR"
+            }
+          },
+          "missing_measurements": [
+            "electrical_power_w",
+            "full_cycle_s_per_attempt",
+            "attempts_per_returned_shot",
+            "setup_energy_j_per_program",
+            "external_classical_energy_for_this_workload_j"
+          ],
+          "hardware_execution_energy_measured_here": false,
+          "provider_bill": null
+        }
+      },
+      "feature_count_each": 40,
+      "export_examples": [
+        {
+          "sequence_file": "qrc_step0_prefix1.json",
+          "sequence_sha256": "a0fec923c09858e120faa51229fd3f45d1109a97754686d448ea6172941ed76e",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "qrc_step0_prefix2.json",
+          "sequence_sha256": "d93669b2c2ee927b8501a2ca722a6e251775609093002a665758be6d65e8159f",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "qrc_step0_prefix3.json",
+          "sequence_sha256": "ca4bcf16452e7f7fc027f88c4a19d41671b46877817c9da5ba791621ecfe6f4c",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "qrc_step0_prefix4.json",
+          "sequence_sha256": "36d44dad5fcc8e0f9b97d410d3e5678e430c84b07aee30c7832288b41504e7d0",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix1.json",
+          "sequence_sha256": "a0fec923c09858e120faa51229fd3f45d1109a97754686d448ea6172941ed76e",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix2.json",
+          "sequence_sha256": "d93669b2c2ee927b8501a2ca722a6e251775609093002a665758be6d65e8159f",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix3.json",
+          "sequence_sha256": "ca4bcf16452e7f7fc027f88c4a19d41671b46877817c9da5ba791621ecfe6f4c",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        },
+        {
+          "sequence_file": "vqc_step0_prefix4.json",
+          "sequence_sha256": "36d44dad5fcc8e0f9b97d410d3e5678e430c84b07aee30c7832288b41504e7d0",
+          "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+          "runs": 250,
+          "local_qpu_validation_passed": true,
+          "server_validation_passed": false,
+          "layout_calibration_required": true
+        }
+      ],
+      "pca_explained_variance": 0.5197069584827088
+    }
+  ],
+  "versions": {
+    "pulser-core": "1.10.0",
+    "pulser-simulation": "1.10.0",
+    "qutip": "5.3.1",
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.8.0"
+  },
+  "runtime_seconds": 587.3641749989984,
+  "target_aggregate": {
+    "0.7": {
+      "repeats": 3,
+      "paired_validation_target_hits": 3,
+      "paired_held_out_compatibility_hits": 3,
+      "qrc_target_hits": 3,
+      "vqc_target_hits": 3,
+      "selection": "All repetitions retained; no accuracy/cost extrapolation for unreached targets"
+    },
+    "0.8": {
+      "repeats": 3,
+      "paired_validation_target_hits": 1,
+      "paired_held_out_compatibility_hits": 1,
+      "qrc_target_hits": 1,
+      "vqc_target_hits": 1,
+      "selection": "All repetitions retained; no accuracy/cost extrapolation for unreached targets"
+    },
+    "0.9": {
+      "repeats": 3,
+      "paired_validation_target_hits": 0,
+      "paired_held_out_compatibility_hits": 0,
+      "qrc_target_hits": 0,
+      "vqc_target_hits": 0,
+      "selection": "All repetitions retained; no accuracy/cost extrapolation for unreached targets"
+    }
+  },
+  "accuracy_aggregate": {
+    "qrc": {
+      "mean": 0.8666666666666666,
+      "sample_standard_deviation": 0.05204164998665336,
+      "repeats": 3,
+      "scope": "Validation-selected fallback models; overlapping test subsets across seeds"
+    },
+    "vqc": {
+      "mean": 0.8666666666666666,
+      "sample_standard_deviation": 0.05204164998665336,
+      "repeats": 3,
+      "scope": "Validation-selected fallback models; overlapping test subsets across seeds"
+    },
+    "classical": {
+      "mean": 0.9,
+      "sample_standard_deviation": 0.025000000000000022,
+      "repeats": 3,
+      "scope": "Validation-selected fallback models; overlapping test subsets across seeds"
+    }
+  }
+}
