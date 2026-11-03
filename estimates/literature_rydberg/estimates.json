@@ -1,0 +1,629 @@
+{
+  "status": "Literature-anchored scenarios, not measured/calibrated Pasqal costs or energy advantage",
+  "configuration": {
+    "schema_version": 1,
+    "sources": {
+      "alves2026": {
+        "title": "Energetics of Rydberg-atom Quantum Computation",
+        "authors": "\u00d3scar Alves, Marco Pezzutto, Yasser Omar",
+        "version": "arXiv:2601.03141v2, 18 May 2026",
+        "url": "https://arxiv.org/html/2601.03141v2",
+        "boundary": "Radiation-source energy; excludes electrical conversion, control electronics, HVAC and host processing",
+        "platform": "Paper's cesium gate-model experimental reference, not Pasqal FRESNEL",
+        "locators": [
+          "Section IV.1 radiation-source table",
+          "Section IV.2 baseline/preparation/measurement table"
+        ]
+      },
+      "carrasco2026": {
+        "title": "Energy efficiency of quantum computers",
+        "authors": "Miquel Carrasco-Codina et al.",
+        "version": "arXiv:2605.15090v2, 31 August 2026",
+        "url": "https://arxiv.org/html/2605.15090v2",
+        "boundary": "Reference machine/facility electrical power including HVAC and hardware-control computers",
+        "platform": "Harvard rubidium-87 n=53 digital neutral-atom reference; not Pasqal calibration",
+        "locators": [
+          "Section 6.2.1",
+          "Equation 18",
+          "Appendix A.4, Tables 8 and 9"
+        ]
+      },
+      "pasqal2023": {
+        "title": "Quantum Computing to Greener Calculations",
+        "url": "https://www.pasqal.com/blog/quantum-computing-rethinking-energy-consumption/",
+        "version": "Vendor article dated 5 October 2023",
+        "boundary": "Historical vendor total-power statement; not a research paper or a current FRESNEL measurement",
+        "locator": "Neutral atoms, a greener quantum architecture: approximately 2.6 kW"
+      }
+    },
+    "alves_reference": {
+      "microwave_radiation_w": 0.0574,
+      "blue_source_w": 0.1,
+      "infrared_global_source_w": 11.0,
+      "trap_source_w_per_trap": 0.01,
+      "reference_traps": 49,
+      "cooling_source_w": 0.001,
+      "cooling_s": 0.1,
+      "pumping_source_w": 0.001,
+      "pumping_s": 0.01,
+      "measurement_beams": 4,
+      "measurement_source_w_per_beam": 0.00022,
+      "measurement_s": 0.09,
+      "reproduction": {
+        "microwave_us": 615.999,
+        "blue_us": 279.581,
+        "infrared_us": 54.454,
+        "trap_on_s": 0.2009,
+        "repetitions": 700,
+        "paper_computation_mj_rounded": 0.662,
+        "paper_total_j_rounded": 69.5
+      }
+    },
+    "carrasco_reference": {
+      "components": [
+        {
+          "name": "Trap lasers",
+          "count": 1,
+          "unit_w": 1500
+        },
+        {
+          "name": "Lasers for Rydberg gates",
+          "count": 1,
+          "unit_w": 1900
+        },
+        {
+          "name": "Other lasers A",
+          "count": 2,
+          "unit_w": 900
+        },
+        {
+          "name": "Other lasers B",
+          "count": 7,
+          "unit_w": 150
+        },
+        {
+          "name": "Magnetic field generation",
+          "count": 1,
+          "unit_w": 1050
+        },
+        {
+          "name": "Camera",
+          "count": 1,
+          "unit_w": 155
+        },
+        {
+          "name": "Vacuum pump",
+          "count": 1,
+          "unit_w": 100
+        },
+        {
+          "name": "Classical computers",
+          "count": 1,
+          "unit_w": 150
+        },
+        {
+          "name": "HVAC",
+          "count": 1,
+          "unit_w": 7500
+        },
+        {
+          "name": "Other electronics",
+          "count": 1,
+          "unit_w": 2000
+        },
+        {
+          "name": "Small laser chillers",
+          "count": 5,
+          "unit_w": 600
+        },
+        {
+          "name": "Large laser chillers",
+          "count": 2,
+          "unit_w": 1000
+        }
+      ],
+      "reset_s": 0.01,
+      "measurement_s": 0.01,
+      "clock_s": 0.0005,
+      "transport_s": 0.0005,
+      "transport_per_layer": 0.25,
+      "reload_s": 0.5,
+      "layers_per_reload": 2400,
+      "extra_continuous_reload_components_w": [
+        350,
+        1500,
+        700
+      ]
+    },
+    "transferred_scenarios": {
+      "radiation_source": {
+        "trap_count": 49,
+        "raman_to_microwave_power_mapping": "Assumption: charge Raman controls at the paper's derived microwave radiation power; mechanisms differ",
+        "blue_global_scaling": "Assumption: one local-blue reference power per illuminated atom; shared infrared beam counted once",
+        "constant_on_power": "Assumption: reference source powers held fixed for pulse-on windows, regardless of simulated Rabi rate. Not a Rabi-power calibration or validated architecture ranking."
+      },
+      "system_power_scenarios": [
+        {
+          "id": "harvard_paper_reference",
+          "power_from": "carrasco_components",
+          "source": "carrasco2026"
+        },
+        {
+          "id": "pasqal_historical_power_transfer",
+          "power_w": 2600,
+          "source": "pasqal2023"
+        }
+      ],
+      "schedule_timing": {
+        "reset_from": "carrasco_reference.reset_s",
+        "measurement_from": "carrasco_reference.measurement_s",
+        "transport_events": 0,
+        "reconfiguration_layers": 0,
+        "reloads_per_shot": 0,
+        "assumption": "Our compiled recipes keep a fixed register; no motion/reconfiguration/reloading is charged. Their real overheads need calibration; paper reset/readout times are transferred as a scenario."
+      },
+      "shots_per_prediction": 1000,
+      "shot_sensitivity": [
+        100,
+        1000,
+        10000
+      ],
+      "reset_plus_readout_sensitivity_s": [
+        0.002,
+        0.02,
+        0.2
+      ],
+      "electricity_tariff_per_kwh": 0.25,
+      "currency": "EUR",
+      "tariff_status": "Illustrative user-changeable arithmetic assumption, not a market quote or QPU service price"
+    }
+  },
+  "config_sha256": "80512cee05922947393343b683f082c4a7567c30cc136685e6171fc23d2b9e93",
+  "reproduction_alves": {
+    "computation_j_per_execution": 0.0006623104426,
+    "trapping_j_per_execution": 0.098441,
+    "preparation_j_per_execution": 0.00011,
+    "measurement_j_per_execution": 7.92e-05,
+    "radiation_j_per_execution": 0.0992925104426,
+    "total_radiation_j": 69.50475730982,
+    "repetitions": 700,
+    "scope": "Reproduction of the paper's source-power/time tables, not wall-plug energy"
+  },
+  "carrasco_table8_power_w": 22205.0,
+  "carrasco_equation18_reference_times_s": {
+    "10": 0.028333333333333335,
+    "100": 0.10333333333333333,
+    "1000": 0.8533333333333334
+  },
+  "system_scenarios": {
+    "harvard_paper_reference": {
+      "power_w": 22205.0,
+      "source": "carrasco2026"
+    },
+    "pasqal_historical_power_transfer": {
+      "power_w": 2600,
+      "source": "pasqal2023"
+    }
+  },
+  "architectures": {
+    "digital_analog": {
+      "n_qubits": 8,
+      "held_out_inputs": 400,
+      "source_model": "results/mnist_3_8_seed7/model.npz",
+      "implementation_status": "Research gate/transfer recipe; not supported on selected Pasqal interface; unequal physical fidelity",
+      "source_model_sha256": "7e23fb731961de53a5f13b9b639ddfdc513a3aef8bc94a573b3ab6399a5d4c86",
+      "scheduled_control_us": {
+        "mean": 18.937105128680216,
+        "min": 17.539677166207234,
+        "max": 20.557824073864484
+      },
+      "radiation_scenario_j_per_shot": {
+        "mean": 0.09821805494222247,
+        "min": 0.0982172667620933,
+        "max": 0.09821898361795482
+      },
+      "control_radiation_j_per_shot": {
+        "mean": 1.9575760709420604e-05,
+        "min": 1.9465977396042384e-05,
+        "max": 1.9710284158620017e-05
+      },
+      "system_scenarios": {
+        "harvard_paper_reference": {
+          "statistics": {
+            "cycle_s_per_shot": {
+              "mean": 0.02001893710512868,
+              "min": 0.020017539677166206,
+              "max": 0.020020557824073866
+            },
+            "electrical_j_per_shot": {
+              "mean": 444.52049841938236,
+              "min": 444.4894685314756,
+              "max": 444.5564864835602
+            },
+            "electrical_j_per_prediction": {
+              "mean": 444520.4984193824,
+              "min": 444489.46853147564,
+              "max": 444556.48648356023
+            },
+            "kwh_per_prediction": {
+              "mean": 0.1234779162276062,
+              "min": 0.12346929681429879,
+              "max": 0.12348791291210007
+            }
+          },
+          "held_out_dataset_kwh": 49.39116649104248,
+          "held_out_dataset_electricity_cost": 12.34779162276062,
+          "currency": "EUR",
+          "electricity_tariff_per_kwh": 0.25
+        },
+        "pasqal_historical_power_transfer": {
+          "statistics": {
+            "cycle_s_per_shot": {
+              "mean": 0.02001893710512868,
+              "min": 0.020017539677166206,
+              "max": 0.020020557824073866
+            },
+            "electrical_j_per_shot": {
+              "mean": 52.049236473334574,
+              "min": 52.04560316063213,
+              "max": 52.05345034259205
+            },
+            "electrical_j_per_prediction": {
+              "mean": 52049.23647333456,
+              "min": 52045.603160632134,
+              "max": 52053.45034259205
+            },
+            "kwh_per_prediction": {
+              "mean": 0.014458121242592936,
+              "min": 0.014457111989064481,
+              "max": 0.014459291761831125
+            }
+          },
+          "held_out_dataset_kwh": 5.7832484970371745,
+          "held_out_dataset_electricity_cost": 1.4458121242592936,
+          "currency": "EUR",
+          "electricity_tariff_per_kwh": 0.25
+        }
+      },
+      "measured_energy_j": null,
+      "provider_bill": null,
+      "hardware_training_energy_j": null
+    },
+    "digital": {
+      "n_qubits": 8,
+      "held_out_inputs": 400,
+      "source_model": "results/mnist_3_8_digital_seed7/model.npz",
+      "implementation_status": "Research gate/transfer recipe; not supported on selected Pasqal interface; unequal physical fidelity",
+      "source_model_sha256": "45b7df6698767d66efe55bffb6526da184412a14e72caba826b09b6aae47bc3a",
+      "scheduled_control_us": {
+        "mean": 334.08481221654785,
+        "min": 332.68738425407497,
+        "max": 335.70553116173215
+      },
+      "radiation_scenario_j_per_shot": {
+        "mean": 0.10147011996369447,
+        "min": 0.10146933178356529,
+        "max": 0.1014710486394268
+      },
+      "control_radiation_j_per_shot": {
+        "mean": 0.0031172184057083395,
+        "min": 0.0031171086223949615,
+        "max": 0.0031173529291575394
+      },
+      "system_scenarios": {
+        "harvard_paper_reference": {
+          "statistics": {
+            "cycle_s_per_shot": {
+              "mean": 0.02033408481221655,
+              "min": 0.020332687384254075,
+              "max": 0.020335705531161735
+            },
+            "electrical_j_per_shot": {
+              "mean": 451.51835325526844,
+              "min": 451.48732336736174,
+              "max": 451.55434131944634
+            },
+            "electrical_j_per_prediction": {
+              "mean": 451518.3532552685,
+              "min": 451487.32336736174,
+              "max": 451554.34131944634
+            },
+            "kwh_per_prediction": {
+              "mean": 0.12542176479313014,
+              "min": 0.1254131453798227,
+              "max": 0.12543176147762397
+            }
+          },
+          "held_out_dataset_kwh": 50.16870591725205,
+          "held_out_dataset_electricity_cost": 12.542176479313012,
+          "currency": "EUR",
+          "electricity_tariff_per_kwh": 0.25
+        },
+        "pasqal_historical_power_transfer": {
+          "statistics": {
+            "cycle_s_per_shot": {
+              "mean": 0.02033408481221655,
+              "min": 0.020332687384254075,
+              "max": 0.020335705531161735
+            },
+            "electrical_j_per_shot": {
+              "mean": 52.86862051176303,
+              "min": 52.86498719906059,
+              "max": 52.87283438102051
+            },
+            "electrical_j_per_prediction": {
+              "mean": 52868.62051176302,
+              "min": 52864.98719906059,
+              "max": 52872.83438102051
+            },
+            "kwh_per_prediction": {
+              "mean": 0.014685727919934175,
+              "min": 0.01468471866640572,
+              "max": 0.014686898439172364
+            }
+          },
+          "held_out_dataset_kwh": 5.874291167973669,
+          "held_out_dataset_electricity_cost": 1.4685727919934173,
+          "currency": "EUR",
+          "electricity_tariff_per_kwh": 0.25
+        }
+      },
+      "measured_energy_j": null,
+      "provider_bill": null,
+      "hardware_training_energy_j": null
+    },
+    "pasqal_native_analog": {
+      "n_qubits": 4,
+      "held_out_inputs": 40,
+      "source_model": "hardware_results/pasqal_native_mnist_3_8_seed7/model.npz",
+      "implementation_status": "Supported SDK global-pulse model; different data/architecture budget from original pair",
+      "source_model_sha256": "da83b9c7085d71aa51d8504078cd48f318a1ad3c401a801f0e7c33a6d1ceb897",
+      "scheduled_control_us": {
+        "mean": 0.6819000000000004,
+        "min": 0.6780000000000004,
+        "max": 0.6820000000000004
+      },
+      "radiation_scenario_j_per_shot": {
+        "mean": 0.09819730779100001,
+        "min": 0.09819726142,
+        "max": 0.09819730898000001
+      },
+      "control_radiation_j_per_shot": {
+        "mean": 7.773660000000005e-06,
+        "min": 7.729200000000006e-06,
+        "max": 7.774800000000006e-06
+      },
+      "system_scenarios": {
+        "harvard_paper_reference": {
+          "statistics": {
+            "cycle_s_per_shot": {
+              "mean": 0.020000681899999997,
+              "min": 0.020000678,
+              "max": 0.020000682
+            },
+            "electrical_j_per_shot": {
+              "mean": 444.11514158949996,
+              "min": 444.11505499000003,
+              "max": 444.11514380999995
+            },
+            "electrical_j_per_prediction": {
+              "mean": 444115.1415894999,
+              "min": 444115.05499000003,
+              "max": 444115.1438099999
+            },
+            "kwh_per_prediction": {
+              "mean": 0.12336531710819443,
+              "min": 0.12336529305277778,
+              "max": 0.12336531772499998
+            }
+          },
+          "held_out_dataset_kwh": 4.934612684327777,
+          "held_out_dataset_electricity_cost": 1.2336531710819443,
+          "currency": "EUR",
+          "electricity_tariff_per_kwh": 0.25
+        },
+        "pasqal_historical_power_transfer": {
+          "statistics": {
+            "cycle_s_per_shot": {
+              "mean": 0.020000681899999997,
+              "min": 0.020000678,
+              "max": 0.020000682
+            },
+            "electrical_j_per_shot": {
+              "mean": 52.00177294,
+              "min": 52.0017628,
+              "max": 52.001773199999995
+            },
+            "electrical_j_per_prediction": {
+              "mean": 52001.772939999995,
+              "min": 52001.762800000004,
+              "max": 52001.773199999996
+            },
+            "kwh_per_prediction": {
+              "mean": 0.01444493692777778,
+              "min": 0.014444934111111113,
+              "max": 0.014444937
+            }
+          },
+          "held_out_dataset_kwh": 0.5777974771111111,
+          "held_out_dataset_electricity_cost": 0.14444936927777777,
+          "currency": "EUR",
+          "electricity_tariff_per_kwh": 0.25
+        }
+      },
+      "measured_energy_j": null,
+      "provider_bill": null,
+      "hardware_training_energy_j": null,
+      "target_device_sha256": "77cae02afd05a9470683e72294e7f4b1c1e7f2e686ca886a243fe4f4ab351ea1"
+    }
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "qoolqit": "1.5.0",
+    "pulser-core": "1.10.0",
+    "matplotlib": "3.11.2"
+  },
+  "research_profile_sha256": "7ce8708167066a3b70c6b2ba6bdfb3ac47449917bb9d0df9b2e9a3bb95d1d71f",
+  "training_hardware_projection": {
+    "harvard_paper_reference": {
+      "circuit_feature_evaluation_breakdown": {
+        "initial_alpha_selection": 100,
+        "spsa_objective_inputs": 1920,
+        "validation_checkpoint_inputs": 400,
+        "final_readout_fit_inputs": 80
+      },
+      "total_circuit_feature_evaluations": 2500,
+      "assumed_shots_per_feature_evaluation": 1000,
+      "physical_shots_if_run": 2500000,
+      "estimated_allocated_hardware_hours": 13.889362430555554,
+      "estimated_hardware_kwh": 308.41329277048607,
+      "estimated_electricity_cost": 77.10332319262152,
+      "actual_hardware_energy_j": null,
+      "scope": "Hypothetical finite-shot replay budget, using selected model's representative duration. Actual training was a CPU simulation with exact expectations; SPSA trajectory/accuracy would change on noisy finite-shot hardware. Original ideal-adjoint training has no inferred hardware gradient budget."
+    },
+    "pasqal_historical_power_transfer": {
+      "circuit_feature_evaluation_breakdown": {
+        "initial_alpha_selection": 100,
+        "spsa_objective_inputs": 1920,
+        "validation_checkpoint_inputs": 400,
+        "final_readout_fit_inputs": 80
+      },
+      "total_circuit_feature_evaluations": 2500,
+      "assumed_shots_per_feature_evaluation": 1000,
+      "physical_shots_if_run": 2500000,
+      "estimated_allocated_hardware_hours": 13.889362430555554,
+      "estimated_hardware_kwh": 36.11234231944445,
+      "estimated_electricity_cost": 9.028085579861113,
+      "actual_hardware_energy_j": null,
+      "scope": "Hypothetical finite-shot replay budget, using selected model's representative duration. Actual training was a CPU simulation with exact expectations; SPSA trajectory/accuracy would change on noisy finite-shot hardware. Original ideal-adjoint training has no inferred hardware gradient budget."
+    }
+  },
+  "sensitivity": [
+    {
+      "scenario": "harvard_paper_reference",
+      "assumed_reset_plus_readout_s": 0.002,
+      "shots": 100,
+      "electrical_j_per_prediction": 4442.51415895,
+      "electricity_cost": 0.0003085079277048611
+    },
+    {
+      "scenario": "harvard_paper_reference",
+      "assumed_reset_plus_readout_s": 0.002,
+      "shots": 1000,
+      "electrical_j_per_prediction": 44425.1415895,
+      "electricity_cost": 0.003085079277048611
+    },
+    {
+      "scenario": "harvard_paper_reference",
+      "assumed_reset_plus_readout_s": 0.002,
+      "shots": 10000,
+      "electrical_j_per_prediction": 444251.415895,
+      "electricity_cost": 0.03085079277048611
+    },
+    {
+      "scenario": "harvard_paper_reference",
+      "assumed_reset_plus_readout_s": 0.02,
+      "shots": 100,
+      "electrical_j_per_prediction": 44411.51415895,
+      "electricity_cost": 0.003084132927704861
+    },
+    {
+      "scenario": "harvard_paper_reference",
+      "assumed_reset_plus_readout_s": 0.02,
+      "shots": 1000,
+      "electrical_j_per_prediction": 444115.1415895,
+      "electricity_cost": 0.03084132927704861
+    },
+    {
+      "scenario": "harvard_paper_reference",
+      "assumed_reset_plus_readout_s": 0.02,
+      "shots": 10000,
+      "electrical_j_per_prediction": 4441151.415895,
+      "electricity_cost": 0.3084132927704861
+    },
+    {
+      "scenario": "harvard_paper_reference",
+      "assumed_reset_plus_readout_s": 0.2,
+      "shots": 100,
+      "electrical_j_per_prediction": 444101.51415894995,
+      "electricity_cost": 0.030840382927704857
+    },
+    {
+      "scenario": "harvard_paper_reference",
+      "assumed_reset_plus_readout_s": 0.2,
+      "shots": 1000,
+      "electrical_j_per_prediction": 4441015.1415895,
+      "electricity_cost": 0.3084038292770486
+    },
+    {
+      "scenario": "harvard_paper_reference",
+      "assumed_reset_plus_readout_s": 0.2,
+      "shots": 10000,
+      "electrical_j_per_prediction": 44410151.415895,
+      "electricity_cost": 3.084038292770486
+    },
+    {
+      "scenario": "pasqal_historical_power_transfer",
+      "assumed_reset_plus_readout_s": 0.002,
+      "shots": 100,
+      "electrical_j_per_prediction": 520.1772940000001,
+      "electricity_cost": 3.6123423194444446e-05
+    },
+    {
+      "scenario": "pasqal_historical_power_transfer",
+      "assumed_reset_plus_readout_s": 0.002,
+      "shots": 1000,
+      "electrical_j_per_prediction": 5201.772940000001,
+      "electricity_cost": 0.0003612342319444445
+    },
+    {
+      "scenario": "pasqal_historical_power_transfer",
+      "assumed_reset_plus_readout_s": 0.002,
+      "shots": 10000,
+      "electrical_j_per_prediction": 52017.729400000004,
+      "electricity_cost": 0.0036123423194444446
+    },
+    {
+      "scenario": "pasqal_historical_power_transfer",
+      "assumed_reset_plus_readout_s": 0.02,
+      "shots": 100,
+      "electrical_j_per_prediction": 5200.177294,
+      "electricity_cost": 0.00036112342319444447
+    },
+    {
+      "scenario": "pasqal_historical_power_transfer",
+      "assumed_reset_plus_readout_s": 0.02,
+      "shots": 1000,
+      "electrical_j_per_prediction": 52001.77294,
+      "electricity_cost": 0.0036112342319444446
+    },
+    {
+      "scenario": "pasqal_historical_power_transfer",
+      "assumed_reset_plus_readout_s": 0.02,
+      "shots": 10000,
+      "electrical_j_per_prediction": 520017.7294,
+      "electricity_cost": 0.03611234231944444
+    },
+    {
+      "scenario": "pasqal_historical_power_transfer",
+      "assumed_reset_plus_readout_s": 0.2,
+      "shots": 100,
+      "electrical_j_per_prediction": 52000.177294,
+      "electricity_cost": 0.0036111234231944447
+    },
+    {
+      "scenario": "pasqal_historical_power_transfer",
+      "assumed_reset_plus_readout_s": 0.2,
+      "shots": 1000,
+      "electrical_j_per_prediction": 520001.77294,
+      "electricity_cost": 0.03611123423194444
+    },
+    {
+      "scenario": "pasqal_historical_power_transfer",
+      "assumed_reset_plus_readout_s": 0.2,
+      "shots": 10000,
+      "electrical_j_per_prediction": 5200017.729400001,
+      "electricity_cost": 0.3611123423194445
+    }
+  ]
+}

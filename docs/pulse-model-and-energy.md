@@ -49,6 +49,8 @@ See [the generated result report](../hardware_results/SUMMARY.md).
 
 ## Energy: what is known and what remains unknown
 
+For **published-parameter scenarios**, see the separate [literature energy/cost method](literature-energy-cost.md) and [generated estimates](../estimates/literature_rydberg/SUMMARY.md). They reproduce a Rydberg energetics paper's worked budget and transfer explicitly labeled source-power and whole-machine electrical assumptions to saved schedules. They preserve the unknown calibration fields described below.
+
 For every input and architecture, the ledger records total scheduled control time, time by stage, per-channel beam-on time and `integral Omega_eff(t)^2 dt`. For a linear ramp from a to b over dt, the latter is `dt*(a*a+a*b+b*b)/3`. Global-beam power is counted once, not multiplied by atom count. These are control-exposure quantities, **not joules**.
 
 To obtain optical energy, supply calibrated coefficients for each laser/control channel:

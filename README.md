@@ -12,7 +12,9 @@ See [the paired architecture comparison](results/ARCHITECTURE_COMPARISON.md), [t
 
 An optional **QuTiP three-level pulse backend** now models both architectures with finite-rise controls, Rydberg blockade, storage/Rydberg transfers, decay, dephasing and explicit static-noise assumptions. A separate **QoolQit/Pulser** check compiles and simulates the eight-atom global analog block against SDK device constraints. Full eight-qubit trained schedules have an inspectable energy ledger; full noisy dynamics were checked on a small four-atom MNIST probe.
 
-This is a research model, not device-calibrated hardware. The probe exposes substantial pulse/noise errors, so a trustworthy energy-per-accuracy comparison needs calibration and pulse improvements. Joules remain unknown until measured power/efficiency and overhead data are provided. See [hardware results](hardware_results/SUMMARY.md) and [model, energy equations and setup](docs/pulse-model-and-energy.md). The ideal results below remain separate.
+This is a research model, not device-calibrated hardware. The probe exposes substantial pulse/noise errors, so a trustworthy energy-per-accuracy comparison needs calibration and pulse improvements. Device-calibrated joules remain unknown until measured power/efficiency and overhead data are provided. See [hardware results](hardware_results/SUMMARY.md) and [model, energy equations and setup](docs/pulse-model-and-energy.md). The ideal results below remain separate.
+
+**Paper-based energy/cost estimates are available:** [results and figures](estimates/literature_rydberg/SUMMARY.md), [methods and source papers](docs/literature-energy-cost.md), and [editable parameters](configs/literature_energy.json). The estimator reproduces Alves et al.'s Rydberg energy example and separately uses Carrasco-Codina et al.'s electrical component inventory. It applies explicit scenarios to 400 saved inputs per original architecture and 40 Pasqal-native inputs, with shot/overhead sensitivity and an illustrative electricity tariff. These are literature transfers, not measured Pasqal costs or evidence of an energy advantage.
 
 ## Pipeline
 

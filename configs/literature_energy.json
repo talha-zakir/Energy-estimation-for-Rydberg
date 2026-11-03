@@ -1,0 +1,93 @@
+{
+  "schema_version": 1,
+  "sources": {
+    "alves2026": {
+      "title": "Energetics of Rydberg-atom Quantum Computation",
+      "authors": "Óscar Alves, Marco Pezzutto, Yasser Omar",
+      "version": "arXiv:2601.03141v2, 18 May 2026",
+      "url": "https://arxiv.org/html/2601.03141v2",
+      "boundary": "Radiation-source energy; excludes electrical conversion, control electronics, HVAC and host processing",
+      "platform": "Paper's cesium gate-model experimental reference, not Pasqal FRESNEL",
+      "locators": ["Section IV.1 radiation-source table", "Section IV.2 baseline/preparation/measurement table"]
+    },
+    "carrasco2026": {
+      "title": "Energy efficiency of quantum computers",
+      "authors": "Miquel Carrasco-Codina et al.",
+      "version": "arXiv:2605.15090v2, 31 August 2026",
+      "url": "https://arxiv.org/html/2605.15090v2",
+      "boundary": "Reference machine/facility electrical power including HVAC and hardware-control computers",
+      "platform": "Harvard rubidium-87 n=53 digital neutral-atom reference; not Pasqal calibration",
+      "locators": ["Section 6.2.1", "Equation 18", "Appendix A.4, Tables 8 and 9"]
+    },
+    "pasqal2023": {
+      "title": "Quantum Computing to Greener Calculations",
+      "url": "https://www.pasqal.com/blog/quantum-computing-rethinking-energy-consumption/",
+      "version": "Vendor article dated 5 October 2023",
+      "boundary": "Historical vendor total-power statement; not a research paper or a current FRESNEL measurement",
+      "locator": "Neutral atoms, a greener quantum architecture: approximately 2.6 kW"
+    }
+  },
+  "alves_reference": {
+    "microwave_radiation_w": 0.0574,
+    "blue_source_w": 0.1,
+    "infrared_global_source_w": 11.0,
+    "trap_source_w_per_trap": 0.01,
+    "reference_traps": 49,
+    "cooling_source_w": 0.001,
+    "cooling_s": 0.1,
+    "pumping_source_w": 0.001,
+    "pumping_s": 0.01,
+    "measurement_beams": 4,
+    "measurement_source_w_per_beam": 0.00022,
+    "measurement_s": 0.09,
+    "reproduction": {
+      "microwave_us": 615.999, "blue_us": 279.581, "infrared_us": 54.454,
+      "trap_on_s": 0.2009, "repetitions": 700,
+      "paper_computation_mj_rounded": 0.662,
+      "paper_total_j_rounded": 69.5
+    }
+  },
+  "carrasco_reference": {
+    "components": [
+      {"name": "Trap lasers", "count": 1, "unit_w": 1500},
+      {"name": "Lasers for Rydberg gates", "count": 1, "unit_w": 1900},
+      {"name": "Other lasers A", "count": 2, "unit_w": 900},
+      {"name": "Other lasers B", "count": 7, "unit_w": 150},
+      {"name": "Magnetic field generation", "count": 1, "unit_w": 1050},
+      {"name": "Camera", "count": 1, "unit_w": 155},
+      {"name": "Vacuum pump", "count": 1, "unit_w": 100},
+      {"name": "Classical computers", "count": 1, "unit_w": 150},
+      {"name": "HVAC", "count": 1, "unit_w": 7500},
+      {"name": "Other electronics", "count": 1, "unit_w": 2000},
+      {"name": "Small laser chillers", "count": 5, "unit_w": 600},
+      {"name": "Large laser chillers", "count": 2, "unit_w": 1000}
+    ],
+    "reset_s": 0.01, "measurement_s": 0.01,
+    "clock_s": 0.0005, "transport_s": 0.0005,
+    "transport_per_layer": 0.25, "reload_s": 0.5, "layers_per_reload": 2400,
+    "extra_continuous_reload_components_w": [350, 1500, 700]
+  },
+  "transferred_scenarios": {
+    "radiation_source": {
+      "trap_count": 49,
+      "raman_to_microwave_power_mapping": "Assumption: charge Raman controls at the paper's derived microwave radiation power; mechanisms differ",
+      "blue_global_scaling": "Assumption: one local-blue reference power per illuminated atom; shared infrared beam counted once",
+      "constant_on_power": "Assumption: reference source powers held fixed for pulse-on windows, regardless of simulated Rabi rate. Not a Rabi-power calibration or validated architecture ranking."
+    },
+    "system_power_scenarios": [
+      {"id": "harvard_paper_reference", "power_from": "carrasco_components", "source": "carrasco2026"},
+      {"id": "pasqal_historical_power_transfer", "power_w": 2600, "source": "pasqal2023"}
+    ],
+    "schedule_timing": {
+      "reset_from": "carrasco_reference.reset_s", "measurement_from": "carrasco_reference.measurement_s",
+      "transport_events": 0, "reconfiguration_layers": 0, "reloads_per_shot": 0,
+      "assumption": "Our compiled recipes keep a fixed register; no motion/reconfiguration/reloading is charged. Their real overheads need calibration; paper reset/readout times are transferred as a scenario."
+    },
+    "shots_per_prediction": 1000,
+    "shot_sensitivity": [100, 1000, 10000],
+    "reset_plus_readout_sensitivity_s": [0.002, 0.02, 0.2],
+    "electricity_tariff_per_kwh": 0.25,
+    "currency": "EUR",
+    "tariff_status": "Illustrative user-changeable arithmetic assumption, not a market quote or QPU service price"
+  }
+}
