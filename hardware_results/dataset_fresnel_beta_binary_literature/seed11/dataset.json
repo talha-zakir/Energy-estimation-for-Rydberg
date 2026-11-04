@@ -1,0 +1,44 @@
+{
+  "protocol": {
+    "name": "kornjaca_binary_hardware",
+    "source": "https://arxiv.org/html/2407.02553v1",
+    "dataset_size_source": "https://arxiv.org/html/2407.02553v1#S1.SS1.SSS1",
+    "validation_source": "https://arxiv.org/html/2407.02553v1#S1.SS2.SSS2",
+    "training_pool_size": 1000,
+    "fit_training_size": 800,
+    "validation_size": 200,
+    "test_size": 200,
+    "validation_is_inside_published_training_pool": true,
+    "scope": "Dataset sizes and internal 80/20 split adapted from the paper; FRESNEL compiler, regression readout and finite-shot optimization are our protocol. Configured prior-test exclusions are an additional adaptation. This is not a reproduction of the paper's Aquila/SVM experiment."
+  },
+  "split_sha256": "864a046bf625138e758d88018e7feceb3f88e5a94984d9530ff2e7d401dc22bb",
+  "source_namespaces": [
+    "official_train",
+    "official_train",
+    "official_test"
+  ],
+  "class_counts": {
+    "train": {
+      "3": 410,
+      "8": 390
+    },
+    "validation": {
+      "3": 102,
+      "8": 98
+    },
+    "test": {
+      "3": 99,
+      "8": 101
+    }
+  },
+  "test_exclusions": {
+    "manifest": "configs/mnist_prior_test_exclusions.json",
+    "sha256": "fd5ef9a88426f75072151b70c56dda6aa83be054f9a4e3e0152c865a8fac1a72",
+    "excluded_count": 2303,
+    "scope": "Frozen lower bound on known saved test-inspection history from Git-tracked results/ and hardware_results/ split archives. All listed original-MNIST official-test indices are excluded from new protected tests. This does not establish that every other image has never been inspected outside the saved history. Repeat seeds can still have overlapping eligible test subsets; exclusion does not imply statistically independent repeats."
+  },
+  "eligible_test_images_after_known_exclusions": 836,
+  "selection_uses_prediction_accuracy": false,
+  "repeat_test_sets_may_overlap": true,
+  "holdout_scope": "Frozen lower bound on known saved test-inspection history from Git-tracked results/ and hardware_results/ split archives. All listed original-MNIST official-test indices are excluded from new protected tests. This does not establish that every other image has never been inspected outside the saved history. Repeat seeds can still have overlapping eligible test subsets; exclusion does not imply statistically independent repeats."
+}

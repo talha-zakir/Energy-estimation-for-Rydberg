@@ -34,6 +34,19 @@ def summarize(report, output):
         "checkpoint separately. Test shots are separate; identical selected/terminal checkpoints reuse one test evaluation.", "",
         "| Seed | Method | Selected step | Selected test | Terminal step | Terminal test | Stop reason | All training shots |",
         "|---|---|---:|---:|---:|---:|---|---:|"]
+    if report.get("dataset_protocol", {}).get("source"):
+        spec = report["dataset_protocol"]
+        additions = ["## Dataset provenance", "",
+            f"Dataset-size reference: [{spec['name']}]({spec['dataset_size_source']}). "
+            f"The {spec['training_pool_size']:,}-image training pool includes validation: "
+            f"{config['n_train']:,} fit-training + {config['n_val']:,} validation. "
+            "The dataset-size protocol is adapted to our common regression/FRESNEL pipeline; it does not reproduce the source paper's Aquila/SVM experiment.", "",
+            ("Known previously inspected test indices are excluded using the frozen manifest recorded in each repeat. "
+             if config.get("test_exclusions") else "This configuration does not exclude previously inspected test images. ") +
+            "Repeat test sets may still overlap one another; seed SDs remain descriptive. "
+            "The optimizer safety cap is unchanged, so dataset size alone does not establish adequate optimization.", ""]
+        position = lines.index("## Held-out results and all consumed training")
+        lines[position:position] = additions
     for repeat in report["repeats"]:
         for algorithm, item in repeat["algorithms"].items():
             lines.append(f"| {repeat['seed']} | {algorithm.upper()} | {item['selected_checkpoint']['iteration']} | "
@@ -72,7 +85,9 @@ def summarize(report, output):
                 f"{item['complete_study_execution_budget']['submitted_jobs_including_reported_retries']:,} | "
                 f"{'unknown' if energy is None else f'{energy:.4f}'} |")
     lines += ["", "## Interpretation limits", "",
-        "This is a small exploratory simulator study; earlier work inspected overlapping MNIST test images. "
+        "This is an exploratory simulator study. Earlier work inspected official MNIST test images; "
+        + ("this run excludes the frozen known history, which cannot rule out unrecorded prior inspection. "
+           if config.get("test_exclusions") else "this configuration does not exclude that history. ") +
         "Validation repetitions reduce measurement noise, not finite-dataset uncertainty or validation selection bias. "
         "The default two Monte Carlo noise trajectories are a computational approximation; a trajectory-convergence "
         "study and fresh held-out data are needed for publication claims. Repeated seed SDs are descriptive, not "

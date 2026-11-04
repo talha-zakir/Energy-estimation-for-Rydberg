@@ -55,9 +55,9 @@ def first_target_hit(checkpoints, target):
     return next((c for c in checkpoints if c["validation_accuracy"] >= target), None)
 
 
-def get_data(images, labels, test_images, test_labels, config, seed):
+def get_data(images, labels, test_images, test_labels, config, seed, *, excluded_test_indices=None):
     indices = split_indices(labels, test_labels, config["digits"], config["n_train"],
-                             config["n_val"], config["n_test"], seed)
+                             config["n_val"], config["n_test"], seed, excluded_test_indices=excluded_test_indices)
     pixel = [images[indices[0]]/255., images[indices[1]]/255., test_images[indices[2]]/255.]
     pca = PCA(n_components=2*config["regime"]["input_slots"], svd_solver="full")
     raw = [pca.fit_transform(pixel[0]), pca.transform(pixel[1]), pca.transform(pixel[2])]

@@ -1,0 +1,62 @@
+{
+  "target": "configs/fresnel_beta_target.json",
+  "calibration": "configs/fresnel_beta_calibration.json",
+  "literature_config": "configs/literature_energy_fresnel_beta.json",
+  "digits": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ],
+  "n_train": 8000,
+  "n_val": 2000,
+  "n_test": 1000,
+  "repeat_seeds": [
+    7,
+    11,
+    19
+  ],
+  "regime": {
+    "n_qubits": 4,
+    "input_slots": 4,
+    "mixing_fraction_of_max": 0.5,
+    "interaction_to_mixing": 1.0,
+    "encoding_to_mixing": 1.0,
+    "phase_per_slot": 2.0,
+    "layout_slug": null,
+    "trap_ids": null
+  },
+  "readout_slots": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "shots_per_image": 1000,
+  "noise_trajectories": 2,
+  "alpha_grid": [
+    0.01,
+    0.1,
+    1.0,
+    10.0
+  ],
+  "vqc_steps": 64,
+  "minibatch_size": 8,
+  "checkpoint_every": 4,
+  "spsa_learning_rate": 0.2,
+  "spsa_perturbation": 0.15,
+  "parameter_bound": 2.0,
+  "threads": 4,
+  "scope": "Dataset-size and internal80/20-validation adaptation from Kornjaca et al. arXiv2407.02553v1. Same FRESNEL-informed control/readout for QRC and VQC. Known previously inspected official-test indices are excluded by a frozen manifest. Optimizer limits are unchanged and do not establish convergence. No new accuracy result is implied by this configuration.",
+  "validation_repetitions": 3,
+  "plateau_patience": 6,
+  "plateau_relative_improvement": 0.01,
+  "dataset_protocol": "kornjaca_tenclass_simulation",
+  "test_exclusions": "configs/mnist_prior_test_exclusions.json"
+}

@@ -16,6 +16,7 @@ from .accuracy_energy import LinearHead, get_data, validate_config as validate_l
 from .calibrated_cost import budget, validate_calibration
 from .finite_backend import FeatureEngine, PulserCountsBackend
 from .target_profile import AnalogProfile
+from .dataset_protocol import load_test_exclusions, protocol_description, save_exclusions_snapshot, split_metadata
 
 
 PROTOCOL = "full_training_performance_energy_v1"
@@ -24,6 +25,7 @@ PROTOCOL = "full_training_performance_energy_v1"
 def validate_config(config):
     # Reuse basic input checks without giving target accuracy any role in this protocol.
     validate_legacy_config(dict(config, accuracy_targets=[.5], test_accuracy_tolerance=0.))
+    protocol_description(config)
     for key in ("validation_repetitions", "plateau_patience"):
         if isinstance(config[key], bool) or not isinstance(config[key], int) or config[key] < 1:
             raise ValueError(f"{key} must be a positive integer")
@@ -81,6 +83,7 @@ def account_repeat(repetition, records, energy):
 
 def run(config, output, cache="data/mnist", backend_factory=None, profile_factory=None):
     validate_config(config)
+    excluded, exclusion = load_test_exclusions(config)
     started = time.perf_counter()
     profile = (AnalogProfile.build(config["target"], config["regime"]) if profile_factory is None else
                profile_factory(config["target"], config["regime"]))
@@ -91,6 +94,7 @@ def run(config, output, cache="data/mnist", backend_factory=None, profile_factor
     (output/"configuration.json").write_text(json.dumps(config, indent=2)+"\n")
     for key in ("target", "calibration", "literature_config"):
         (output/(key+"_snapshot.json")).write_bytes(Path(config[key]).read_bytes())
+    save_exclusions_snapshot(config, output, exclusion)
     device_source = Path(config["target"]).parent/profile.target["device_json"]
     device_bytes = device_source.read_bytes()
     if hashlib.sha256(device_bytes).hexdigest() != profile.target["device_sha256"]:
@@ -100,6 +104,7 @@ def run(config, output, cache="data/mnist", backend_factory=None, profile_factor
     snapshot_target = dict(profile.target, device_json="device_snapshot.json")
     (output/"portable_target.json").write_text(json.dumps(snapshot_target, indent=2)+"\n")
     report = {"protocol_id": PROTOCOL, "status": "running", "config": config,
+        "dataset_protocol": protocol_description(config),
         "device_profile": profile.metadata, "target": profile.target, "calibration": calibration,
         "literature_configuration": literature,
         "input_sha256": {key: hashlib.sha256(Path(config[key]).read_bytes()).hexdigest()
@@ -114,19 +119,22 @@ def run(config, output, cache="data/mnist", backend_factory=None, profile_factor
             "cost": "All consumed training, repeated validation, objective and discarded-checkpoint work, regardless of selected step",
             "initialization": "Paired initial offsets and common random measurement seeds at step zero; validation repetitions independent",
             "inference": "Selected and terminal models evaluated after selection; same-checkpoint measurements reused and charged once",
-            "prior_test_inspection": "Exploratory MNIST sample; earlier studies inspected overlapping official-test subsets",
+            "prior_test_inspection": exclusion["scope"],
             "hardware_jobs_submitted_by_default": False,
             "calibrated_energy": "Unknown without traceable target-specific power/cycle/setup and external classical measurements",
             "noise_trajectories": "Monte Carlo emulator approximation, not extra physical shots or independent experimental repeats"},
         "repeats": [], "versions": {name: importlib.metadata.version(name) for name in
             ("pulser-core", "pulser-simulation", "qutip", "numpy", "scipy", "scikit-learn")}}
     images, labels, test_images, test_labels = load_mnist(cache)
+    if config.get("test_exclusions"):
+        report["input_sha256"]["test_exclusions"] = exclusion["sha256"]
     for seed in config["repeat_seeds"]:
         repeat_started = time.perf_counter()
         folder = output/f"seed{seed}"; folder.mkdir()
         backend = backend_factory(profile, seed) if backend_factory else PulserCountsBackend(profile.device, config["noise_trajectories"])
         engine = FeatureEngine(profile, backend, config["readout_slots"], config["shots_per_image"])
-        indices, data, mapped, onehot, pca, scale, original = get_data(images, labels, test_images, test_labels, config, seed)
+        indices, data, mapped, onehot, pca, scale, original = get_data(images, labels, test_images, test_labels, config, seed,
+                                                                   excluded_test_indices=excluded)
         rng = np.random.default_rng(seed)
         initial = rng.normal(0., .15, 2*config["regime"]["input_slots"])
         theta = initial.copy()
@@ -210,6 +218,11 @@ def run(config, output, cache="data/mnist", backend_factory=None, profile_factor
                     exports.append(profile.export_example(sequence, folder/f"{key}_prefix{prefix}_job{job}.json", shots))
         classical = LinearHead.fit(data[0], data[1], *onehot[:2], config["alpha_grid"])
         repetition = {"seed": seed, "backend": backend.execution_kind, "checkpoints": checkpoints,
+            "dataset": split_metadata(indices, original, test_labels, config, exclusion, excluded_test_indices=excluded),
+            "optimizer_coverage": {"image_draws": len(optimizer)*config["minibatch_size"],
+                "distinct_training_images_in_objectives": len({i for entry in optimizer for i in entry["source_indices"]}),
+                "fit_training_images": config["n_train"],
+                "scope": "SPSA objective coverage only; every checkpoint fits the head on all training images"},
             "optimizer_history": optimizer, "algorithms": {name: {
                 "completion": {"reason": "fixed_reservoir_fit_complete" if name == "qrc" else stop_reason,
                     "optimizer_steps": 0 if name == "qrc" else len(optimizer),
@@ -248,10 +261,16 @@ def main():
     parser.add_argument("--config", default="configs/performance_energy_fresnel_beta.json")
     parser.add_argument("--output", required=True)
     parser.add_argument("--cache", default="data/mnist")
+    parser.add_argument("--prepare-only", action="store_true", help="Save verified real-data splits/PCA and resource bounds; do not train or submit jobs")
     args = parser.parse_args()
     config = json.loads(Path(args.config).read_text())
     with threadpool_limits(limits=config.get("threads", 4)):
-        run(config, args.output, args.cache)
+        if args.prepare_only:
+            from .dataset_protocol import prepare
+            validate_config(config)
+            prepare(config, args.output, args.cache, AnalogProfile.build(config["target"], config["regime"]))
+        else:
+            run(config, args.output, args.cache)
 
 
 if __name__ == "__main__":

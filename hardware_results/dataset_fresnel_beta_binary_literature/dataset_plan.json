@@ -1,0 +1,298 @@
+{
+  "status": "prepared_not_trained",
+  "performance_results_available": false,
+  "dataset_protocol": {
+    "name": "kornjaca_binary_hardware",
+    "source": "https://arxiv.org/html/2407.02553v1",
+    "dataset_size_source": "https://arxiv.org/html/2407.02553v1#S1.SS1.SSS1",
+    "validation_source": "https://arxiv.org/html/2407.02553v1#S1.SS2.SSS2",
+    "training_pool_size": 1000,
+    "fit_training_size": 800,
+    "validation_size": 200,
+    "test_size": 200,
+    "validation_is_inside_published_training_pool": true,
+    "scope": "Dataset sizes and internal 80/20 split adapted from the paper; FRESNEL compiler, regression readout and finite-shot optimization are our protocol. Configured prior-test exclusions are an additional adaptation. This is not a reproduction of the paper's Aquila/SVM experiment."
+  },
+  "config": {
+    "target": "configs/fresnel_beta_target.json",
+    "calibration": "configs/fresnel_beta_calibration.json",
+    "literature_config": "configs/literature_energy_fresnel_beta.json",
+    "digits": [
+      3,
+      8
+    ],
+    "n_train": 800,
+    "n_val": 200,
+    "n_test": 200,
+    "repeat_seeds": [
+      7,
+      11,
+      19
+    ],
+    "regime": {
+      "n_qubits": 4,
+      "input_slots": 4,
+      "mixing_fraction_of_max": 0.5,
+      "interaction_to_mixing": 1.0,
+      "encoding_to_mixing": 1.0,
+      "phase_per_slot": 2.0,
+      "layout_slug": null,
+      "trap_ids": null
+    },
+    "readout_slots": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "shots_per_image": 1000,
+    "noise_trajectories": 2,
+    "alpha_grid": [
+      0.01,
+      0.1,
+      1.0,
+      10.0
+    ],
+    "vqc_steps": 64,
+    "minibatch_size": 8,
+    "checkpoint_every": 4,
+    "spsa_learning_rate": 0.2,
+    "spsa_perturbation": 0.15,
+    "parameter_bound": 2.0,
+    "threads": 4,
+    "scope": "Dataset-size and internal80/20-validation adaptation from Kornjaca et al. arXiv2407.02553v1. Same FRESNEL-informed control/readout for QRC and VQC. Known previously inspected official-test indices are excluded by a frozen manifest. Optimizer limits are unchanged and do not establish convergence. No new accuracy result is implied by this configuration.",
+    "validation_repetitions": 3,
+    "plateau_patience": 6,
+    "plateau_relative_improvement": 0.01,
+    "dataset_protocol": "kornjaca_binary_hardware",
+    "test_exclusions": "configs/mnist_prior_test_exclusions.json"
+  },
+  "device_profile": {
+    "target_device": "FRESNEL",
+    "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+    "compiler": "Pulser global analog pulses, explicit layout, SDK QPU validation",
+    "atomic_coordinates_um": [
+      [
+        -10.971113,
+        0.0
+      ],
+      [
+        -3.657038,
+        0.0
+      ],
+      [
+        3.657038,
+        0.0
+      ],
+      [
+        10.971113,
+        0.0
+      ]
+    ],
+    "nearest_neighbor_spacing_um": [
+      7.314075000000001,
+      7.314075000000001,
+      7.314075000000001,
+      7.314075000000001
+    ],
+    "mixing_rad_us": 5.654866776461628,
+    "encoding_rad_us": 5.654866776461628,
+    "interaction_to_mixing_actual": [
+      1.0000003034081866,
+      1.0000003034081866,
+      1.0000003034081866,
+      1.0000003034081866
+    ],
+    "encoding_to_mixing": 1.0,
+    "slot_duration_ns": 356,
+    "rise_ns": 72,
+    "mixing_phase_per_slot_actual": 2.0131325724203393,
+    "layout_traps": 60,
+    "layout_precalibrated": false,
+    "layout_calibration_required": true,
+    "hardware_submission_verified": false,
+    "account_specific_spec_verified": false,
+    "device_max_runs_per_job": 500,
+    "published_regime_source": "https://arxiv.org/html/2407.02553v1#A2.SS2",
+    "scope": "Comparable driving/interaction/encoding/probing scales adapted within target constraints; not a reproduction or a provider-confirmed operating optimum"
+  },
+  "device_sha256": "d70cc7d46a56ab236ac21ef51415d60fb240cadef784d38480f14ca7047d0b52",
+  "official_dataset_checksums_md5": {
+    "train-images-idx3-ubyte.gz": "f68b3c2dcbeaaa9fbdd348bbdeb94873",
+    "train-labels-idx1-ubyte.gz": "d53e105ee54ea40749a09fcbcd1e9432",
+    "t10k-images-idx3-ubyte.gz": "9fb629c4189551a2d022fa330f9573f3",
+    "t10k-labels-idx1-ubyte.gz": "ec29112dd5afa0611ce80d1b7f02629c"
+  },
+  "versions": {
+    "numpy": "2.5.4",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.8.0"
+  },
+  "resource_plan": {
+    "status": "planned_bounds_not_executed",
+    "qrc_training": {
+      "image_feature_evaluations": 1400,
+      "requested_shots": 1400000,
+      "count_requests_after_job_splitting": 5600
+    },
+    "vqc_training_at_safety_cap": {
+      "image_feature_evaluations": 24824,
+      "requested_shots": 24824000,
+      "count_requests_after_job_splitting": 99296
+    },
+    "one_test_pass": {
+      "image_feature_evaluations": 200,
+      "requested_shots": 200000,
+      "count_requests_after_job_splitting": 800
+    },
+    "maximum_vqc_checkpoint_fits": 17,
+    "maximum_full_study_shots_all_seeds": 80472000,
+    "vqc_optimizer_image_draws_at_cap": 512,
+    "optimizer_draws_per_training_image_at_cap": 0.64,
+    "optimizer_scope": "Repeated minibatch draws; not guaranteed dataset coverage. Linear-head checkpoints use all fit-training images. Unchanged optimizer safety cap is not proof of sufficient training on the larger dataset.",
+    "calibrated_qpu_energy_j": null,
+    "hardware_jobs_submitted": 0
+  },
+  "repeats": [
+    {
+      "protocol": {
+        "name": "kornjaca_binary_hardware",
+        "source": "https://arxiv.org/html/2407.02553v1",
+        "dataset_size_source": "https://arxiv.org/html/2407.02553v1#S1.SS1.SSS1",
+        "validation_source": "https://arxiv.org/html/2407.02553v1#S1.SS2.SSS2",
+        "training_pool_size": 1000,
+        "fit_training_size": 800,
+        "validation_size": 200,
+        "test_size": 200,
+        "validation_is_inside_published_training_pool": true,
+        "scope": "Dataset sizes and internal 80/20 split adapted from the paper; FRESNEL compiler, regression readout and finite-shot optimization are our protocol. Configured prior-test exclusions are an additional adaptation. This is not a reproduction of the paper's Aquila/SVM experiment."
+      },
+      "split_sha256": "85a317108f5f4c97d8b000dbbf905952eef971b9fa816080bc5dfb1d698d15fd",
+      "source_namespaces": [
+        "official_train",
+        "official_train",
+        "official_test"
+      ],
+      "class_counts": {
+        "train": {
+          "3": 410,
+          "8": 390
+        },
+        "validation": {
+          "3": 102,
+          "8": 98
+        },
+        "test": {
+          "3": 99,
+          "8": 101
+        }
+      },
+      "test_exclusions": {
+        "manifest": "configs/mnist_prior_test_exclusions.json",
+        "sha256": "fd5ef9a88426f75072151b70c56dda6aa83be054f9a4e3e0152c865a8fac1a72",
+        "excluded_count": 2303,
+        "scope": "Frozen lower bound on known saved test-inspection history from Git-tracked results/ and hardware_results/ split archives. All listed original-MNIST official-test indices are excluded from new protected tests. This does not establish that every other image has never been inspected outside the saved history. Repeat seeds can still have overlapping eligible test subsets; exclusion does not imply statistically independent repeats."
+      },
+      "eligible_test_images_after_known_exclusions": 836,
+      "selection_uses_prediction_accuracy": false,
+      "repeat_test_sets_may_overlap": true,
+      "holdout_scope": "Frozen lower bound on known saved test-inspection history from Git-tracked results/ and hardware_results/ split archives. All listed original-MNIST official-test indices are excluded from new protected tests. This does not establish that every other image has never been inspected outside the saved history. Repeat seeds can still have overlapping eligible test subsets; exclusion does not imply statistically independent repeats.",
+      "seed": 7
+    },
+    {
+      "protocol": {
+        "name": "kornjaca_binary_hardware",
+        "source": "https://arxiv.org/html/2407.02553v1",
+        "dataset_size_source": "https://arxiv.org/html/2407.02553v1#S1.SS1.SSS1",
+        "validation_source": "https://arxiv.org/html/2407.02553v1#S1.SS2.SSS2",
+        "training_pool_size": 1000,
+        "fit_training_size": 800,
+        "validation_size": 200,
+        "test_size": 200,
+        "validation_is_inside_published_training_pool": true,
+        "scope": "Dataset sizes and internal 80/20 split adapted from the paper; FRESNEL compiler, regression readout and finite-shot optimization are our protocol. Configured prior-test exclusions are an additional adaptation. This is not a reproduction of the paper's Aquila/SVM experiment."
+      },
+      "split_sha256": "864a046bf625138e758d88018e7feceb3f88e5a94984d9530ff2e7d401dc22bb",
+      "source_namespaces": [
+        "official_train",
+        "official_train",
+        "official_test"
+      ],
+      "class_counts": {
+        "train": {
+          "3": 410,
+          "8": 390
+        },
+        "validation": {
+          "3": 102,
+          "8": 98
+        },
+        "test": {
+          "3": 99,
+          "8": 101
+        }
+      },
+      "test_exclusions": {
+        "manifest": "configs/mnist_prior_test_exclusions.json",
+        "sha256": "fd5ef9a88426f75072151b70c56dda6aa83be054f9a4e3e0152c865a8fac1a72",
+        "excluded_count": 2303,
+        "scope": "Frozen lower bound on known saved test-inspection history from Git-tracked results/ and hardware_results/ split archives. All listed original-MNIST official-test indices are excluded from new protected tests. This does not establish that every other image has never been inspected outside the saved history. Repeat seeds can still have overlapping eligible test subsets; exclusion does not imply statistically independent repeats."
+      },
+      "eligible_test_images_after_known_exclusions": 836,
+      "selection_uses_prediction_accuracy": false,
+      "repeat_test_sets_may_overlap": true,
+      "holdout_scope": "Frozen lower bound on known saved test-inspection history from Git-tracked results/ and hardware_results/ split archives. All listed original-MNIST official-test indices are excluded from new protected tests. This does not establish that every other image has never been inspected outside the saved history. Repeat seeds can still have overlapping eligible test subsets; exclusion does not imply statistically independent repeats.",
+      "seed": 11
+    },
+    {
+      "protocol": {
+        "name": "kornjaca_binary_hardware",
+        "source": "https://arxiv.org/html/2407.02553v1",
+        "dataset_size_source": "https://arxiv.org/html/2407.02553v1#S1.SS1.SSS1",
+        "validation_source": "https://arxiv.org/html/2407.02553v1#S1.SS2.SSS2",
+        "training_pool_size": 1000,
+        "fit_training_size": 800,
+        "validation_size": 200,
+        "test_size": 200,
+        "validation_is_inside_published_training_pool": true,
+        "scope": "Dataset sizes and internal 80/20 split adapted from the paper; FRESNEL compiler, regression readout and finite-shot optimization are our protocol. Configured prior-test exclusions are an additional adaptation. This is not a reproduction of the paper's Aquila/SVM experiment."
+      },
+      "split_sha256": "37e21082e7bb4dde24a199c778072265a13564429b955625f3292a0aa033e45a",
+      "source_namespaces": [
+        "official_train",
+        "official_train",
+        "official_test"
+      ],
+      "class_counts": {
+        "train": {
+          "3": 410,
+          "8": 390
+        },
+        "validation": {
+          "3": 102,
+          "8": 98
+        },
+        "test": {
+          "3": 99,
+          "8": 101
+        }
+      },
+      "test_exclusions": {
+        "manifest": "configs/mnist_prior_test_exclusions.json",
+        "sha256": "fd5ef9a88426f75072151b70c56dda6aa83be054f9a4e3e0152c865a8fac1a72",
+        "excluded_count": 2303,
+        "scope": "Frozen lower bound on known saved test-inspection history from Git-tracked results/ and hardware_results/ split archives. All listed original-MNIST official-test indices are excluded from new protected tests. This does not establish that every other image has never been inspected outside the saved history. Repeat seeds can still have overlapping eligible test subsets; exclusion does not imply statistically independent repeats."
+      },
+      "eligible_test_images_after_known_exclusions": 836,
+      "selection_uses_prediction_accuracy": false,
+      "repeat_test_sets_may_overlap": true,
+      "holdout_scope": "Frozen lower bound on known saved test-inspection history from Git-tracked results/ and hardware_results/ split archives. All listed original-MNIST official-test indices are excluded from new protected tests. This does not establish that every other image has never been inspected outside the saved history. Repeat seeds can still have overlapping eligible test subsets; exclusion does not imply statistically independent repeats.",
+      "seed": 19
+    }
+  ],
+  "pairwise_test_overlap_counts": {
+    "7/11": 46,
+    "7/19": 50,
+    "11/19": 49
+  }
+}

@@ -22,6 +22,8 @@ ROOT = Path(__file__).resolve().parents[1]
 class PerformanceEnergyTests(unittest.TestCase):
     def config(self):
         config = json.loads((ROOT/"configs/performance_energy_fresnel_beta.json").read_text())
+        config["dataset_protocol"] = "custom"
+        config.pop("test_exclusions", None)
         for key in ("target", "calibration", "literature_config"):
             config[key] = str(ROOT/config[key])
         config["regime"].update(n_qubits=2, input_slots=2)

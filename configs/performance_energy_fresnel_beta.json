@@ -6,9 +6,9 @@
     3,
     8
   ],
-  "n_train": 80,
-  "n_val": 20,
-  "n_test": 40,
+  "n_train": 800,
+  "n_val": 200,
+  "n_test": 200,
   "repeat_seeds": [
     7,
     11,
@@ -45,8 +45,10 @@
   "spsa_perturbation": 0.15,
   "parameter_bound": 2.0,
   "threads": 4,
-  "scope": "Paired full-training exploratory sample. Accuracy is an outcome; validation plateau or safety cap ends training. Public FRESNEL snapshot is provisional until account specification, calibration and server validation are verified.",
+  "scope": "Dataset-size and internal80/20-validation adaptation from Kornjaca et al. arXiv2407.02553v1. Same FRESNEL-informed control/readout for QRC and VQC. Known previously inspected official-test indices are excluded by a frozen manifest. Optimizer limits are unchanged and do not establish convergence. No new accuracy result is implied by this configuration.",
   "validation_repetitions": 3,
   "plateau_patience": 6,
-  "plateau_relative_improvement": 0.01
+  "plateau_relative_improvement": 0.01,
+  "dataset_protocol": "kornjaca_binary_hardware",
+  "test_exclusions": "configs/mnist_prior_test_exclusions.json"
 }

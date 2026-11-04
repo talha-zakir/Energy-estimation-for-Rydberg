@@ -18,7 +18,9 @@ This is a research model, not device-calibrated hardware. The probe exposes subs
 
 **Quantum reservoir computing is implemented:** [paired QRC/VQC accuracy and cost results](hardware_results/pasqal_qrc_mnist_3_8_seed7/SUMMARY.md), [method and QRC papers](docs/qrc-vqc-comparison.md), and [config](configs/pasqal_qrc_mnist.json). A fixed reservoir uses the native VQC's exact split, PCA, atoms and global input encoding, and trains only a linear readout. Endpoint and temporal-prefix readouts are compared with the saved VQC, including device noise, equal total-shot budgets and separate training/inference energy projections. This is local QoolQit/Pulser simulation on the pinned Pasqal target.
 
-**The primary comparison now trains both methods and reports accuracy as an outcome:** [full-training results](hardware_results/performance_energy_fresnel_beta_sample/SUMMARY.md), [protocol](docs/performance-energy-protocol.md), and [configuration](configs/performance_energy_fresnel_beta.json). Both use the same four atoms, unique MNIST splits, finite-shot temporal features, and linear regression procedure. VQC stops at a validation-loss plateau or safety cap; every optimizer evaluation, validation repetition and discarded checkpoint remains in its consumed cost, even if step zero is selected. Both selected and terminal accuracies are reported. The pinned public FRESNEL profile remains provisional for the account's beta QPU, and calibrated electrical joules remain unknown. The [earlier accuracy-target protocol](docs/accuracy-energy-protocol.md) and its [historical results](hardware_results/accuracy_energy_fresnel_beta_sample/SUMMARY.md) remain available separately. Neither study establishes a hardware-energy advantage.
+**The primary QRC/VQC comparison now uses literature-sized MNIST datasets:** the [default binary configuration](configs/performance_energy_fresnel_beta.json) uses **800 fit-training + 200 validation + 200 test images**, adapting Kornjača et al.'s 1,000-image training pool and internal 80/20 split. Both methods use identical splits, four atoms, finite-shot temporal features and linear regression. [Dataset protocols and optional ten-class presets](docs/dataset-protocol.md) document the sources and adaptations. A frozen manifest excludes known previously inspected test images. [Verified dataset preparation and resource bounds](hardware_results/dataset_fresnel_beta_binary_literature/SUMMARY.md) are available; the larger quantum benchmark has not been trained yet. The [earlier accuracy results](hardware_results/performance_energy_fresnel_beta_sample/SUMMARY.md) belong to the historical **80/20/40 smoke sample** and do not describe the new default. That sample remains reproducible through [its explicit configuration](configs/performance_energy_fresnel_beta_smoke.json).
+
+VQC stops at a validation-loss plateau or safety cap, and all consumed training and discarded checkpoints remain charged. Actual optimizer image coverage is now recorded, because the unchanged 64-step cap is not a convergence guarantee on a larger dataset. See the [performance/resource protocol](docs/performance-energy-protocol.md). The pinned public FRESNEL profile remains provisional for the account's beta QPU; calibrated electrical joules remain unknown. The [optional accuracy-target protocol](docs/accuracy-energy-protocol.md) remains separate.
 
 ## Pipeline
 
@@ -46,8 +48,14 @@ python -m pip install -r requirements-tested.txt
 python -m pip install --no-deps -e .
 python -m unittest discover -s tests -v
 
-# Primary native analog QRC/VQC full-training study
+# Verify the literature-sized dataset and planned workload without training
+python -m rydberg_mnist.hardware.performance_energy --prepare-only --output hardware_results/new_dataset_preparation
+
+# Execute the full literature-sized native analog QRC/VQC study (substantial simulation workload)
 python -m rydberg_mnist.hardware.performance_energy --output hardware_results/new_performance_energy
+
+# Historical small smoke-study configuration
+python -m rydberg_mnist.hardware.performance_energy --config configs/performance_energy_fresnel_beta_smoke.json --output hardware_results/new_smoke
 
 # Paper-aligned binary task: digits 3 and 8
 python -m rydberg_mnist.experiment --config configs/mnist_3_8.json --output results/new_binary

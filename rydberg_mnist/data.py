@@ -53,11 +53,17 @@ def stratified_subset(indices, labels, count, seed):
                             random_state=seed)[0]
 
 
-def split_indices(train_labels, test_labels, digits, n_train, n_val, n_test, seed):
+def split_indices(train_labels, test_labels, digits, n_train, n_val, n_test, seed, *, excluded_test_indices=None):
     eligible = np.flatnonzero(np.isin(train_labels, digits))
     pool = stratified_subset(eligible, train_labels, n_train + n_val, seed)
     train, val = train_test_split(pool, test_size=n_val, stratify=train_labels[pool],
                                  random_state=seed + 1)
-    test = stratified_subset(np.flatnonzero(np.isin(test_labels, digits)),
-                             test_labels, n_test, seed + 2)
+    eligible_test = np.flatnonzero(np.isin(test_labels, digits))
+    if excluded_test_indices is not None:
+        excluded = np.asarray(excluded_test_indices)
+        if (excluded.ndim != 1 or (excluded.size and not np.issubdtype(excluded.dtype, np.integer))
+                or np.any(excluded < 0) or np.any(excluded >= len(test_labels))):
+            raise ValueError("Test exclusions must be integer indices into the official test set")
+        eligible_test = eligible_test[~np.isin(eligible_test, excluded)]
+    test = stratified_subset(eligible_test, test_labels, n_test, seed + 2)
     return train, val, test
